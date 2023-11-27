@@ -1,0 +1,11 @@
+Model Information:
+* title:	Spiderman
+* source:	https://sketchfab.com/3d-models/spiderman-476522e7076c4763a7e3ca4731e0add9
+* author:	1FENIL (https://sketchfab.com/1FENIL)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Spiderman" (https://sketchfab.com/3d-models/spiderman-476522e7076c4763a7e3ca4731e0add9) by 1FENIL (https://sketchfab.com/1FENIL) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

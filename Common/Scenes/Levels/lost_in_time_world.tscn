@@ -1,0 +1,96 @@
+[gd_scene load_steps=16 format=3 uid="uid://yk0isbn513re"]
+
+[ext_resource type="Texture2D" uid="uid://c3qvjq47ucbfk" path="res://Common/Assets/Textures/mpumalanga_veld_puresky_2k.hdr" id="1_a2sw3"]
+[ext_resource type="PackedScene" uid="uid://besfpqmr1e0bs" path="res://Common/Scenes/Objects/magic_portal.tscn" id="2_2oxby"]
+[ext_resource type="Texture2D" uid="uid://x5bq8262ba4" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_diff_1k.png" id="2_ny6dh"]
+[ext_resource type="PackedScene" uid="uid://cionrln6akfpq" path="res://Common/Scenes/Objects/Blue_gem.tscn" id="3_dgde8"]
+[ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="3_k4eva"]
+[ext_resource type="Texture2D" uid="uid://chl6tgct4wlof" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_nor_gl_1k.png" id="3_oprn2"]
+[ext_resource type="Texture2D" uid="uid://dg0g22clwmej5" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_rough_1k.png" id="4_75ggc"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_eu8wj"]
+panorama = ExtResource("1_a2sw3")
+
+[sub_resource type="Sky" id="Sky_80dab"]
+sky_material = SubResource("PanoramaSkyMaterial_eu8wj")
+
+[sub_resource type="Environment" id="Environment_mpkyy"]
+background_mode = 2
+sky = SubResource("Sky_80dab")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajchh"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.0509804)
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bowgs"]
+material = SubResource("StandardMaterial3D_ajchh")
+size = Vector2(50, 50)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_imsvo"]
+data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0, -25, 25, 0, -25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lidyt"]
+albedo_texture = ExtResource("2_ny6dh")
+roughness_texture = ExtResource("4_75ggc")
+normal_enabled = true
+normal_texture = ExtResource("3_oprn2")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hc5cy"]
+material = SubResource("StandardMaterial3D_lidyt")
+size = Vector2(20, 20)
+
+[node name="LostInTimeWorld" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mpkyy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, 0)
+mesh = SubResource("PlaneMesh_bowgs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_imsvo")
+
+[node name="Floor2" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_hc5cy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_imsvo")
+
+[node name="Portals" type="Node3D" parent="."]
+
+[node name="magic_portal" parent="Portals" instance=ExtResource("2_2oxby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00808144, -0.0237584, -7.413)
+gem_scene = ExtResource("3_dgde8")
+gem_color = "blue"
+
+[node name="magic_portal2" parent="Portals" instance=ExtResource("2_2oxby")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.79372, 0, 0)
+portal_color_override = Color(0.462745, 0.0117647, 0.721569, 1)
+gem_scene = ExtResource("3_dgde8")
+gem_color = "green"
+
+[node name="magic_portal3" parent="Portals" instance=ExtResource("2_2oxby")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.08867, 0, -0.0411854)
+portal_color_override = Color(0.462745, 0.0117647, 0.721569, 1)
+gem_scene = ExtResource("3_dgde8")
+gem_color = "red"
+
+[node name="magic_portal4" parent="Portals" instance=ExtResource("2_2oxby")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.122499, 0, 6.18169)
+portal_color_override = Color(0.462745, 0.0117647, 0.721569, 1)
+gem_scene = ExtResource("3_dgde8")
+gem_color = "yellow"
+
+[node name="Player" parent="." instance=ExtResource("3_k4eva")]
