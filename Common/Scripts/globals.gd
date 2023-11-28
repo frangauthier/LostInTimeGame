@@ -14,10 +14,13 @@ var gem_collected = {
 	"green": false,
 }
 
-func complete_level(gem_color: String):
+func complete_level(gem_color: String) -> bool: 
 	if [GEM_COLORS.BLUE, GEM_COLORS.RED, GEM_COLORS.YELLOW, GEM_COLORS.GREEN].has(gem_color):
-		gem_collected[gem_color] = true
-		check_victory()
+		if not gem_collected[gem_color]:
+			gem_collected[gem_color] = true
+			check_victory()
+			return true
+	return false
 
 var end_game_menu: PackedScene = preload("res://Common/Scenes/UI/EndGameMenu.tscn")
 func check_victory():
@@ -34,8 +37,12 @@ const level_scenes = {
 	"yellow": "res://YellowLevel/yellow_level.tscn",
 	"green": "res://GreenLevel/green_level.tscn",
 }
+const lobby_scene = preload("res://Common/Scenes/Levels/lost_in_time_world.tscn")
 func load_level(gem_color: String):
-	var next_scene = load(level_scenes[gem_color])
-	get_tree().change_scene_to_packed(next_scene)
+	if gem_color == "lobby":
+		get_tree().change_scene_to_packed(lobby_scene)
+	else:
+		var next_scene = load(level_scenes[gem_color])
+		get_tree().change_scene_to_packed(next_scene)
 	
 

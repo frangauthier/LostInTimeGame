@@ -54,8 +54,3 @@ script = ExtResource("1_jrqud")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -180.74, -0.961579)
 mesh = SubResource("ArrayMesh_icfsp")
 skeleton = NodePath("")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77, -29.7396, -91.9616)
-light_color = Color(0, 0, 1, 1)
-light_energy = 3.004
