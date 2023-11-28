@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjykeqsxjykxu"]
+[gd_scene load_steps=9 format=3 uid="uid://cjykeqsxjykxu"]
 
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_omg1k"]
+[ext_resource type="PackedScene" uid="uid://cftr6ie1o3auk" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="2_x4wxs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xsofc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -20,9 +21,10 @@ albedo_color = Color(0.6, 0.517647, 0.254902, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_q15gj"]
 material = SubResource("StandardMaterial3D_x65hj")
+size = Vector2(5, 5)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ff5sy"]
-data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ugcr8"]
+data = PackedVector3Array(2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5)
 
 [node name="YellowLevel" type="Node3D"]
 
@@ -37,8 +39,12 @@ shadow_enabled = true
 mesh = SubResource("PlaneMesh_q15gj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_ff5sy")
+shape = SubResource("ConcavePolygonShape3D_ugcr8")
 
 [node name="Player" parent="." instance=ExtResource("1_omg1k")]
+
+[node name="PortalBackLobby" parent="." instance=ExtResource("2_x4wxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)

@@ -18,10 +18,11 @@ func _process(delta):
 
 
 func _on_complete_button_body_entered(body):
-	var gem = gem_scene.instantiate() as Node3D
-	gem.scale = Vector3.ONE*0.003;
-	$GemLocation.add_child(gem)
-	Globals.complete_level(gem_color);
+	var new_gem = Globals.complete_level(gem_color);
+	if new_gem:
+		var gem = gem_scene.instantiate() as Node3D
+		gem.scale = Vector3.ONE*0.003;
+		$GemLocation.add_child(gem)
 
 
 func _on_enter_portal_area_body_entered(body):
