@@ -22,3 +22,7 @@ func _on_complete_button_body_entered(body):
 	gem.scale = Vector3.ONE*0.003;
 	$GemLocation.add_child(gem)
 	Globals.complete_level(gem_color);
+
+
+func _on_enter_portal_area_body_entered(body):
+	Globals.load_level(gem_color)

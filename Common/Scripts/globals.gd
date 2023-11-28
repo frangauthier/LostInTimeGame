@@ -27,4 +27,15 @@ func check_victory():
 		add_child(end_menu)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		get_tree().paused = true
-		
+
+const level_scenes = {
+	"blue": "res://BlueLevel/blue_level.tscn",
+	"red": "res://RedLevel/red_level.tscn",
+	"yellow": "res://YellowLevel/yellow_level.tscn",
+	"green": "res://GreenLevel/green_level.tscn",
+}
+func load_level(gem_color: String):
+	var next_scene = load(level_scenes[gem_color])
+	get_tree().change_scene_to_packed(next_scene)
+	
+

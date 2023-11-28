@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://yk0isbn513re"]
+[gd_scene load_steps=24 format=3 uid="uid://yk0isbn513re"]
 
 [ext_resource type="Texture2D" uid="uid://c3qvjq47ucbfk" path="res://Common/Assets/Textures/mpumalanga_veld_puresky_2k.hdr" id="1_a2sw3"]
 [ext_resource type="PackedScene" uid="uid://besfpqmr1e0bs" path="res://Common/Scenes/Objects/magic_portal.tscn" id="2_2oxby"]
@@ -42,6 +42,38 @@ normal_texture = ExtResource("3_oprn2")
 material = SubResource("StandardMaterial3D_lidyt")
 size = Vector2(20, 20)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3kg3s"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_t2wmw"]
+material = SubResource("StandardMaterial3D_3kg3s")
+radius = 0.2
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3cqwp"]
+albedo_color = Color(0, 0.54902, 0.027451, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_aqqa7"]
+material = SubResource("StandardMaterial3D_3cqwp")
+radius = 0.2
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_445n3"]
+albedo_color = Color(0.815686, 0.137255, 0.215686, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_63qse"]
+material = SubResource("StandardMaterial3D_445n3")
+radius = 0.2
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q1jrh"]
+albedo_color = Color(0.643137, 0.623529, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_e1dbm"]
+material = SubResource("StandardMaterial3D_q1jrh")
+radius = 0.2
+height = 1.0
+
 [node name="LostInTimeWorld" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -53,44 +85,81 @@ shadow_enabled = true
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, 0)
+layers = 2
 mesh = SubResource("PlaneMesh_bowgs")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_imsvo")
 
 [node name="Floor2" type="MeshInstance3D" parent="."]
+layers = 2
 mesh = SubResource("PlaneMesh_hc5cy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor2"]
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_imsvo")
 
 [node name="Portals" type="Node3D" parent="."]
 
-[node name="magic_portal" parent="Portals" instance=ExtResource("2_2oxby")]
+[node name="blue_portal" parent="Portals" instance=ExtResource("2_2oxby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00808144, -0.0237584, -7.413)
 gem_scene = ExtResource("3_dgde8")
 gem_color = "blue"
 
-[node name="magic_portal2" parent="Portals" instance=ExtResource("2_2oxby")]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portals/blue_portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26532, 1.26856, -0.153371)
+mesh = SubResource("CapsuleMesh_t2wmw")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Portals/blue_portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27338, 1.26856, -0.153371)
+mesh = SubResource("CapsuleMesh_t2wmw")
+
+[node name="green_portal" parent="Portals" instance=ExtResource("2_2oxby")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.79372, 0, 0)
 portal_color_override = Color(0.462745, 0.0117647, 0.721569, 1)
 gem_scene = ExtResource("3_dgde8")
 gem_color = "green"
 
-[node name="magic_portal3" parent="Portals" instance=ExtResource("2_2oxby")]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portals/green_portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26532, 1.26856, -0.153371)
+mesh = SubResource("CapsuleMesh_aqqa7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Portals/green_portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31999, 1.26856, -0.153371)
+mesh = SubResource("CapsuleMesh_aqqa7")
+
+[node name="red_portal" parent="Portals" instance=ExtResource("2_2oxby")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.08867, 0, -0.0411854)
 portal_color_override = Color(0.462745, 0.0117647, 0.721569, 1)
 gem_scene = ExtResource("3_dgde8")
 gem_color = "red"
 
-[node name="magic_portal4" parent="Portals" instance=ExtResource("2_2oxby")]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portals/red_portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26532, 1.26856, -0.153371)
+mesh = SubResource("CapsuleMesh_63qse")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Portals/red_portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27115, 1.26856, -0.153371)
+mesh = SubResource("CapsuleMesh_63qse")
+
+[node name="yellow_portal" parent="Portals" instance=ExtResource("2_2oxby")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.122499, 0, 6.18169)
 portal_color_override = Color(0.462745, 0.0117647, 0.721569, 1)
 gem_scene = ExtResource("3_dgde8")
 gem_color = "yellow"
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portals/yellow_portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26532, 1.26856, -0.153371)
+mesh = SubResource("CapsuleMesh_e1dbm")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Portals/yellow_portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29983, 1.26856, -0.153371)
+mesh = SubResource("CapsuleMesh_e1dbm")
+
 [node name="Player" parent="." instance=ExtResource("3_k4eva")]
+collision_mask = 3
