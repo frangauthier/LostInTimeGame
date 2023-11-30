@@ -1,7 +1,7 @@
 extends Node3D
 
-@onready var bgm_player: AudioStreamPlayer3D = $"BGM-Player"
-@onready var ambience_player: AudioStreamPlayer3D = $"Sound-Players/Ambience-Player"
+@onready var bgm_player: AudioStreamPlayer3D = $"SoundPlayers/BGM-Player"
+@onready var ambience_player: AudioStreamPlayer3D = $"SoundPlayers/Ambience-Player"
 
 
 # Called when the node enters the scene tree for the first time.
