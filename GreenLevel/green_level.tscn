@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://iok7mad6ntj0"]
 
-[ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_level.gd" id="1_5702t"]
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_oxf7w"]
+[ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_level.gd" id="1_vo1iy"]
 [ext_resource type="PackedScene" uid="uid://cftr6ie1o3auk" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="2_2wu0v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ns0eh"]
@@ -28,7 +28,7 @@ size = Vector2(5, 5)
 data = PackedVector3Array(2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5)
 
 [node name="GreenLevel" type="Node3D"]
-script = ExtResource("1_5702t")
+script = ExtResource("1_vo1iy")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5ggl8")
