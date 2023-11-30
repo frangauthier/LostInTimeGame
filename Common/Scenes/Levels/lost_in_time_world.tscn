@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://yk0isbn513re"]
+[gd_scene load_steps=25 format=3 uid="uid://yk0isbn513re"]
 
 [ext_resource type="Texture2D" uid="uid://c3qvjq47ucbfk" path="res://Common/Assets/Textures/mpumalanga_veld_puresky_2k.hdr" id="1_a2sw3"]
 [ext_resource type="PackedScene" uid="uid://besfpqmr1e0bs" path="res://Common/Scenes/Objects/magic_portal.tscn" id="2_2oxby"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="3_k4eva"]
 [ext_resource type="Texture2D" uid="uid://chl6tgct4wlof" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_nor_gl_1k.png" id="3_oprn2"]
 [ext_resource type="Texture2D" uid="uid://dg0g22clwmej5" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_rough_1k.png" id="4_75ggc"]
+[ext_resource type="PackedScene" uid="uid://bxje7wxl4i0vq" path="res://Common/Scenes/Objects/Red_gem.tscn" id="7_duh7q"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_eu8wj"]
 panorama = ExtResource("1_a2sw3")
@@ -136,7 +137,7 @@ mesh = SubResource("CapsuleMesh_aqqa7")
 [node name="red_portal" parent="Portals" instance=ExtResource("2_2oxby")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.08867, 0, -0.0411854)
 portal_color_override = Color(0.462745, 0.0117647, 0.721569, 1)
-gem_scene = ExtResource("3_dgde8")
+gem_scene = ExtResource("7_duh7q")
 gem_color = "red"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Portals/red_portal"]
