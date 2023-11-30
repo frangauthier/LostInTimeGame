@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqlw36n7fgxns"]
+[gd_scene load_steps=9 format=3 uid="uid://dqlw36n7fgxns"]
 
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_abhmw"]
+[ext_resource type="Script" path="res://RedLevel/Scripts/KillCounterUI.gd" id="2_6cdtc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7nou0"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -43,3 +44,26 @@ mesh = SubResource("PlaneMesh_6w7uw")
 shape = SubResource("ConcavePolygonShape3D_2xt6t")
 
 [node name="Player" parent="." instance=ExtResource("1_abhmw")]
+
+[node name="KillCounterUI" type="CanvasLayer" parent="."]
+script = ExtResource("2_6cdtc")
+
+[node name="MarginContainer" type="MarginContainer" parent="KillCounterUI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.5
+offset_right = 30.5
+offset_bottom = 36.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="KillCounterUI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="KillCounterUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Killed: 0"
