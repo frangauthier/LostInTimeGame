@@ -4,6 +4,8 @@ signal collected
 
 const ROTATION_SPEED = 1
 
+var is_collected = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.rotation = Vector3(rotation.x, randf(), rotation.z)
@@ -14,7 +16,12 @@ func _process(delta):
 	self.rotate_y(delta * ROTATION_SPEED)
 
 func _on_area_3d_body_entered(body):
-	$PickupSound.play()
-	collected.emit()
-	queue_free()
+	if !is_collected:
+		is_collected = true
+		$PickupSound.play()
+		$AnimationPlayer.play("Collected")
+		collected.emit()
+		$Timer.start()
 
+func _on_timer_timeout():
+	queue_free()
