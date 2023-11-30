@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmjtqyr3ghwgb"]
+
+[ext_resource type="Script" path="res://BlueLevel/target_ui.gd" id="1_ugy7h"]
+[ext_resource type="Texture2D" uid="uid://di3s4kdtkdtdw" path="res://BlueLevel/progress_bar/bg.png" id="2_d1w1y"]
+[ext_resource type="Texture2D" uid="uid://cxb14vqgeqdbj" path="res://BlueLevel/progress_bar/over.png" id="3_jmsou"]
+[ext_resource type="Texture2D" uid="uid://cna3hwb5au55r" path="res://BlueLevel/progress_bar/progress.png" id="4_eoyc2"]
+
+[sub_resource type="Theme" id="Theme_8eoip"]
+
+[node name="TargetUI" type="CanvasLayer"]
+script = ExtResource("1_ugy7h")
+
+[node name="TargetContainer" type="MarginContainer" parent="."]
+offset_right = 129.0
+offset_bottom = 50.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TargetContainer"]
+layout_mode = 2
+
+[node name="PLACETARGETIMGHERE" type="TextureRect" parent="TargetContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TargetVar" type="Label" parent="TargetContainer/HBoxContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Total" type="Label" parent="TargetContainer/HBoxContainer"]
+layout_mode = 2
+text = "/10"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_8eoip")
+max_value = 30.0
+value = 15.0
+texture_under = ExtResource("2_d1w1y")
+texture_over = ExtResource("3_jmsou")
+texture_progress = ExtResource("4_eoyc2")
+tint_under = Color(0, 0, 0, 1)
+tint_over = Color(0, 1, 1, 1)
+tint_progress = Color(0, 1, 1, 1)
