@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://iok7mad6ntj0"]
+[gd_scene load_steps=12 format=3 uid="uid://iok7mad6ntj0"]
 
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_oxf7w"]
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_level.gd" id="1_vo1iy"]
 [ext_resource type="PackedScene" uid="uid://cftr6ie1o3auk" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="2_2wu0v"]
+[ext_resource type="AudioStream" uid="uid://dsjsgbo52hu0f" path="res://GreenLevel/GreenAssests/BGM/dramatic-jungle-beat-loop_96bpm_B_minor.mp3" id="4_mf8a4"]
+[ext_resource type="AudioStream" uid="uid://bd7mcvk2qaio8" path="res://GreenLevel/GreenAssests/BGM/zapsplat_nature_rainforest_evening_cicada_insects_birds_distant_echos_28312.mp3" id="5_wokgp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ns0eh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -54,5 +56,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.321)
 [node name="SoundPlayers" type="Node" parent="."]
 
 [node name="BGM-Player" type="AudioStreamPlayer3D" parent="SoundPlayers"]
+stream = ExtResource("4_mf8a4")
 
 [node name="Ambience-Player" type="AudioStreamPlayer3D" parent="SoundPlayers"]
+stream = ExtResource("5_wokgp")
+volume_db = 0.1
