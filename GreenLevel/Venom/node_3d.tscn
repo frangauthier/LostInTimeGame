@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfw60hlyg2jyq"]
+
+[ext_resource type="PackedScene" uid="uid://cx8od8nfpbgmy" path="res://GreenLevel/Venom/Venom 2018.fbx" id="1_5trmb"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Venom 2018" parent="." instance=ExtResource("1_5trmb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61161, 0, 0.0198348)
