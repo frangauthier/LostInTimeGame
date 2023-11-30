@@ -2,7 +2,7 @@
 
 [sub_resource type="Theme" id="Theme_ou7vt"]
 
-[node name="UI" type="CanvasLayer"]
+[node name="Green_UI" type="CanvasLayer"]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_right = 40.0
