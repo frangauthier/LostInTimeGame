@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://7dbuw4p62ov4"]
+[gd_scene load_steps=7 format=3 uid="uid://bwmp0iies4lj2"]
 
 [ext_resource type="Script" path="res://Common/Scenes/Objects/any_gem.gd" id="1_gay5n"]
 [ext_resource type="Texture2D" uid="uid://bdlihr4xx2mrq" path="res://Common/Assets/Models/stylized_crystal_gems_asset_pack/textures/material_3_baseColor.png" id="1_oc860"]
