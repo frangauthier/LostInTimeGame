@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://du80smrse61sd"]
+[gd_scene load_steps=2 format=3 uid="uid://du80smrse61sd"]
+
+[sub_resource type="Theme" id="Theme_ou7vt"]
 
 [node name="UI" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_ou7vt")
+text = "x"
+
+[node name="counter" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
