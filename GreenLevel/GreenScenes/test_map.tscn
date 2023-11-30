@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://biyca3rkmjncm"]
 
-[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/turn.tscn" id="1_x66wx"]
+[ext_resource type="PackedScene" uid="uid://uf3ab3uo1c3j" path="res://GreenLevel/GreenScenes/turn.tscn" id="1_x66wx"]
 [ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/straight.tscn" id="2_f4ggt"]
 
 [node name="TestMap" type="Node3D"]

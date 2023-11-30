@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://66tx3awrx08f"]
+[gd_scene load_steps=5 format=3 uid="uid://66tx3awrx08f"]
 
-[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/turn.tscn" id="1_prv5u"]
+[ext_resource type="PackedScene" uid="uid://uf3ab3uo1c3j" path="res://GreenLevel/GreenScenes/turn.tscn" id="1_prv5u"]
 [ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/straight.tscn" id="2_jirxs"]
 [ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="3_byj6m"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_eppt8"]
 
 [node name="TestMap" type="Node3D"]
 
@@ -33,7 +35,7 @@ transform = Transform3D(-0.885965, -0.0829815, 0.456262, -0.447838, 0.4086, -0.7
 transform = Transform3D(-0.885964, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120436, -0.908933, -0.399168, -0.837433, 4.51553, -10.605)
 
 [node name="Turn4" parent="." instance=ExtResource("1_prv5u")]
-transform = Transform3D(0.975518, -0.00978113, 0.2197, 0.0119358, 0.999893, -0.0084822, -0.219594, 0.0108969, 0.975531, 26.561, -51.2097, -12.7456)
+transform = Transform3D(0.975518, -0.00978113, 0.2197, 0.0119358, 0.999893, -0.0084822, -0.219594, 0.0108969, 0.975531, 25.4607, -51.5367, -13.2528)
 
 [node name="Straight" parent="Turn4" instance=ExtResource("2_jirxs")]
 transform = Transform3D(-0.885966, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120435, -0.908933, -0.399168, -0.183792, 1.32045, -3.59194)
@@ -58,3 +60,9 @@ transform = Transform3D(1, 0, 0, 0, -0.85137, 0.524566, 0, -0.524566, -0.85137, 
 
 [node name="Camera3D" type="Camera3D" parent="Venom 2018"]
 transform = Transform3D(-0.999942, -0.00923521, 0.00557214, 0.0101675, -0.9795, 0.201187, 0.0035999, 0.201232, 0.979537, 0, 2.83832, 6.05048)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9604, 0.950449, -2.0419)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+mesh = SubResource("PlaneMesh_eppt8")
