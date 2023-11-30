@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://brunr2p1xxuji"]
+
+[ext_resource type="Script" path="res://RedLevel/NoahFolder/Scripts/enemy.gd" id="1_groen"]
+[ext_resource type="PackedScene" uid="uid://b8jqhu4iqvkdn" path="res://RedLevel/NoahFolder/Worker/worker.gltf" id="1_hxm03"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5pyjf"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_21nre"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_07cug"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_turvq"]
+advance_mode = 2
+advance_condition = &"is_running"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w0a47"]
+advance_mode = 2
+advance_condition = &"is_idling"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ccoaw"]
+states/idle/node = SubResource("AnimationNodeAnimation_5pyjf")
+states/idle/position = Vector2(313, 59)
+states/run/node = SubResource("AnimationNodeAnimation_21nre")
+states/run/position = Vector2(461, 59)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_07cug"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_turvq"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_w0a47")]
+
+[node name="Enemy" instance=ExtResource("1_hxm03")]
+
+[node name="Worker" parent="." index="0"]
+script = ExtResource("1_groen")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Worker" index="3"]
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_ccoaw")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/conditions/is_idling = false
+parameters/conditions/is_running = false
