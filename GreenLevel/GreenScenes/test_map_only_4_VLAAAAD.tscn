@@ -1,57 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://biyca3rkmjncm"]
+[gd_scene load_steps=3 format=3 uid="uid://bribbgc4qrl52"]
 
-[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/turn.tscn" id="1_x66wx"]
-[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/straight.tscn" id="2_f4ggt"]
-[ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="3_8dauk"]
+[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/turn.tscn" id="1_2ukvb"]
+[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/straight.tscn" id="2_dslyy"]
 
 [node name="TestMap" type="Node3D"]
 
-[node name="Turn" parent="." instance=ExtResource("1_x66wx")]
+[node name="Turn" parent="." instance=ExtResource("1_2ukvb")]
 
-[node name="Turn2" parent="." instance=ExtResource("1_x66wx")]
+[node name="Turn2" parent="." instance=ExtResource("1_2ukvb")]
 transform = Transform3D(-0.815431, -5.0605e-08, -0.578854, 0, -1, 8.74228e-08, -0.578854, 7.12872e-08, 0.815431, -16.8647, -20.2153, -5.39665)
 
-[node name="Straight" parent="Turn2" instance=ExtResource("2_f4ggt")]
+[node name="Straight" parent="Turn2" instance=ExtResource("2_dslyy")]
 transform = Transform3D(-0.885966, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120435, -0.908933, -0.399168, -0.183792, 1.32045, -3.59194)
 
-[node name="Straight2" parent="Turn2" instance=ExtResource("2_f4ggt")]
+[node name="Straight2" parent="Turn2" instance=ExtResource("2_dslyy")]
 transform = Transform3D(-0.885965, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120435, -0.908933, -0.399168, -0.494122, 2.90023, -7.05823)
 
-[node name="Straight3" parent="Turn2" instance=ExtResource("2_f4ggt")]
+[node name="Straight3" parent="Turn2" instance=ExtResource("2_dslyy")]
 transform = Transform3D(-0.885964, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120436, -0.908933, -0.399168, -0.837433, 4.51553, -10.605)
 
-[node name="Turn3" parent="." instance=ExtResource("1_x66wx")]
+[node name="Turn3" parent="." instance=ExtResource("1_2ukvb")]
 transform = Transform3D(-0.81504, 0.0146428, 0.579219, 0.0119358, 0.999893, -0.0084822, -0.579281, 1.21903e-07, -0.815128, -2.88607, -30.726, -25.1426)
 
-[node name="Straight" parent="Turn3" instance=ExtResource("2_f4ggt")]
+[node name="Straight" parent="Turn3" instance=ExtResource("2_dslyy")]
 transform = Transform3D(-0.885966, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120435, -0.908933, -0.399168, -0.183792, 1.32045, -3.59194)
 
-[node name="Straight2" parent="Turn3" instance=ExtResource("2_f4ggt")]
+[node name="Straight2" parent="Turn3" instance=ExtResource("2_dslyy")]
 transform = Transform3D(-0.885965, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120435, -0.908933, -0.399168, -0.494122, 2.90023, -7.05823)
 
-[node name="Straight3" parent="Turn3" instance=ExtResource("2_f4ggt")]
+[node name="Straight3" parent="Turn3" instance=ExtResource("2_dslyy")]
 transform = Transform3D(-0.885964, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120436, -0.908933, -0.399168, -0.837433, 4.51553, -10.605)
 
-[node name="Turn4" parent="." instance=ExtResource("1_x66wx")]
+[node name="Turn4" parent="." instance=ExtResource("1_2ukvb")]
 transform = Transform3D(0.975518, -0.00978113, 0.2197, 0.0119358, 0.999893, -0.0084822, -0.219594, 0.0108969, 0.975531, 26.561, -51.2097, -12.7456)
 
-[node name="Straight" parent="Turn4" instance=ExtResource("2_f4ggt")]
+[node name="Straight" parent="Turn4" instance=ExtResource("2_dslyy")]
 transform = Transform3D(-0.885966, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120435, -0.908933, -0.399168, -0.183792, 1.32045, -3.59194)
 
-[node name="Straight2" parent="Turn4" instance=ExtResource("2_f4ggt")]
+[node name="Straight2" parent="Turn4" instance=ExtResource("2_dslyy")]
 transform = Transform3D(-0.885965, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120435, -0.908933, -0.399168, -0.494122, 2.90023, -7.05823)
 
-[node name="Straight3" parent="Turn4" instance=ExtResource("2_f4ggt")]
+[node name="Straight3" parent="Turn4" instance=ExtResource("2_dslyy")]
 transform = Transform3D(-0.885964, -0.0829815, 0.456262, -0.447838, 0.4086, -0.795293, -0.120436, -0.908933, -0.399168, -0.837433, 4.51553, -10.605)
 
-[node name="Straight" parent="." instance=ExtResource("2_f4ggt")]
+[node name="Straight" parent="." instance=ExtResource("2_dslyy")]
 transform = Transform3D(0.936776, -0.302659, 0.175636, -7.21427e-09, 0.501918, 0.864915, -0.349929, -0.810232, 0.470185, 20.5465, -42.056, -29.9648)
 
-[node name="Straight2" parent="." instance=ExtResource("2_f4ggt")]
+[node name="Straight2" parent="." instance=ExtResource("2_dslyy")]
 transform = Transform3D(0.936776, -0.302659, 0.175636, -7.21427e-09, 0.501918, 0.864915, -0.349929, -0.810232, 0.470185, 21.7807, -44.0253, -26.7826)
 
-[node name="Straight3" parent="." instance=ExtResource("2_f4ggt")]
+[node name="Straight3" parent="." instance=ExtResource("2_dslyy")]
 transform = Transform3D(0.936776, -0.302659, 0.175636, -7.21427e-09, 0.501918, 0.864915, -0.349929, -0.810232, 0.470185, 22.8244, -45.7587, -24.0038)
-
-[node name="Venom 2018" parent="." instance=ExtResource("3_8dauk")]
-transform = Transform3D(1, 0, 0, 0, -0.85137, 0.524566, 0, -0.524566, -0.85137, 0.0293156, 7.07246, 1.3301)
