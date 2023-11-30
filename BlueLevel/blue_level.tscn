@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c10pr8glgha0h"]
 
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_rh8s2"]
-[ext_resource type="PackedScene" uid="uid://cftr6ie1o3auk" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="2_dlojs"]
+[ext_resource type="PackedScene" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="2_dlojs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ly6jl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

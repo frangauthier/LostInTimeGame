@@ -28,5 +28,11 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/8f5c8f610f17473b93ee6a4b4a5cd1c3_fbx/Object_2/RootNode/Object_4/Skeleton3D": {
+"retarget/bone_map": Resource("res://GreenLevel/new_bone_map.tres")
+}
+}
+}
 gltf/embedded_image_handling=1
