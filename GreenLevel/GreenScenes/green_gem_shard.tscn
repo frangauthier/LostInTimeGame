@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7i1s2j7kcomy"]
+[gd_scene load_steps=10 format=3 uid="uid://c7i1s2j7kcomy"]
 
-[ext_resource type="Texture2D" uid="uid://bqtsxsclp2ohn" path="res://Common/Assets/Models/stylized_crystal_gems_asset_pack/textures/material_normal.png" id="1_fkvpe"]
-[ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_gem_shard.gd" id="1_tks6q"]
+[ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_gem_shard.gd" id="1_0j0dg"]
+[ext_resource type="Texture2D" uid="uid://bqtsxsclp2ohn" path="res://Common/Assets/Models/stylized_crystal_gems_asset_pack/textures/material_normal.png" id="2_2meep"]
+[ext_resource type="AudioStream" uid="uid://dpth6lhghqk5s" path="res://GreenLevel/GreenAssests/Sounds/coin_c_02-102844.mp3" id="3_3vf6f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptj4c"]
 resource_name = "Material"
@@ -10,7 +11,7 @@ vertex_color_use_as_albedo = true
 albedo_color = Color(0, 0.905882, 0, 1)
 roughness = 0.4
 normal_enabled = true
-normal_texture = ExtResource("1_fkvpe")
+normal_texture = ExtResource("2_2meep")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_a3ewx"]
 _surfaces = [{
@@ -42,6 +43,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_a3ewx")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_omtr3"]
+radius = 0.343384
+
 [sub_resource type="Animation" id="Animation_r3v0k"]
 resource_name = "Float"
 length = 2.0
@@ -50,9 +54,9 @@ tracks/0/type = "position_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 2, 1, 0, 0, 0)
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 0, 0.25, 0, 2, 1, 0, 0, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7qe1m"]
 _data = {
@@ -60,16 +64,27 @@ _data = {
 }
 
 [node name="gem_shard" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.911522, 0)
-script = ExtResource("1_tks6q")
+script = ExtResource("1_0j0dg")
 
 [node name="Cube" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.401291, 0)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_e3m57")
 skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="Cube"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/Area3D"]
+shape = SubResource("SphereShape3D_omtr3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Cube")
 libraries = {
 "": SubResource("AnimationLibrary_7qe1m")
 }
+
+[node name="PickupSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_3vf6f")
+volume_db = 1.0
+
+[connection signal="body_entered" from="Cube/Area3D" to="." method="_on_area_3d_body_entered"]
