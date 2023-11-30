@@ -1,0 +1,4 @@
+Bark Texture:
+	-https://polyhaven.com/a/tree_bark_03
+	-Rob Tuytel
+	-Tree Bark 03
