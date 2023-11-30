@@ -23,6 +23,10 @@ Globals="*res://Common/Scripts/globals.gd"
 
 project/assembly_name="Lost In Time"
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 move_right={
