@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://baaepn0px8ens"]
+
+[ext_resource type="PackedScene" uid="uid://8xqqes65myec" path="res://GreenLevel/GreenScenes/branch.tscn" id="1_ylt6n"]
+
+[node name="Turn" type="Node3D"]
+
+[node name="Branch" parent="." instance=ExtResource("1_ylt6n")]
+transform = Transform3D(0.973223, 0, -0.229863, 0.222495, 0.251157, 0.942028, 0.0577317, -0.967946, 0.244432, 0, 0, 0)
+
+[node name="Branch2" parent="." instance=ExtResource("1_ylt6n")]
+transform = Transform3D(0.973223, 0, -0.229863, 0.222495, 0.251157, 0.942028, 0.0577317, -0.967946, 0.244432, 0, -0.992872, 3.87688)
+
+[node name="Branch3" parent="." instance=ExtResource("1_ylt6n")]
+transform = Transform3D(0.973223, 0, -0.229863, 0.222495, 0.251157, 0.942028, 0.0577317, -0.967946, 0.244432, 0, -1.99253, 7.74363)
+
+[node name="Branch4" parent="." instance=ExtResource("1_ylt6n")]
+transform = Transform3D(0.947482, 0.171974, -0.269634, 0.222495, 0.251157, 0.942028, 0.229725, -0.952547, 0.199704, -0.282333, -2.95612, 11.4173)
+
+[node name="Branch5" parent="." instance=ExtResource("1_ylt6n")]
+transform = Transform3D(0.845719, 0.430988, -0.314655, 0.152309, 0.370168, 0.916394, 0.51143, -0.822937, 0.247415, -1.44459, -4.12624, 14.6999)
+
+[node name="Branch6" parent="." instance=ExtResource("1_ylt6n")]
+transform = Transform3D(0.539622, 0.745663, -0.39089, 0.152309, 0.370168, 0.916394, 0.828016, -0.554042, 0.0861795, -3.59612, -5.50881, 17.2786)
+
+[node name="Branch7" parent="." instance=ExtResource("1_ylt6n")]
+transform = Transform3D(0.223444, 0.890308, -0.396768, 0.152309, 0.370168, 0.916394, 0.962743, -0.265194, -0.0528901, -6.68774, -6.91999, 18.8355)
+
+[node name="Branch8" parent="." instance=ExtResource("1_ylt6n")]
+transform = Transform3D(0.00152621, 0.927123, -0.374755, 0.152309, 0.370167, 0.916394, 0.988332, -0.0584771, -0.140644, -10.1389, -8.34034, 19.4389)
+
+[node name="Branch9" parent="." instance=ExtResource("1_ylt6n")]
+transform = Transform3D(-0.348051, 0.912275, -0.215903, 0.151501, 0.28201, 0.947374, 0.925152, 0.297025, -0.236365, -13.4116, -9.55372, 19.0341)

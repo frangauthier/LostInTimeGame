@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfhj4226571dl"]
+
+[ext_resource type="PackedScene" uid="uid://8xqqes65myec" path="res://GreenLevel/GreenScenes/branch.tscn" id="1_urp3b"]
+
+[node name="Straight" type="Node3D"]
+
+[node name="Branch" parent="." instance=ExtResource("1_urp3b")]
