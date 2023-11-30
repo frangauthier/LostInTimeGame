@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="3_k4eva"]
 [ext_resource type="Texture2D" uid="uid://chl6tgct4wlof" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_nor_gl_1k.png" id="3_oprn2"]
 [ext_resource type="Texture2D" uid="uid://dg0g22clwmej5" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_rough_1k.png" id="4_75ggc"]
-[ext_resource type="PackedScene" path="res://Common/Scenes/Objects/Green_gem.tscn" id="7_gc2gi"]
+[ext_resource type="PackedScene" uid="uid://7dbuw4p62ov4" path="res://Common/Scenes/Objects/Green_gem.tscn" id="7_gc2gi"]
 [ext_resource type="PackedScene" path="res://Common/Scenes/Objects/Red_gem.tscn" id="8_qfyme"]
 [ext_resource type="PackedScene" path="res://Common/Scenes/Objects/Yellow_gem.tscn" id="9_jx6dt"]
 
