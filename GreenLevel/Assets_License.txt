@@ -16,3 +16,23 @@ Ambient Sound:
 	Link: https://www.zapsplat.com/music/evening-tropical-rainforest-cicada-and-other-insects-distant-birds-echo/
 	Author: ZapSplat
 	Name: Evening tropical rainforest, cicada and other insects, distant birds echo
+
+3D Gold Coin:
+	Link: https://www.turbosquid.com/3d-models/3d-simple-gold-coin-model-2084198
+	Author: Makartsov Aleksandr
+	Name: 3D Simple gold coin model
+	
+Gold Material:
+	Link: https://www.poliigon.com/texture/painted-metal-texture-gold/7253
+	Author: Poliigon
+	Name: Painted Metal Texture, Gold
+
+Silver Material:
+	Link: https://www.poliigon.com/texture/lightly-worn-galvanised-steel-industrial-metal-texture/3129
+	Author: Poliigon
+	Name: Lightly Worn Galvanised Steel Industrial Metal Texture
+
+Bronze Material:
+	Link: https://www.poliigon.com/texture/bronze-metal-texture-worn/7248
+	Author: Poliigon
+	Name: Bronze Metal Texture, Worn
