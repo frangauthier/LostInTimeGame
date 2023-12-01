@@ -9,6 +9,8 @@ extends CanvasLayer
 @export var atlas_texture_height: int
 @export var frames_per_second: float = 5.0
 
+@onready var counter_label: Label = $CollectionContainer/VBoxContainer/HBoxContainer/Counter
+
 var atlas_rect: Rect2
 var current_frame: float = 0
 var total_frames
@@ -54,4 +56,4 @@ func gem_shard_animation(delta: float):
 
 func _on_gem_shard_collected():
 	gem_counter += 1
-	$CollectionContainer/VBoxContainer/HBoxContainer/Counter.text = "x " + str(gem_counter)
+	counter_label.text = "x " + str(gem_counter)
