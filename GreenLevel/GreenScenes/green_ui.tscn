@@ -1,20 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://du80smrse61sd"]
+[gd_scene load_steps=4 format=3 uid="uid://du80smrse61sd"]
 
-[sub_resource type="Theme" id="Theme_ou7vt"]
+[ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_ui.gd" id="1_si3tl"]
+[ext_resource type="Texture2D" uid="uid://r8chtro0i1kq" path="res://GreenLevel/GreenAssests/ui_textures/gem-atlased.tres" id="2_1jc7a"]
 
-[node name="Green_UI" type="CanvasLayer"]
+[sub_resource type="Theme" id="Theme_r3s1b"]
+default_font_size = 30
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Green_UI" type="CanvasLayer" node_paths=PackedStringArray("texture_to_animate")]
+script = ExtResource("1_si3tl")
+texture_to_animate = NodePath("CollectedShards/VBoxContainer/HBoxContainer/Gem Shards")
+atlas_texture = ExtResource("2_1jc7a")
+atlas_total_columns = 6
+atlas_total_rows = 4
+atlas_texture_width = 130
+atlas_texture_height = 210
+frames_per_second = 10.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="CollectedShards" type="MarginContainer" parent="."]
+offset_right = 81.0
+offset_bottom = 60.0
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CollectedShards"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CollectedShards/VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_ou7vt")
-text = "x"
+size_flags_horizontal = 0
+size_flags_vertical = 4
 
-[node name="counter" type="Label" parent="MarginContainer/HBoxContainer"]
+[node name="Gem Shards" type="TextureRect" parent="CollectedShards/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_1jc7a")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Counter" type="Label" parent="CollectedShards/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_r3s1b")
+text = "x 0"
