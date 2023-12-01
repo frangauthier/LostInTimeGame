@@ -15,3 +15,7 @@ func _ready():
 func _process(delta):
 	
 	pass
+
+
+func _on_gem_shard_collected():
+	pass # Replace with function body.

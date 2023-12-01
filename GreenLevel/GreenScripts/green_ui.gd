@@ -12,6 +12,7 @@ extends CanvasLayer
 var atlas_rect: Rect2
 var current_frame: float = 0
 var total_frames
+var gem_counter: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -49,3 +50,8 @@ func gem_shard_animation(delta: float):
 	
 	# Update the texture in the TextureRect
 	texture_to_animate.texture = atlas_texture
+
+
+func _on_gem_shard_collected():
+	gem_counter += 1
+	$CollectionContainer/VBoxContainer/HBoxContainer/Counter.text = "x " + str(gem_counter)

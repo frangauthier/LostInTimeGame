@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://iok7mad6ntj0"]
 
+[ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_level_manager.gd" id="1_eepxb"]
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_oxf7w"]
-[ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_level.gd" id="1_vo1iy"]
 [ext_resource type="PackedScene" uid="uid://cftr6ie1o3auk" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="2_2wu0v"]
 [ext_resource type="PackedScene" uid="uid://du80smrse61sd" path="res://GreenLevel/GreenScenes/green_ui.tscn" id="2_kjlh8"]
 [ext_resource type="AudioStream" uid="uid://dsjsgbo52hu0f" path="res://GreenLevel/GreenAssests/Sounds/dramatic-jungle-beat-loop_96bpm_B_minor.mp3" id="4_t1ull"]
@@ -31,7 +31,7 @@ size = Vector2(5, 5)
 data = PackedVector3Array(2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5)
 
 [node name="GreenLevel" type="Node3D"]
-script = ExtResource("1_vo1iy")
+script = ExtResource("1_eepxb")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5ggl8")
@@ -41,6 +41,13 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="Green_UI" parent="." instance=ExtResource("2_kjlh8")]
+
+[node name="SoundPlayers" type="Node" parent="."]
+
+[node name="BGM-Player" type="AudioStreamPlayer3D" parent="SoundPlayers"]
+stream = ExtResource("4_t1ull")
+
+[node name="Ambience-Player" type="AudioStreamPlayer3D" parent="SoundPlayers"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_rv3e5")
@@ -56,12 +63,8 @@ shape = SubResource("ConcavePolygonShape3D_mfo6w")
 [node name="PortalBackLobby" parent="." instance=ExtResource("2_2wu0v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.321)
 
-[node name="SoundPlayers" type="Node" parent="."]
-
-[node name="BGM-Player" type="AudioStreamPlayer3D" parent="SoundPlayers"]
-stream = ExtResource("4_t1ull")
-
-[node name="Ambience-Player" type="AudioStreamPlayer3D" parent="SoundPlayers"]
-
 [node name="gem_shard" parent="." instance=ExtResource("6_7xxkl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0865316, 0.598623, 1.9899)
+
+[connection signal="collected" from="gem_shard" to="." method="_on_gem_shard_collected"]
+[connection signal="collected" from="gem_shard" to="Green_UI" method="_on_gem_shard_collected"]
