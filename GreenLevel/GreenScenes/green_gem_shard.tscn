@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7i1s2j7kcomy"]
+[gd_scene load_steps=11 format=3 uid="uid://c7i1s2j7kcomy"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_gem_shard.gd" id="1_0j0dg"]
 [ext_resource type="Texture2D" uid="uid://bqtsxsclp2ohn" path="res://Common/Assets/Models/stylized_crystal_gems_asset_pack/textures/material_normal.png" id="2_2meep"]
@@ -58,8 +58,20 @@ tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 0, 0.25, 0, 2, 1, 0, 0, 0)
 
+[sub_resource type="Animation" id="Animation_arpq3"]
+resource_name = "Collected"
+length = 0.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.5, 1, 0, 0.151432, 0)
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7qe1m"]
 _data = {
+"Collected": SubResource("Animation_arpq3"),
 "Float": SubResource("Animation_r3v0k")
 }
 
@@ -67,7 +79,7 @@ _data = {
 script = ExtResource("1_0j0dg")
 
 [node name="Cube" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.151432, 0)
 mesh = SubResource("ArrayMesh_e3m57")
 skeleton = NodePath("")
 
@@ -85,6 +97,11 @@ libraries = {
 
 [node name="PickupSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_3vf6f")
-volume_db = 1.0
+volume_db = 80.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="body_entered" from="Cube/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
