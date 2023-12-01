@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://duadvudo57vyx"]
+
+[ext_resource type="Texture2D" uid="uid://c3l5u8j3uxith" path="res://GreenLevel/GreenAssests/UI/MetalGoldPaint002/MetalGoldPaint002_COL_2K_METALNESS.png" id="1_swmp2"]
+[ext_resource type="Texture2D" uid="uid://c4du71hlma6bj" path="res://GreenLevel/GreenAssests/UI/MetalGoldPaint002/MetalGoldPaint002_METALNESS_2K_METALNESS.png" id="2_fkfdu"]
+[ext_resource type="Texture2D" uid="uid://dgewrghlilliy" path="res://GreenLevel/GreenAssests/UI/MetalGoldPaint002/MetalGoldPaint002_NRM_2K_METALNESS.png" id="3_jk2g2"]
+[ext_resource type="Texture2D" uid="uid://xphuoivvlsna" path="res://GreenLevel/GreenAssests/UI/MetalGoldPaint002/MetalGoldPaint002_ROUGHNESS_2K_METALNESS.png" id="4_fsuix"]
+
+[resource]
+albedo_texture = ExtResource("1_swmp2")
+metallic = 1.0
+metallic_texture = ExtResource("2_fkfdu")
+roughness_texture = ExtResource("4_fsuix")
+normal_enabled = true
+normal_texture = ExtResource("3_jk2g2")

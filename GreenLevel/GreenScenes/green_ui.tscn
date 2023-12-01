@@ -1,47 +1,107 @@
 [gd_scene load_steps=4 format=3 uid="uid://du80smrse61sd"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_ui.gd" id="1_si3tl"]
-[ext_resource type="Texture2D" uid="uid://r8chtro0i1kq" path="res://GreenLevel/GreenAssests/ui_textures/gem-atlased.tres" id="2_1jc7a"]
+[ext_resource type="Texture2D" uid="uid://r8chtro0i1kq" path="res://GreenLevel/GreenAssests/UI/gem-atlased.tres" id="2_u186g"]
 
 [sub_resource type="Theme" id="Theme_r3s1b"]
 default_font_size = 30
 
 [node name="Green_UI" type="CanvasLayer" node_paths=PackedStringArray("texture_to_animate")]
 script = ExtResource("1_si3tl")
-texture_to_animate = NodePath("CollectedShards/VBoxContainer/HBoxContainer/Gem Shards")
-atlas_texture = ExtResource("2_1jc7a")
+texture_to_animate = NodePath("CollectionContainer/VBoxContainer/HBoxContainer/Gem Shards")
+atlas_texture = ExtResource("2_u186g")
 atlas_total_columns = 6
 atlas_total_rows = 4
 atlas_texture_width = 130
 atlas_texture_height = 210
 frames_per_second = 10.0
 
-[node name="CollectedShards" type="MarginContainer" parent="."]
+[node name="CollectionContainer" type="MarginContainer" parent="."]
 offset_right = 81.0
 offset_bottom = 60.0
 size_flags_horizontal = 4
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CollectedShards"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CollectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CollectedShards/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CollectionContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 
-[node name="Gem Shards" type="TextureRect" parent="CollectedShards/VBoxContainer/HBoxContainer"]
+[node name="Gem Shards" type="TextureRect" parent="CollectionContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-texture = ExtResource("2_1jc7a")
+texture = ExtResource("2_u186g")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Counter" type="Label" parent="CollectedShards/VBoxContainer/HBoxContainer"]
+[node name="Counter" type="Label" parent="CollectionContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_r3s1b")
 text = "x 0"
+
+[node name="RewardContainer" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+
+[node name="Panel" type="Panel" parent="RewardContainer"]
+layout_mode = 2
+
+[node name="TiersVBox" type="VBoxContainer" parent="RewardContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TitleHBox" type="HBoxContainer" parent="RewardContainer/TiersVBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="RewardContainer/TiersVBox/TitleHBox"]
+layout_mode = 2
+text = "Reward Tiers"
+
+[node name="GemHBox" type="HBoxContainer" parent="RewardContainer/TiersVBox"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="RewardContainer/TiersVBox/GemHBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="RewardContainer/TiersVBox/GemHBox"]
+layout_mode = 2
+
+[node name="GoldHBox" type="HBoxContainer" parent="RewardContainer/TiersVBox"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="RewardContainer/TiersVBox/GoldHBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="RewardContainer/TiersVBox/GoldHBox"]
+layout_mode = 2
+
+[node name="SilverHBox" type="HBoxContainer" parent="RewardContainer/TiersVBox"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="RewardContainer/TiersVBox/SilverHBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="RewardContainer/TiersVBox/SilverHBox"]
+layout_mode = 2
+
+[node name="BronzeHBox" type="HBoxContainer" parent="RewardContainer/TiersVBox"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="RewardContainer/TiersVBox/BronzeHBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="RewardContainer/TiersVBox/BronzeHBox"]
+layout_mode = 2

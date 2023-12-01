@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://clctn32wubmmo"]
+
+[ext_resource type="Texture2D" uid="uid://dw8indsmgsplw" path="res://GreenLevel/GreenAssests/UI/MetalGalvanizedSteelWorn001/MetalGalvanizedSteelWorn001_COL_2K_METALNESS.jpg" id="1_52l06"]
+[ext_resource type="Texture2D" uid="uid://dkwwn5bq4wrh0" path="res://GreenLevel/GreenAssests/UI/MetalGalvanizedSteelWorn001/MetalGalvanizedSteelWorn001_METALNESS_2K_METALNESS.jpg" id="2_g501u"]
+[ext_resource type="Texture2D" uid="uid://bernckdiclk6y" path="res://GreenLevel/GreenAssests/UI/MetalGalvanizedSteelWorn001/MetalGalvanizedSteelWorn001_NRM_2K_METALNESS.jpg" id="3_tacxm"]
+[ext_resource type="Texture2D" uid="uid://bebqrnmbidqqe" path="res://GreenLevel/GreenAssests/UI/MetalGalvanizedSteelWorn001/MetalGalvanizedSteelWorn001_ROUGHNESS_2K_METALNESS.jpg" id="4_0es23"]
+
+[resource]
+albedo_texture = ExtResource("1_52l06")
+metallic = 1.0
+metallic_texture = ExtResource("2_g501u")
+roughness_texture = ExtResource("4_0es23")
+normal_enabled = true
+normal_texture = ExtResource("3_tacxm")

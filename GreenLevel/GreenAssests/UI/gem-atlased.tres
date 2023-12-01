@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://r8chtro0i1kq"]
+
+[ext_resource type="Texture2D" uid="uid://xy6hkdljmo1q" path="res://GreenLevel/GreenAssests/UI/gem-spinning.png" id="1_j3gg0"]
+
+[resource]
+atlas = ExtResource("1_j3gg0")
+region = Rect2(0, 210, 130, 210)
