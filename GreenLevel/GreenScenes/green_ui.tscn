@@ -1,12 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://du80smrse61sd"]
+[gd_scene load_steps=9 format=3 uid="uid://du80smrse61sd"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_ui.gd" id="1_si3tl"]
 [ext_resource type="Texture2D" uid="uid://r8chtro0i1kq" path="res://GreenLevel/GreenAssests/UI/gem-atlased.tres" id="2_u186g"]
+[ext_resource type="Texture2D" uid="uid://bjbiwl6fev5gc" path="res://GreenLevel/GreenAssests/UI/Gem.png" id="3_aj52r"]
+[ext_resource type="Texture2D" uid="uid://cd2hv0fwb0eq1" path="res://GreenLevel/GreenAssests/UI/gold-gem-coin.png" id="4_i3cgw"]
+[ext_resource type="Texture2D" uid="uid://ckdpefkbxnqep" path="res://GreenLevel/GreenAssests/UI/silver-gem-coin.png" id="5_xn1ro"]
+[ext_resource type="Texture2D" uid="uid://dl7m41tkwp0kc" path="res://GreenLevel/GreenAssests/UI/bronze-gem-coin.png" id="6_f7h7g"]
 
 [sub_resource type="Theme" id="Theme_r3s1b"]
 default_font_size = 30
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_du0hr"]
+bg_color = Color(0.184314, 0.184314, 0.184314, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
 [node name="Green_UI" type="CanvasLayer" node_paths=PackedStringArray("texture_to_animate")]
+follow_viewport_enabled = true
 script = ExtResource("1_si3tl")
 texture_to_animate = NodePath("CollectionContainer/VBoxContainer/HBoxContainer/Gem Shards")
 atlas_texture = ExtResource("2_u186g")
@@ -58,50 +70,90 @@ theme_override_constants/margin_right = 15
 
 [node name="Panel" type="Panel" parent="RewardContainer"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_du0hr")
 
 [node name="TiersVBox" type="VBoxContainer" parent="RewardContainer"]
 layout_mode = 2
-theme_override_constants/separation = 2
+theme_override_constants/separation = 10
 
 [node name="TitleHBox" type="HBoxContainer" parent="RewardContainer/TiersVBox"]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="Label" type="Label" parent="RewardContainer/TiersVBox/TitleHBox"]
 layout_mode = 2
-text = "Reward Tiers"
+size_flags_horizontal = 4
+text = "REWARDS"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GemHBox" type="HBoxContainer" parent="RewardContainer/TiersVBox"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
 
 [node name="TextureRect" type="TextureRect" parent="RewardContainer/TiersVBox/GemHBox"]
 layout_mode = 2
+texture = ExtResource("3_aj52r")
+expand_mode = 2
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="RewardContainer/TiersVBox/GemHBox"]
 layout_mode = 2
+size_flags_horizontal = 4
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GoldHBox" type="HBoxContainer" parent="RewardContainer/TiersVBox"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
 
 [node name="TextureRect" type="TextureRect" parent="RewardContainer/TiersVBox/GoldHBox"]
 layout_mode = 2
+texture = ExtResource("4_i3cgw")
+expand_mode = 2
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="RewardContainer/TiersVBox/GoldHBox"]
 layout_mode = 2
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SilverHBox" type="HBoxContainer" parent="RewardContainer/TiersVBox"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
 
 [node name="TextureRect" type="TextureRect" parent="RewardContainer/TiersVBox/SilverHBox"]
 layout_mode = 2
+texture = ExtResource("5_xn1ro")
+expand_mode = 2
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="RewardContainer/TiersVBox/SilverHBox"]
 layout_mode = 2
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BronzeHBox" type="HBoxContainer" parent="RewardContainer/TiersVBox"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
 
 [node name="TextureRect" type="TextureRect" parent="RewardContainer/TiersVBox/BronzeHBox"]
 layout_mode = 2
+texture = ExtResource("6_f7h7g")
+expand_mode = 2
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="RewardContainer/TiersVBox/BronzeHBox"]
 layout_mode = 2
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
