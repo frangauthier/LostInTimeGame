@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://j1qhxftk73e6"]
 
-[ext_resource type="PackedScene" uid="uid://baaepn0px8ens" path="res://GreenLevel/GreenScenes/turn.tscn" id="1_prv5u"]
-[ext_resource type="PackedScene" uid="uid://dfhj4226571dl" path="res://GreenLevel/GreenScenes/straight.tscn" id="2_jirxs"]
+[ext_resource type="PackedScene" uid="uid://uf3ab3uo1c3j" path="res://GreenLevel/GreenScenes/turn.tscn" id="1_prv5u"]
+[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/straight.tscn" id="2_jirxs"]
 [ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="3_byj6m"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_eppt8"]
@@ -9,6 +9,7 @@
 [node name="TestMap" type="Node3D"]
 
 [node name="Turn" parent="." instance=ExtResource("1_prv5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00325584, -0.123904, 0.0114632)
 
 [node name="Turn2" parent="." instance=ExtResource("1_prv5u")]
 transform = Transform3D(-0.815431, -5.0605e-08, -0.578854, 0, -1, 8.74228e-08, -0.578854, 7.12872e-08, 0.815431, -16.8647, -20.2153, -5.39665)
