@@ -10,6 +10,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var target: Node3D = $"."
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
+@onready var player = $'../../../Player' # Worker -> Enemy -> Enemies -> Player
 
 var target_set = false
 
@@ -26,8 +27,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 func find_target():
-	# TODO: Logic to find the player.
-	pass
+	if(player):
+		target = player
 
 func auto_movement(delta):
 	var direction = Vector3()
