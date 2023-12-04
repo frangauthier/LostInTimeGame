@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cey75invq4d1x"]
+[gd_scene load_steps=10 format=3 uid="uid://cey75invq4d1x"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/time_stone.gd" id="1_pltou"]
 [ext_resource type="Texture2D" uid="uid://bdlihr4xx2mrq" path="res://Common/Assets/Models/stylized_crystal_gems_asset_pack/textures/material_3_baseColor.png" id="2_3spim"]
 [ext_resource type="Texture2D" uid="uid://cx7qk3ns5dlur" path="res://Common/Assets/Models/stylized_crystal_gems_asset_pack/textures/material_3_normal.png" id="3_fieg8"]
+[ext_resource type="AudioStream" uid="uid://dy8y8ilxdqb0l" path="res://GreenLevel/GreenAssests/Sounds/gem_hum.wav" id="4_cij03"]
+[ext_resource type="AudioStream" uid="uid://b4kn06so6b3pj" path="res://GreenLevel/GreenAssests/Sounds/gem_shard_pickup.wav" id="5_yqbwy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t48yf"]
 resource_name = "material_3"
@@ -63,4 +65,14 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.6399, -5.64357e-06)
 shape = SubResource("CapsuleShape3D_3y0ye")
 
+[node name="Hum" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_cij03")
+autoplay = true
+
+[node name="PickupSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_yqbwy")
+
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

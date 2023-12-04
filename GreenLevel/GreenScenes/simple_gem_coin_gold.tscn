@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bigr7434uvc15"]
+[gd_scene load_steps=9 format=3 uid="uid://bigr7434uvc15"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/simple_gem_coin.gd" id="2_711r0"]
 [ext_resource type="Material" uid="uid://duadvudo57vyx" path="res://GreenLevel/GreenAssests/UI/MetalGoldPaint002/gold_material.tres" id="2_bcgex"]
+[ext_resource type="AudioStream" uid="uid://bitsubntjy7qd" path="res://GreenLevel/GreenAssests/Sounds/medal_collect.wav" id="3_fkr0k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pyy8"]
 resource_name = "1"
@@ -85,4 +86,12 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_7wc3o")
 
+[node name="PickupSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_fkr0k")
+volume_db = 80.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
