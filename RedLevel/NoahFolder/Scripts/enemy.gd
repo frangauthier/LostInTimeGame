@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
+const SPEED = 2.0
 const JUMP_VELOCITY = 4.5
 const ACCEL = 10
 
@@ -10,9 +10,12 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var target: Node3D = $"."
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
-@onready var player = $'../../../Player' # Worker -> Enemy -> Enemies -> Player
+@onready var player = $'../../../Player' # Worker -> Enemy -> Enemies -> RedLevel -> Player
 
 var target_set = false
+
+func _process(delta):
+	find_target()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -27,8 +30,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 func find_target():
-	if(player):
+	if(player and not target_set):
 		target = player
+		target_set = true
 
 func auto_movement(delta):
 	var direction = Vector3()
