@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_level_manager.gd" id="1_s7iod"]
 [ext_resource type="PackedScene" uid="uid://du80smrse61sd" path="res://GreenLevel/GreenScenes/green_ui.tscn" id="2_yxwaa"]
-[ext_resource type="AudioStream" uid="uid://dsjsgbo52hu0f" path="res://GreenLevel/GreenAssests/Sounds/dramatic-jungle-beat-loop_96bpm_B_minor.mp3" id="3_oxapt"]
+[ext_resource type="AudioStream" uid="uid://b5o8ebu06qfd4" path="res://GreenLevel/GreenAssests/Sounds/John_Bartmann_-_01_-_Mad_Hatter_Tea_Party(chosic.com).mp3" id="3_v4n6r"]
 [ext_resource type="Texture2D" uid="uid://chl6tgct4wlof" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_nor_gl_1k.png" id="4_800mb"]
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="4_ff0ig"]
 [ext_resource type="AudioStream" uid="uid://bd7mcvk2qaio8" path="res://GreenLevel/GreenAssests/Sounds/zapsplat_nature_rainforest_evening_cicada_insects_birds_distant_echos_28312.mp3" id="4_vf42t"]
@@ -75,16 +75,15 @@ shadow_enabled = true
 
 [node name="SoundPlayers" type="Node" parent="."]
 
-[node name="BGM-Player" type="AudioStreamPlayer3D" parent="SoundPlayers"]
-stream = ExtResource("3_oxapt")
-attenuation_model = 3
+[node name="BGM-Player" type="AudioStreamPlayer2D" parent="SoundPlayers"]
+stream = ExtResource("3_v4n6r")
 volume_db = -5.0
+autoplay = true
 
-[node name="Ambience-Player" type="AudioStreamPlayer3D" parent="SoundPlayers"]
+[node name="Ambience-Player" type="AudioStreamPlayer2D" parent="SoundPlayers"]
 stream = ExtResource("4_vf42t")
-attenuation_model = 3
 volume_db = -10.0
-max_db = 1.0
+autoplay = true
 
 [node name="SpawnPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02929, 0)

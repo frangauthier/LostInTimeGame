@@ -1,7 +1,7 @@
 extends Node3D
 
-@onready var bgm_player: AudioStreamPlayer3D = $"SoundPlayers/BGM-Player"
-@onready var ambiance_player: AudioStreamPlayer3D = $"SoundPlayers/Ambience-Player"
+@onready var bgm_player: AudioStreamPlayer2D = $"SoundPlayers/BGM-Player"
+@onready var ambiance_player: AudioStreamPlayer2D = $"SoundPlayers/Ambience-Player"
 @onready var player: CharacterBody3D = $Player
 @onready var spawn_point: Node3D = $SpawnPoint
 
