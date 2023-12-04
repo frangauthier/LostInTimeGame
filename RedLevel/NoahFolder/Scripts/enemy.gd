@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+const LERP_VALUE : float = 0.15
 
 const SPEED = 2.0
 const JUMP_VELOCITY = 4.5
@@ -7,6 +8,8 @@ const ACCEL = 10
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+@onready var character_mesh: Skeleton3D = $root/Skeleton3D
 
 @onready var target: Node3D = $"."
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
@@ -41,8 +44,11 @@ func auto_movement(delta):
 	
 	direction = nav.get_next_path_position() - global_position
 	direction = direction.normalized()
-	
+		
 	velocity = velocity.lerp(direction * SPEED, ACCEL * delta)
+	
+	if (velocity):
+		look_at(nav.get_next_path_position())
 
 func update_animation():
 	$"../AnimationTree"["parameters/conditions/is_idling"] = velocity.length() < 0.05
