@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://crxccirkx0dtl"
+path="res://.godot/imported/laughin last.wav-3f2ee4bb6a94b32d06f5d10716ed9676.sample"
+
+[deps]
+
+source_file="res://GreenLevel/GreenAssests/Sounds/laughin last.wav"
+dest_files=["res://.godot/imported/laughin last.wav-3f2ee4bb6a94b32d06f5d10716ed9676.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

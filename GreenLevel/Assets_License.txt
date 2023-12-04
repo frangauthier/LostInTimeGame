@@ -36,3 +36,24 @@ Bronze Material:
 	Link: https://www.poliigon.com/texture/bronze-metal-texture-worn/7248
 	Author: Poliigon
 	Name: Bronze Metal Texture, Worn
+
+
+Wood sound:
+	Link: https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=39921
+	Author: pixabay	
+	Name: wood scratching
+
+Jumping sound:
+	Link: https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=65494
+	Author: pixabay
+	Name: Jump
+
+Laughing sounds:
+	Link: https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=22868
+	Author: Pixabay
+	Name: Exclamations Male
+
+Background Image:
+	Link: https://polyhaven.com/a/monks_forest
+	Author: Greg Zaal
+	Name: Monk's Forest
