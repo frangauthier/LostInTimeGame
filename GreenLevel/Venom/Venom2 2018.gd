@@ -35,9 +35,9 @@ func _physics_process(delta):
 
 # Handle rotation.
 	var rotation_speed = 150.0  # Adjust this value to your liking.
-	if Input.is_action_pressed("ui_left"):
+	if Input.get_action_strength("move_left"):
 		rotation_degrees.y += rotation_speed * delta
-	if Input.is_action_pressed("ui_right"):
+	if Input.get_action_strength("move_right"):
 		rotation_degrees.y -= rotation_speed * delta
 
 
