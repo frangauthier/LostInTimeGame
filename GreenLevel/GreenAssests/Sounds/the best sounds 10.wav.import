@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dg5aqgobi7f1w"
+path="res://.godot/imported/the best sounds 10.wav-f123c6e6ae3eccf19ee484d0782a1822.sample"
+
+[deps]
+
+source_file="res://GreenLevel/GreenAssests/Sounds/the best sounds 10.wav"
+dest_files=["res://.godot/imported/the best sounds 10.wav-f123c6e6ae3eccf19ee484d0782a1822.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
