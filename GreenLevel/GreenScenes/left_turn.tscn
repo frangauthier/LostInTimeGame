@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0h8ecc5dwpyc"]
+
+[ext_resource type="PackedScene" uid="uid://8xqqes65myec" path="res://GreenLevel/GreenScenes/branch.tscn" id="1_vvn71"]
+
+[node name="Left_Turn" type="Node3D"]
+
+[node name="Branch" parent="." instance=ExtResource("1_vvn71")]
+transform = Transform3D(1, 0, 0, 0, 0.173218, 0.984883, 0, -0.984883, 0.173218, 0, 0, 0)
+
+[node name="Branch2" parent="." instance=ExtResource("1_vvn71")]
+transform = Transform3D(0.994327, -0.10476, 0.0184249, 0, 0.173218, 0.984883, -0.106368, -0.979296, 0.172236, 0.172012, -0.742344, 3.87576)
+
+[node name="Branch3" parent="." instance=ExtResource("1_vvn71")]
+transform = Transform3D(0.96717, -0.250288, 0.0440199, 0.0070159, 0.19945, 0.979883, -0.254032, -0.947405, 0.194658, 0.857691, -1.52421, 7.6874)
+
+[node name="Branch4" parent="." instance=ExtResource("1_vvn71")]
+transform = Transform3D(0.901673, -0.407125, -0.145723, 0.208273, 0.113555, 0.971456, -0.378956, -0.906286, 0.187183, 2.08065, -2.15784, 11.1655)
+
+[node name="Branch5" parent="." instance=ExtResource("1_vvn71")]
+transform = Transform3D(0.667253, -0.742705, -0.0562383, 0.208273, 0.113555, 0.971456, -0.715119, -0.659921, 0.230456, 4.15126, -2.5818, 13.9956)
+
+[node name="Branch6" parent="." instance=ExtResource("1_vvn71")]
+transform = Transform3D(0.565309, -0.824505, -0.0248204, 0.208273, 0.113555, 0.971456, -0.798152, -0.554343, 0.235916, 6.73187, -3.03459, 16.005)
+
+[node name="Branch7" parent="." instance=ExtResource("1_vvn71")]
+transform = Transform3D(0.469796, -0.882772, 0.00246798, 0.208273, 0.113555, 0.971456, -0.857854, -0.455872, 0.237206, 9.83686, -3.48847, 17.8506)
+
+[node name="Branch8" parent="." instance=ExtResource("1_vvn71")]
+transform = Transform3D(0.33516, -0.941387, 0.0381847, 0.208273, 0.113555, 0.971456, -0.918853, -0.31764, 0.234125, 13.4397, -3.95668, 19.3938)
+
+[node name="Branch9" parent="." instance=ExtResource("1_vvn71")]
+transform = Transform3D(0.125732, -0.988105, 0.0885453, 0.208273, 0.113555, 0.971457, -0.969955, -0.103702, 0.220074, 17.1917, -4.49339, 20.2375)
+
+[node name="Branch10" parent="." instance=ExtResource("1_vvn71")]
+transform = Transform3D(0.125732, -0.988105, 0.0885453, 0.208273, 0.113555, 0.971457, -0.969955, -0.103702, 0.220074, 21.0857, -5.00979, 20.6469)

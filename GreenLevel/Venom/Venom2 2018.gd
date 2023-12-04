@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 
-const SPEED = 500.0
-const JUMP_VELOCITY = 4.5
+@export var SPEED = 500.0
+@export var JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -35,9 +35,9 @@ func _physics_process(delta):
 
 # Handle rotation.
 	var rotation_speed = 150.0  # Adjust this value to your liking.
-	if Input.is_action_pressed("ui_left"):
+	if Input.get_action_strength("move_left"):
 		rotation_degrees.y += rotation_speed * delta
-	if Input.is_action_pressed("ui_right"):
+	if Input.get_action_strength("move_right"):
 		rotation_degrees.y -= rotation_speed * delta
 
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://j1qhxftk73e6"]
 
 [ext_resource type="PackedScene" uid="uid://uf3ab3uo1c3j" path="res://GreenLevel/GreenScenes/turn.tscn" id="1_prv5u"]
-[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/straight.tscn" id="2_jirxs"]
+[ext_resource type="PackedScene" uid="uid://dfhj4226571dl" path="res://GreenLevel/GreenScenes/straight.tscn" id="2_jirxs"]
 [ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="3_byj6m"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_eppt8"]

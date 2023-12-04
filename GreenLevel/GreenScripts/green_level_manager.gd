@@ -1,7 +1,5 @@
 extends Node3D
 
-@onready var bgm_player: AudioStreamPlayer2D = $"SoundPlayers/BGM-Player"
-@onready var ambiance_player: AudioStreamPlayer2D = $"SoundPlayers/Ambience-Player"
 @onready var player: CharacterBody3D = $Player
 @onready var spawn_point: Node3D = $SpawnPoint
 
@@ -21,11 +19,10 @@ var gem_counter: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	ambiance_player.play()
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-
+func _process(_delta):
 	pass
 
 func giveReward():

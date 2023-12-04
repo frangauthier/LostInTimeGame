@@ -11,5 +11,13 @@ func _process(delta):
 	rotate_z(0.1 * delta)
 
 func _on_body_entered(_body):
+	$PickupSound.play()
+	$"1_1_0".visible = false
+	$Hum.stop()
+	$Timer.start()
 	Globals.complete_level("green")
+	
+
+
+func _on_timer_timeout():
 	queue_free()

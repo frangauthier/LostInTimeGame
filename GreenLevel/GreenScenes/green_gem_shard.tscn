@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_gem_shard.gd" id="1_0j0dg"]
 [ext_resource type="Texture2D" uid="uid://bqtsxsclp2ohn" path="res://Common/Assets/Models/stylized_crystal_gems_asset_pack/textures/material_normal.png" id="2_2meep"]
-[ext_resource type="AudioStream" uid="uid://b4kn06so6b3pj" path="res://GreenLevel/GreenAssests/Sounds/459694__matrixxx__key.wav" id="3_t3otx"]
+[ext_resource type="AudioStream" uid="uid://b4kn06so6b3pj" path="res://GreenLevel/GreenAssests/Sounds/gem_shard_pickup.wav" id="3_viati"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptj4c"]
 resource_name = "Material"
@@ -96,7 +96,7 @@ libraries = {
 }
 
 [node name="PickupSound" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("3_t3otx")
+stream = ExtResource("3_viati")
 volume_db = 80.0
 
 [node name="Timer" type="Timer" parent="."]

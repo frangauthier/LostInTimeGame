@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnjx10x6ot2ju"]
+[gd_scene load_steps=9 format=3 uid="uid://dnjx10x6ot2ju"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/simple_gem_coin.gd" id="2_lvj7x"]
 [ext_resource type="Material" uid="uid://58ado3f7red4" path="res://GreenLevel/GreenAssests/UI/MetalBronzeWorn001/bronze_material.tres" id="2_y0s27"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_c8056"]
-radius = 0.3
+[ext_resource type="AudioStream" uid="uid://bitsubntjy7qd" path="res://GreenLevel/GreenAssests/Sounds/medal_collect.wav" id="3_u7py8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pyy8"]
 resource_name = "1"
@@ -72,13 +70,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dxxgt")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_c8056"]
+radius = 0.3
+
 [node name="SimpleGemCoinBronze" type="Area3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 script = ExtResource("2_lvj7x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, -8.95677e-16, 0, 1, 0, 0, 3.55271e-15, 1, -2.98023e-08, 0, 0)
-shape = SubResource("SphereShape3D_c8056")
 
 [node name="1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.000173648, -0.000984808, 0, 0.000984808, 0.000173648, 0, 0, 0, 0.001, 0.132209, 0.899854, 0.16212)
@@ -86,4 +83,16 @@ material_override = ExtResource("2_y0s27")
 mesh = SubResource("ArrayMesh_sppt5")
 skeleton = NodePath("")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, -8.95677e-16, 0, 1, 0, 0, 3.55271e-15, 1, -2.98023e-08, 0, 0)
+shape = SubResource("SphereShape3D_c8056")
+
+[node name="PickupSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_u7py8")
+volume_db = 80.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
