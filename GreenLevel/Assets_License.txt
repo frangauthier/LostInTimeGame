@@ -8,9 +8,9 @@ Bark Texture:
 	-Tree Bark 03
 
 Background Music:
-	Link: https://samplefocus.com/samples/dramatic-jungle-beat-loop
-	Author: Susan Graham
-	Name: Dramatic Jungle Beat Loop
+	Link: https://www.chosic.com/download-audio/24778/
+	Author: John Bartmann
+	Name: Mad Hatter Tea Party
 
 Ambient Sound:
 	Link: https://www.zapsplat.com/music/evening-tropical-rainforest-cicada-and-other-insects-distant-birds-echo/
@@ -36,24 +36,3 @@ Bronze Material:
 	Link: https://www.poliigon.com/texture/bronze-metal-texture-worn/7248
 	Author: Poliigon
 	Name: Bronze Metal Texture, Worn
-
-
-Wood sound:
-	Link: https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=39921
-	Author: pixabay	
-	Name: wood scratching
-
-Jumping sound:
-	Link: https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=65494
-	Author: pixabay
-	Name: Jump
-
-Laughing sounds:
-	Link: https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=22868
-	Author: Pixabay
-	Name: Exclamations Male
-
-Background Image:
-	Link: https://polyhaven.com/a/monks_forest
-	Author: Greg Zaal
-	Name: Monk's Forest
