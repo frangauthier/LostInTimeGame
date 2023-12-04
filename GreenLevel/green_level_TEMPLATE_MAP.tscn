@@ -65,6 +65,7 @@ JUMP_VELOCITY = 100.0
 
 [node name="Camera3D" type="Camera3D" parent="Venom 2018"]
 transform = Transform3D(-1.99995, 0.0114935, -0.00755819, -0.0124638, -2.07396, 0.144237, -0.0065973, 0.135811, 1.95222, -0.73065, 0.306134, 16.0452)
+current = true
 
 [node name="Turn" parent="." instance=ExtResource("7_bpdcf")]
 transform = Transform3D(1.2, 0.00175734, -0.0024966, -0.00138491, 1.18783, 0.170448, 0.00272089, -0.170445, 1.18783, 3.11769, -1.94918, -1.36969)
