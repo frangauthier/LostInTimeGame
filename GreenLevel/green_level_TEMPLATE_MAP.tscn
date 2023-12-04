@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://du80smrse61sd" path="res://GreenLevel/GreenScenes/green_ui.tscn" id="2_mrrcd"]
 [ext_resource type="Texture2D" uid="uid://c0155iolx8shb" path="res://GreenLevel/GreenAssests/UI/background/monks_forest_2k.exr" id="2_p0ie4"]
 [ext_resource type="AudioStream" uid="uid://dsjsgbo52hu0f" path="res://GreenLevel/GreenAssests/Sounds/dramatic-jungle-beat-loop_96bpm_B_minor.mp3" id="3_h4kdi"]
-[ext_resource type="PackedScene" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="5_iguhb"]
+[ext_resource type="PackedScene" uid="uid://cftr6ie1o3auk" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="5_iguhb"]
 [ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="6_as3cl"]
 [ext_resource type="PackedScene" uid="uid://c7i1s2j7kcomy" path="res://GreenLevel/GreenScenes/green_gem_shard.tscn" id="6_vcjcr"]
 [ext_resource type="PackedScene" uid="uid://uf3ab3uo1c3j" path="res://GreenLevel/GreenScenes/turn.tscn" id="7_bpdcf"]
@@ -20,6 +20,16 @@ background_mode = 2
 sky = SubResource("Sky_r3ckj")
 tonemap_mode = 2
 glow_enabled = true
+glow_intensity = 2.0
+glow_bloom = 0.5
+fog_light_color = Color(0.435294, 0.6, 0.435294, 1)
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_albedo = Color(0.631373, 0.647059, 0.431373, 1)
+volumetric_fog_anisotropy = -0.25
+volumetric_fog_detail_spread = 0.5
+volumetric_fog_ambient_inject = 1.49
+volumetric_fog_sky_affect = 0.815
 
 [node name="GreenLevel" type="Node3D"]
 script = ExtResource("1_gnycy")
@@ -48,6 +58,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0865316, 0.598623, 1.9899)
 
 [node name="Venom 2018" parent="." instance=ExtResource("6_as3cl")]
 transform = Transform3D(0.5, 0, 0, 0, -0.409509, 0.268053, 0, -0.252316, -0.43505, 3.32322, 8.22411, 0.755885)
+SPEED = 750.0
 
 [node name="Camera3D" type="Camera3D" parent="Venom 2018"]
 transform = Transform3D(-1.99995, 0.0114935, -0.00755819, -0.0124638, -2.07396, 0.144237, -0.0065973, 0.135811, 1.95222, -0.73065, 0.306134, 16.0452)
