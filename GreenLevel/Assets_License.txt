@@ -8,15 +8,19 @@ Bark Texture:
 	-Tree Bark 03
 
 Background Music:
-	Link: https://samplefocus.com/samples/dramatic-jungle-beat-loop
-	Author: Susan Graham
-	Name: Dramatic Jungle Beat Loop
-
+	Link: https://www.chosic.com/download-audio/24778/
+	Author: John Bartmann
+	Name: Mad Hatter Tea Party
+	
 Ambient Sound:
 	Link: https://www.zapsplat.com/music/evening-tropical-rainforest-cicada-and-other-insects-distant-birds-echo/
 	Author: ZapSplat
 	Name: Evening tropical rainforest, cicada and other insects, distant birds echo
 
+Gem Shard Pickup:
+	Link: https://freesound.org/people/MATRIXXX_/sounds/459694/
+	Author: MATRIXXX_
+	Name: Key
 3D Gold Coin:
 	Link: https://www.turbosquid.com/3d-models/3d-simple-gold-coin-model-2084198
 	Author: Makartsov Aleksandr
