@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ciyrf8dluo1te"]
+[gd_scene load_steps=14 format=3 uid="uid://ciyrf8dluo1te"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_level_manager.gd" id="1_gnycy"]
 [ext_resource type="PackedScene" uid="uid://du80smrse61sd" path="res://GreenLevel/GreenScenes/green_ui.tscn" id="2_mrrcd"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="6_as3cl"]
 [ext_resource type="PackedScene" uid="uid://c7i1s2j7kcomy" path="res://GreenLevel/GreenScenes/green_gem_shard.tscn" id="6_vcjcr"]
 [ext_resource type="PackedScene" uid="uid://uf3ab3uo1c3j" path="res://GreenLevel/GreenScenes/turn.tscn" id="7_bpdcf"]
+[ext_resource type="PackedScene" uid="uid://d0h8ecc5dwpyc" path="res://GreenLevel/GreenScenes/left_turn.tscn" id="9_ai1ui"]
+[ext_resource type="PackedScene" uid="uid://8xqqes65myec" path="res://GreenLevel/GreenScenes/branch.tscn" id="10_wy0yx"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mwuxf"]
 panorama = ExtResource("2_p0ie4")
@@ -58,10 +60,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0865316, 0.598623, 1.9899)
 
 [node name="Venom 2018" parent="." instance=ExtResource("6_as3cl")]
 transform = Transform3D(0.5, 0, 0, 0, -0.409509, 0.268053, 0, -0.252316, -0.43505, 3.32322, 8.22411, 0.755885)
-SPEED = 750.0
+SPEED = 700.0
+JUMP_VELOCITY = 100.0
 
 [node name="Camera3D" type="Camera3D" parent="Venom 2018"]
 transform = Transform3D(-1.99995, 0.0114935, -0.00755819, -0.0124638, -2.07396, 0.144237, -0.0065973, 0.135811, 1.95222, -0.73065, 0.306134, 16.0452)
+current = true
 
 [node name="Turn" parent="." instance=ExtResource("7_bpdcf")]
 transform = Transform3D(1.2, 0.00175734, -0.0024966, -0.00138491, 1.18783, 0.170448, 0.00272089, -0.170445, 1.18783, 3.11769, -1.94918, -1.36969)
@@ -75,5 +79,102 @@ transform = Transform3D(-0.814169, 0.0244355, 0.88121, -0.0123975, 1.1991, -0.04
 [node name="Turn4" parent="." instance=ExtResource("7_bpdcf")]
 transform = Transform3D(1.17249, -0.0108646, 0.255263, -0.0495716, 1.16646, 0.277341, -0.250639, -0.281527, 1.13926, -1.72378, -40.0951, -2.95451)
 
+[node name="Left_Turn" parent="." instance=ExtResource("9_ai1ui")]
+transform = Transform3D(-0.0854865, 0.0170756, -0.996193, -0.145273, 0.988954, 0.0294178, 0.985691, 0.147235, -0.0820617, -14.8791, -46.4607, 25.3746)
+
+[node name="Left_Turn2" parent="." instance=ExtResource("9_ai1ui")]
+transform = Transform3D(-0.0729669, -0.0661513, -0.995138, -0.151947, 0.986887, -0.0544615, 0.985691, 0.147235, -0.0820616, -54.6313, -74.1175, 96.1078)
+
+[node name="Left_Turn3" parent="." instance=ExtResource("9_ai1ui")]
+transform = Transform3D(0.987824, 0.153492, 0.0253699, -0.151947, 0.986887, -0.0544615, -0.0333966, 0.0499435, 0.998194, -76.7278, -84.3589, 117.933)
+
+[node name="Left_Turn4" parent="." instance=ExtResource("9_ai1ui")]
+transform = Transform3D(0.059318, 0.0641072, 0.996179, -0.151947, 0.986887, -0.0544615, -0.986607, -0.148136, 0.0682812, -52.3519, -94.6633, 137.913)
+
+[node name="Left_Turn5" parent="." instance=ExtResource("9_ai1ui")]
+transform = Transform3D(-0.98303, -0.145164, 0.112154, -0.151947, 0.986887, -0.0544615, -0.102777, -0.0705788, -0.992197, -30.2404, -105.005, 115.465)
+
+[node name="Branch" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(1, 0, 0, 0, 0.775294, 0.981036, 0, -3.92415, 0.193823, -37.7613, -55.9444, 53.1204)
+
+[node name="Branch2" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(1, 0, 0, 0, 1.18583, 0.955046, 0, -3.82018, 0.296458, -37.7613, -59.8214, 68.2096)
+
+[node name="MeshInstance3D" parent="Branch2" index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.00588417, -0.0758324)
+
+[node name="Branch3" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -56.9336, -117.42, 91.8277)
+
+[node name="MeshInstance3D" parent="Branch3" index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.00588417, -0.0758324)
+
+[node name="Branch4" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -71.1599, -122.689, 90.0095)
+
+[node name="MeshInstance3D" parent="Branch4" index="0"]
+transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+
+[node name="CollisionShape3D" parent="Branch4/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch7" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -85.8008, -128.152, 88.1451)
+
+[node name="MeshInstance3D" parent="Branch7" index="0"]
+transform = Transform3D(2, 0, 5.96046e-08, 0, 2, 1.67638e-08, 5.96046e-08, 8.9407e-08, 2, -7.62939e-06, -0.00588608, -0.0758286)
+
+[node name="CollisionShape3D" parent="Branch7/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch5" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -71.1599, -122.23, 87.9692)
+
+[node name="MeshInstance3D" parent="Branch5" index="0"]
+transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+
+[node name="CollisionShape3D" parent="Branch5/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch8" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -86.1505, -127.716, 86.0572)
+
+[node name="MeshInstance3D" parent="Branch8" index="0"]
+transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+
+[node name="CollisionShape3D" parent="Branch8/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch9" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -86.1505, -127.716, 90.201)
+
+[node name="MeshInstance3D" parent="Branch9" index="0"]
+transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+
+[node name="CollisionShape3D" parent="Branch9/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch6" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -71.1599, -122.23, 92.0821)
+
+[node name="MeshInstance3D" parent="Branch6" index="0"]
+transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+
+[node name="CollisionShape3D" parent="Branch6/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Turn5" parent="." instance=ExtResource("7_bpdcf")]
+transform = Transform3D(1, 0, 0, 0, 0.999967, -0.0081855, 0, 0.0081855, 0.999967, -37.7798, -62.8943, 77.5813)
+
 [connection signal="collected" from="gem_shard" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="gem_shard" to="Green_UI" method="_on_gem_shard_collected"]
+
+[editable path="Branch"]
+[editable path="Branch2"]
+[editable path="Branch3"]
+[editable path="Branch4"]
+[editable path="Branch7"]
+[editable path="Branch5"]
+[editable path="Branch8"]
+[editable path="Branch9"]
+[editable path="Branch6"]
