@@ -46,7 +46,6 @@ visible = false
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Worker" index="3"]
 
 [node name="HitBox" type="Area3D" parent="Worker" index="4"]
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Worker/HitBox" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

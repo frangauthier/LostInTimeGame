@@ -1,4 +1,4 @@
 extends CanvasLayer
 
-var killAmount = 5
+var killAmount = 0
 

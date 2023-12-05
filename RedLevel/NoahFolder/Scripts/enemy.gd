@@ -57,10 +57,7 @@ func update_animation():
 # On getting hit logic
 func _on_hit_box_body_entered(body):
 	
-	if ("Player" in body.name):
-		
-		
+	if (body.name == "Player"):
+		GlobalRedVariable.killAmount += 1
 		print("KILLED")
 		queue_free()
-	
-	pass # Replace with function body.
