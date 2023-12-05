@@ -10,12 +10,12 @@
 [ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="8_wmeik"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wxvvx"]
-size = Vector3(1, 3, 3)
+size = Vector3(1000, 1000, 5)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nxt5b"]
 points = PackedVector3Array(-0.5, -1.45426, -1.45426, 0.5, 1.45426, 1.45426, 0.5, 1.45426, -1.45426, -0.5, 1.45426, 1.45426, 0.5, -1.45426, 1.45426, -0.5, 1.45426, -1.45426, 0.5, -1.45426, -1.45426, -0.5, -1.45426, 1.45426)
 
-[node name="GreenLevel2" type="Node3D"]
+[node name="GreenLevel" type="Node3D"]
 script = ExtResource("1_eepxb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -40,6 +40,9 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.8313
 
 [node name="PortalBackLobby2" parent="." instance=ExtResource("2_2wu0v")]
 transform = Transform3D(0.121194, 0, 0.992629, 0, 1, 0, -0.992629, 0, 0.121194, -93.7778, -130.289, 87.2617)
+
+[node name="gem_shard" parent="." instance=ExtResource("6_7xxkl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0865316, 0.598623, 1.9899)
 
 [node name="GreenLevel" parent="." instance=ExtResource("7_vwh2d")]
 

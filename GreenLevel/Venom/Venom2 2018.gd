@@ -1,8 +1,10 @@
 extends CharacterBody3D
 
 var audio_streams = []
+var animation = true
 
-
+signal death_barrier_hit
+signal finish_line_reached
 
 @export var SPEED = 500.0
 @export var JUMP_VELOCITY = 500
@@ -13,6 +15,7 @@ func _on_SlidingSound_finished():
 	$"Sounds/sliding sound".play()
 
 func _ready():
+	$RootNode.rotate_x(1.4)
 	$"Sounds/laughing sound3".play()
 	$"Sounds/sliding sound".play()
 	$"Sounds/sliding sound".volume_db = -80 
@@ -56,6 +59,9 @@ func _physics_process(delta):
 #		velocity.x = direction.x * SPEED
 #		velocity.z = direction.z * SPEED
 	if is_on_floor():
+		if(animation):
+				$RootNode.rotate_x(-1.4)
+				animation = false
 		var slope_normal = get_floor_normal() + Vector3.UP *0.01
 		var right_dir = transform.basis.x
 		var forward_dir = right_dir.cross(slope_normal).normalized()
@@ -72,3 +78,10 @@ func _on_gem_shard_collected():
 	audio_player.stream = audio_stream  # Set the audio stream to play.
 	add_child(audio_player)  # Add the AudioStreamPlayer to the scene.
 	audio_player.play()  #  Replace with function body.
+func _on_death_zone_body_entered(body):
+	print("hit")
+	death_barrier_hit.emit()
+
+
+func _on_finish_area_body_entered(body):
+	finish_line_reached.emit()
