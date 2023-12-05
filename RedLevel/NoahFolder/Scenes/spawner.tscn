@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ksxkc4kfuve7"]
+
+[ext_resource type="Script" path="res://RedLevel/NoahFolder/Scenes/enemy_spawner.gd" id="1_ji4a3"]
+
+[node name="Spawner" type="Node3D"]
+script = ExtResource("1_ji4a3")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

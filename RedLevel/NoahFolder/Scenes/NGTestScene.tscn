@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_tbbj3"]
 [ext_resource type="Script" path="res://RedLevel/Scripts/KillCounterUI.gd" id="2_60nkd"]
-[ext_resource type="PackedScene" uid="uid://brunr2p1xxuji" path="res://RedLevel/NoahFolder/Scenes/enemy.tscn" id="3_ymtuo"]
+[ext_resource type="PackedScene" uid="uid://ksxkc4kfuve7" path="res://RedLevel/NoahFolder/Scenes/spawner.tscn" id="3_4q5hd"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_kf1pk"]
 vertices = PackedVector3Array(-12.06, 0.5, -23.81, -23.81, 0.5, -23.81, -23.81, 0.5, -12.06, -23.81, 0.5, 11.69, -23.81, 0.5, 23.69, -12.06, 0.5, 23.69, 23.69, 0.5, -12.06, 23.69, 0.5, -23.81, 11.69, 0.5, -23.81, 11.69, 0.5, 23.69, 23.69, 0.5, 23.69, 23.69, 0.5, 11.69, -23.81, 0.5, -0.0599995, -23.81, 0.5, 11.69, -12.06, 0.5, 23.69, 23.69, 0.5, -12.06, 11.69, 0.5, -23.81, -0.0599995, 0.5, -23.81, 23.69, 0.5, -0.0599995, -0.0599995, 0.5, -23.81, -12.06, 0.5, -23.81, -23.81, 0.5, -12.06, -23.81, 0.5, -0.0599995, -0.0599995, 0.5, 23.69, 11.69, 0.5, 23.69, 23.69, 0.5, 11.69, 23.69, 0.5, -0.0599995, -0.0599995, 0.5, -23.81, -23.81, 0.5, -0.0599995, -12.06, 0.5, 23.69, -0.0599995, 0.5, 23.69, 23.69, 0.5, 11.69)
@@ -79,5 +79,5 @@ text = "Killed: 0"
 
 [node name="Enemies" type="Node3D" parent="."]
 
-[node name="Enemy" parent="Enemies" instance=ExtResource("3_ymtuo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.97311, 0, 1.42999)
+[node name="Spawner" parent="." instance=ExtResource("3_4q5hd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0336, 1.4188, 0)
