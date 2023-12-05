@@ -53,3 +53,11 @@ func auto_movement(delta):
 func update_animation():
 	$"../AnimationTree"["parameters/conditions/is_idling"] = velocity.length() < 0.05
 	$"../AnimationTree"["parameters/conditions/is_running"] = velocity.length() > 0.05
+
+# On getting hit logic
+func _on_hit_box_body_entered(body):
+	if ("projectile" in body.name):
+		print("KILLED")
+		queue_free()
+	
+	pass # Replace with function body.

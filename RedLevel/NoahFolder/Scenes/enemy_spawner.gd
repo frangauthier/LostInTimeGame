@@ -9,8 +9,6 @@ var spawn_position
 func _ready():
 	spawn_position = $".".global_position
 	
-	spawnEnemy()
-	
 	setTimer()
 	timer.start()
 
@@ -21,15 +19,11 @@ func _process(delta):
 		setTimer()
 		timer.start()
 		spawnEnemy()
-	
-	pass
 
 func setTimer():
 	timer.wait_time = randf_range(1, 5)
-	pass
 
 func spawnEnemy():
-	print('Spawning...')
 	
 	var enemy = enemyScene.instantiate() as Node3D
 	$"../Enemies".add_child(enemy)
