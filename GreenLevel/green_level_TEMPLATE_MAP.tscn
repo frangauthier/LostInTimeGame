@@ -1,25 +1,20 @@
-[gd_scene load_steps=14 format=3 uid="uid://ciyrf8dluo1te"]
+[gd_scene load_steps=9 format=3 uid="uid://ciyrf8dluo1te"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_level_manager.gd" id="1_gnycy"]
-[ext_resource type="PackedScene" uid="uid://du80smrse61sd" path="res://GreenLevel/GreenScenes/green_ui.tscn" id="2_mrrcd"]
 [ext_resource type="Texture2D" uid="uid://c0155iolx8shb" path="res://GreenLevel/GreenAssests/UI/background/monks_forest_2k.exr" id="2_p0ie4"]
-[ext_resource type="AudioStream" uid="uid://dsjsgbo52hu0f" path="res://GreenLevel/GreenAssests/Sounds/dramatic-jungle-beat-loop_96bpm_B_minor.mp3" id="3_h4kdi"]
-[ext_resource type="PackedScene" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="5_iguhb"]
-[ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="6_as3cl"]
-[ext_resource type="PackedScene" uid="uid://c7i1s2j7kcomy" path="res://GreenLevel/GreenScenes/green_gem_shard.tscn" id="6_vcjcr"]
 [ext_resource type="PackedScene" uid="uid://uf3ab3uo1c3j" path="res://GreenLevel/GreenScenes/turn.tscn" id="7_bpdcf"]
-[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/left_turn.tscn" id="9_ai1ui"]
+[ext_resource type="PackedScene" uid="uid://d0h8ecc5dwpyc" path="res://GreenLevel/GreenScenes/left_turn.tscn" id="9_ai1ui"]
 [ext_resource type="PackedScene" uid="uid://8xqqes65myec" path="res://GreenLevel/GreenScenes/branch.tscn" id="10_wy0yx"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mwuxf"]
 panorama = ExtResource("2_p0ie4")
 
-[sub_resource type="Sky" id="Sky_r3ckj"]
+[sub_resource type="Sky" id="Sky_ah5f6"]
 sky_material = SubResource("PanoramaSkyMaterial_mwuxf")
 
 [sub_resource type="Environment" id="Environment_5ggl8"]
 background_mode = 2
-sky = SubResource("Sky_r3ckj")
+sky = SubResource("Sky_ah5f6")
 tonemap_mode = 2
 glow_enabled = true
 glow_intensity = 2.0
@@ -33,7 +28,7 @@ volumetric_fog_detail_spread = 0.5
 volumetric_fog_ambient_inject = 1.49
 volumetric_fog_sky_affect = 0.815
 
-[node name="GreenLevel" type="Node3D"]
+[node name="GreenLevel2" type="Node3D"]
 script = ExtResource("1_gnycy")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -42,41 +37,6 @@ environment = SubResource("Environment_5ggl8")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
-
-[node name="Green_UI" parent="." instance=ExtResource("2_mrrcd")]
-
-[node name="SoundPlayers" type="Node" parent="."]
-
-[node name="BGM-Player" type="AudioStreamPlayer3D" parent="SoundPlayers"]
-stream = ExtResource("3_h4kdi")
-
-[node name="Ambience-Player" type="AudioStreamPlayer3D" parent="SoundPlayers"]
-
-[node name="PortalBackLobby" parent="." instance=ExtResource("5_iguhb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.321)
-
-[node name="gem_shard" parent="." instance=ExtResource("6_vcjcr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0865316, 0.598623, 1.9899)
-
-[node name="gem_shard2" parent="." instance=ExtResource("6_vcjcr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.95783, -0.969792, 5.29498)
-
-[node name="gem_shard3" parent="." instance=ExtResource("6_vcjcr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.95783, -1.49084, 10.3684)
-
-[node name="gem_shard4" parent="." instance=ExtResource("6_vcjcr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40189, -1.96161, 14.9695)
-
-[node name="gem_shard5" parent="." instance=ExtResource("6_vcjcr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0390913, -3.58708, 19.2118)
-
-[node name="Venom 2018" parent="." instance=ExtResource("6_as3cl")]
-transform = Transform3D(0.5, 0, 0, 0, -0.409509, 0.268053, 0, -0.252316, -0.43505, 3.32322, 8.22411, 0.755885)
-SPEED = 700.0
-
-[node name="Camera3D" type="Camera3D" parent="Venom 2018"]
-transform = Transform3D(-1.99995, 0.0114935, -0.00755819, -0.0124638, -2.07396, 0.144237, -0.0065973, 0.135811, 1.95222, -0.73065, 0.306134, 16.0452)
-current = true
 
 [node name="Turn" parent="." instance=ExtResource("7_bpdcf")]
 transform = Transform3D(1.2, 0.00175734, -0.0024966, -0.00138491, 1.18783, 0.170448, 0.00272089, -0.170445, 1.18783, 3.11769, -1.94918, -1.36969)
@@ -176,22 +136,6 @@ transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1,
 
 [node name="Turn5" parent="." instance=ExtResource("7_bpdcf")]
 transform = Transform3D(1, 0, 0, 0, 0.999967, -0.0081855, 0, 0.0081855, 0.999967, -37.7798, -62.8943, 77.5813)
-
-[connection signal="collected" from="gem_shard" to="." method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard" to="Venom 2018" method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard2" to="." method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard2" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard2" to="Venom 2018" method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard3" to="." method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard3" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard3" to="Venom 2018" method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard4" to="." method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard4" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard4" to="Venom 2018" method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard5" to="." method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard5" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="gem_shard5" to="Venom 2018" method="_on_gem_shard_collected"]
 
 [editable path="Branch"]
 [editable path="Branch2"]
