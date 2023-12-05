@@ -44,7 +44,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0865316, 0.598623, 1.9899)
 [node name="GreenLevel" parent="." instance=ExtResource("7_vwh2d")]
 
 [node name="RewardSpawnPoint" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.3229, -128.901, 87.6907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.3229, -128.073, 87.6907)
 
 [node name="Gem" type="Node3D" parent="."]
 
@@ -103,7 +103,7 @@ transform = Transform3D(0.99821, -0.0062546, 0.0594806, 0.00626569, 0.99998, 0, 
 transform = Transform3D(0.99821, -0.0062546, 0.0594806, 0.00626569, 0.99998, 0, -0.0594794, 0.000372687, 0.998229, -6.98298, -35.4283, -12.1797)
 
 [node name="Venom 2018" parent="." instance=ExtResource("8_wmeik")]
-transform = Transform3D(0.499597, 0.020066, -4.44206e-08, 0.0173761, -0.432625, 0.250068, 0.0100357, -0.249867, -0.432973, 3.3357, 6.75462, -1.35549)
+transform = Transform3D(0.599517, 0.0240791, -7.84526e-08, 0.0208513, -0.51915, 0.300082, 0.0120428, -0.29984, -0.519568, 3.3357, 6.75462, -1.35549)
 
 [node name="DeathArea" parent="." instance=ExtResource("9_78y3o")]
 transform = Transform3D(0.996998, 0, -0.0774325, 0, 1, 0, 0.0774325, 0, 0.996998, -65.6976, -134.102, 90.9285)
