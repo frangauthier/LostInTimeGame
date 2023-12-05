@@ -9,7 +9,6 @@ var is_collected = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.rotation = Vector3(rotation.x, randf(), rotation.z)
-	$AnimationPlayer.play("Float")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -17,9 +16,9 @@ func _process(delta):
 
 func _on_area_3d_body_entered(body):
 	if !is_collected:
+		$Shard.visible = false
 		is_collected = true
 		$PickupSound.play()
-		$AnimationPlayer.play("Collected")
 		collected.emit()
 		$Timer.start()
 
