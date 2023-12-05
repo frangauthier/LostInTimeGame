@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=3 uid="uid://iok7mad6ntj0"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_level_manager.gd" id="1_eepxb"]
-[ext_resource type="PackedScene" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="2_2wu0v"]
+[ext_resource type="PackedScene" uid="uid://cftr6ie1o3auk" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="2_2wu0v"]
 [ext_resource type="PackedScene" uid="uid://du80smrse61sd" path="res://GreenLevel/GreenScenes/green_ui.tscn" id="2_kjlh8"]
 [ext_resource type="AudioStream" uid="uid://b5o8ebu06qfd4" path="res://GreenLevel/GreenAssests/Sounds/John_Bartmann_-_01_-_Mad_Hatter_Tea_Party(chosic.com).mp3" id="3_10xsl"]
 [ext_resource type="AudioStream" uid="uid://bd7mcvk2qaio8" path="res://GreenLevel/GreenAssests/Sounds/zapsplat_nature_rainforest_evening_cicada_insects_birds_distant_echos_28312.mp3" id="4_c4xmg"]
 [ext_resource type="PackedScene" uid="uid://c7i1s2j7kcomy" path="res://GreenLevel/GreenScenes/green_gem_shard.tscn" id="6_7xxkl"]
 [ext_resource type="PackedScene" uid="uid://ciyrf8dluo1te" path="res://GreenLevel/green_level_TEMPLATE_MAP.tscn" id="7_vwh2d"]
 [ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="8_wmeik"]
-[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/death_area.tscn" id="9_78y3o"]
-[ext_resource type="PackedScene" path="res://GreenLevel/GreenScenes/finish_area.tscn" id="10_brm8m"]
+[ext_resource type="PackedScene" uid="uid://dd750mge8ldtv" path="res://GreenLevel/GreenScenes/death_area.tscn" id="9_78y3o"]
+[ext_resource type="PackedScene" uid="uid://dt1meug6sepao" path="res://GreenLevel/GreenScenes/finish_area.tscn" id="10_brm8m"]
 
 [node name="GreenLevel" type="Node3D" node_paths=PackedStringArray("reward_spawn")]
 script = ExtResource("1_eepxb")
@@ -32,11 +32,11 @@ stream = ExtResource("4_c4xmg")
 volume_db = -10.0
 autoplay = true
 
-[node name="PortalBackLobby" parent="." instance=ExtResource("2_2wu0v")]
+[node name="EntryPortal" parent="." instance=ExtResource("2_2wu0v")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.32002, 6.53484, -3.21156)
 
-[node name="PortalBackLobby2" parent="." instance=ExtResource("2_2wu0v")]
-transform = Transform3D(0.121194, 0, 0.992629, 0, 1, 0, -0.992629, 0, 0.121194, -93.7778, -130.289, 87.2617)
+[node name="ExitPortal" parent="." instance=ExtResource("2_2wu0v")]
+transform = Transform3D(0.139903, -0.846084, 2.02597, 0.102661, 2.03038, 0.840836, -2.19315, 0.0410696, 0.168598, -94.3906, -131.758, 86.9468)
 
 [node name="GreenLevel" parent="." instance=ExtResource("7_vwh2d")]
 
@@ -181,13 +181,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.6786, -112.667, 93.0833)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.6071, -115.705, 91.6924)
 
 [node name="Venom 2018" parent="." instance=ExtResource("8_wmeik")]
-transform = Transform3D(0.599517, 0.0240791, -7.84526e-08, 0.0208513, -0.51915, 0.300082, 0.0120428, -0.29984, -0.519568, 3.3357, 6.46952, -1.35549)
+transform = Transform3D(0.399678, 0.0160527, -5.23017e-08, 0.0139008, -0.3461, 0.200054, 0.0080285, -0.199893, -0.346379, 3.3357, 6.46952, -1.35549)
+SPEED = 500.0
 
 [node name="DeathArea" parent="." instance=ExtResource("9_78y3o")]
 transform = Transform3D(0.996998, 0, -0.0774325, 0, 1, 0, 0.0774325, 0, 0.996998, -65.6976, -134.102, 90.9285)
 
 [node name="FinishArea" parent="." instance=ExtResource("10_brm8m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3249, -118.631, 90.6967)
+transform = Transform3D(0.990211, -0.477282, -0.0410294, 0.475448, 0.990689, -0.0498382, 0.0585766, 0.02713, 1.0981, -65.7292, -117.178, 90.6967)
 
 [connection signal="collected" from="Gems/gem_shard" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard" to="Green_UI" method="_on_gem_shard_collected"]
@@ -325,3 +326,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3249, -118.631, 90.6967)
 [connection signal="collected" from="Gems/gem_shard45" to="Green_UI" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard45" to="Venom 2018" method="_on_gem_shard_collected"]
 [connection signal="finished" from="FinishArea" to="." method="_on_finish_area_finished"]
+
+[editable path="Gems/gem_shard"]

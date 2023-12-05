@@ -67,6 +67,7 @@ shape = SubResource("CapsuleShape3D_3y0ye")
 
 [node name="Hum" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_cij03")
+volume_db = 10.0
 autoplay = true
 
 [node name="PickupSound" type="AudioStreamPlayer3D" parent="."]

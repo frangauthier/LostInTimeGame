@@ -99,7 +99,7 @@ transform = Transform3D(2, 0, 5.96046e-08, 0, 2, 1.67638e-08, 5.96046e-08, 8.940
 transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
 
 [node name="Branch5" parent="." instance=ExtResource("10_wy0yx")]
-transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -71.1599, -122.23, 87.9692)
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -71.1599, -122.23, 88.1409)
 
 [node name="MeshInstance3D" parent="Branch5" index="0"]
 transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
@@ -111,25 +111,16 @@ transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1,
 transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -71.357, -120.073, 87.898)
 
 [node name="MeshInstance3D" parent="Branch10" index="0"]
-transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+transform = Transform3D(2, 5.96046e-08, 3.57628e-07, 0, 2, 7.82311e-08, 5.96046e-08, 9.23872e-07, 2, -1.16756, -0.136587, -0.403664)
 
 [node name="CollisionShape3D" parent="Branch10/MeshInstance3D/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
-
-[node name="Branch11" parent="." instance=ExtResource("10_wy0yx")]
-transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -71.357, -120.073, 92.0811)
-
-[node name="MeshInstance3D" parent="Branch11" index="0"]
-transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
-
-[node name="CollisionShape3D" parent="Branch11/MeshInstance3D/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
 
 [node name="Branch8" parent="." instance=ExtResource("10_wy0yx")]
 transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -86.1505, -127.716, 86.0572)
 
 [node name="MeshInstance3D" parent="Branch8" index="0"]
-transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+transform = Transform3D(2, 5.96046e-08, 3.57628e-07, 0, 2, 7.82311e-08, 5.96046e-08, 9.23872e-07, 2, 0.178658, 0.0112171, -0.204361)
 
 [node name="CollisionShape3D" parent="Branch8/MeshInstance3D/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
@@ -138,22 +129,49 @@ transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1,
 transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -86.1505, -125.48, 86.0572)
 
 [node name="MeshInstance3D" parent="Branch13" index="0"]
-transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+transform = Transform3D(2, 1.19209e-07, 3.57628e-07, 0, 2, 9.31323e-08, 5.96046e-08, 9.53674e-07, 2, -1.15267, -0.180405, -0.349274)
 
 [node name="CollisionShape3D" parent="Branch13/MeshInstance3D/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
 
 [node name="Branch9" parent="." instance=ExtResource("10_wy0yx")]
-transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -86.1505, -127.716, 90.201)
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -86.1505, -127.716, 89.9537)
 
 [node name="MeshInstance3D" parent="Branch9" index="0"]
-transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+transform = Transform3D(2, 5.96046e-08, 2.38419e-07, 0, 2, 5.7742e-08, 5.96046e-08, 4.17233e-07, 2, 0.0416641, 0.0412312, 0.499931)
 
 [node name="CollisionShape3D" parent="Branch9/MeshInstance3D/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
 
+[node name="Branch11" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -86.726, -126.162, 90.9021)
+
+[node name="MeshInstance3D" parent="Branch11" index="0"]
+transform = Transform3D(2, 5.96046e-08, 2.38419e-07, 0, 2, 5.7742e-08, 5.96046e-08, 4.17233e-07, 2, 0.0416641, 0.0412312, 0.499931)
+
+[node name="CollisionShape3D" parent="Branch11/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch12" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -71.8883, -120.638, 93.4219)
+
+[node name="MeshInstance3D" parent="Branch12" index="0"]
+transform = Transform3D(2, 3.57628e-07, 3.57628e-07, 0, 2, 1.08033e-07, 5.96046e-08, 1.13249e-06, 2, -0.551346, 0.0159721, 0.620712)
+
+[node name="CollisionShape3D" parent="Branch12/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch6" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -71.1599, -121.582, 91.6637)
+
+[node name="MeshInstance3D" parent="Branch6" index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 5.96046e-08, 5.96046e-08, 2, -7.62939e-06, -0.00588417, -0.0758209)
+
+[node name="CollisionShape3D" parent="Branch6/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
 [node name="Branch14" parent="." instance=ExtResource("10_wy0yx")]
-transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -86.1505, -125.498, 90.201)
+transform = Transform3D(-0.041737, -3.71285, 0.369705, -0.172185, -1.43123, -0.917783, 0.98418, -0.407852, -0.14489, -73.3523, -116.98, 89.8448)
 
 [node name="MeshInstance3D" parent="Branch14" index="0"]
 transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
@@ -161,13 +179,85 @@ transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2,
 [node name="CollisionShape3D" parent="Branch14/MeshInstance3D/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
 
-[node name="Branch6" parent="." instance=ExtResource("10_wy0yx")]
-transform = Transform3D(-0.217785, 3.72849, -0.289342, 0.269283, 1.36935, 0.900162, 0.938113, 0.472509, -0.325561, -71.1599, -122.23, 92.0821)
+[node name="Branch15" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.041737, -3.71285, 0.369705, -0.172185, -1.43123, -0.917783, 0.98418, -0.407852, -0.14489, -72.8477, -117.614, 88.0997)
 
-[node name="MeshInstance3D" parent="Branch6" index="0"]
+[node name="MeshInstance3D" parent="Branch15" index="0"]
 transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
 
-[node name="CollisionShape3D" parent="Branch6/MeshInstance3D/StaticBody3D" index="0"]
+[node name="CollisionShape3D" parent="Branch15/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch16" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.041737, -3.71285, 0.369705, -0.172185, -1.43123, -0.917783, 0.98418, -0.407852, -0.14489, -72.5843, -119.778, 88.1346)
+
+[node name="MeshInstance3D" parent="Branch16" index="0"]
+transform = Transform3D(2, 5.96046e-08, 3.57628e-07, 0, 2, 7.82311e-08, 5.96046e-08, 9.23872e-07, 2, -1.16756, -0.136587, -0.403664)
+
+[node name="CollisionShape3D" parent="Branch16/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch17" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.041737, -3.71285, 0.369705, -0.172185, -1.43123, -0.917783, 0.98418, -0.407852, -0.14489, -72.6816, -118.174, 93.5145)
+
+[node name="MeshInstance3D" parent="Branch17" index="0"]
+transform = Transform3D(2, 3.57628e-07, 3.57628e-07, 0, 2, 1.08033e-07, 5.96046e-08, 1.13249e-06, 2, -0.551346, 0.0159721, 0.620712)
+
+[node name="CollisionShape3D" parent="Branch17/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch18" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.041737, -3.71285, 0.369705, -0.172185, -1.43123, -0.917783, 0.98418, -0.407852, -0.14489, -72.8934, -117.317, 91.5405)
+
+[node name="MeshInstance3D" parent="Branch18" index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 5.96046e-08, 5.96046e-08, 2, -7.62939e-06, -0.00588417, -0.0758209)
+
+[node name="CollisionShape3D" parent="Branch18/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch19" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.041737, -3.71285, 0.369705, -0.172185, -1.43123, -0.917783, 0.98418, -0.407852, -0.14489, -88.6795, -122.553, 88.1913)
+
+[node name="MeshInstance3D" parent="Branch19" index="0"]
+transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+
+[node name="CollisionShape3D" parent="Branch19/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch20" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.041737, -3.71285, 0.369705, -0.172185, -1.43123, -0.917783, 0.98418, -0.407852, -0.14489, -88.1748, -123.187, 86.4462)
+
+[node name="MeshInstance3D" parent="Branch20" index="0"]
+transform = Transform3D(2, 0, 0, 3.72529e-09, 2, 0, 5.96046e-08, 5.96046e-08, 2, -3.8147e-06, -0.00588417, -0.0758286)
+
+[node name="CollisionShape3D" parent="Branch20/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch21" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.041737, -3.71285, 0.369705, -0.172185, -1.43123, -0.917783, 0.98418, -0.407852, -0.14489, -87.9114, -125.35, 86.4812)
+
+[node name="MeshInstance3D" parent="Branch21" index="0"]
+transform = Transform3D(2, 5.96046e-08, 3.57628e-07, 0, 2, 7.82311e-08, 5.96046e-08, 9.23872e-07, 2, -1.16756, -0.136587, -0.403664)
+
+[node name="CollisionShape3D" parent="Branch21/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch22" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.041737, -3.71285, 0.369705, -0.172185, -1.43123, -0.917783, 0.98418, -0.407852, -0.14489, -88.0087, -123.747, 91.861)
+
+[node name="MeshInstance3D" parent="Branch22" index="0"]
+transform = Transform3D(2, 3.57628e-07, 3.57628e-07, 0, 2, 1.08033e-07, 5.96046e-08, 1.13249e-06, 2, -0.551346, 0.0159721, 0.620712)
+
+[node name="CollisionShape3D" parent="Branch22/MeshInstance3D/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
+
+[node name="Branch23" parent="." instance=ExtResource("10_wy0yx")]
+transform = Transform3D(-0.041737, -3.71285, 0.369705, -0.172185, -1.43123, -0.917783, 0.98418, -0.407852, -0.14489, -88.2206, -122.889, 89.8871)
+
+[node name="MeshInstance3D" parent="Branch23" index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 5.96046e-08, 5.96046e-08, 2, -7.62939e-06, -0.00588417, -0.0758209)
+
+[node name="CollisionShape3D" parent="Branch23/MeshInstance3D/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 1.86265e-09, 1, 0, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0)
 
 [node name="Turn5" parent="." instance=ExtResource("7_bpdcf")]
@@ -180,9 +270,19 @@ transform = Transform3D(1, 0, 0, 0, 0.999967, -0.0081855, 0, 0.0081855, 0.999967
 [editable path="Branch7"]
 [editable path="Branch5"]
 [editable path="Branch10"]
-[editable path="Branch11"]
 [editable path="Branch8"]
 [editable path="Branch13"]
 [editable path="Branch9"]
-[editable path="Branch14"]
+[editable path="Branch11"]
+[editable path="Branch12"]
 [editable path="Branch6"]
+[editable path="Branch14"]
+[editable path="Branch15"]
+[editable path="Branch16"]
+[editable path="Branch17"]
+[editable path="Branch18"]
+[editable path="Branch19"]
+[editable path="Branch20"]
+[editable path="Branch21"]
+[editable path="Branch22"]
+[editable path="Branch23"]

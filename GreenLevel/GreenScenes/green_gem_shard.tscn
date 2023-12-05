@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7i1s2j7kcomy"]
+[gd_scene load_steps=11 format=3 uid="uid://c7i1s2j7kcomy"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_gem_shard.gd" id="1_0j0dg"]
 [ext_resource type="Texture2D" uid="uid://bqtsxsclp2ohn" path="res://Common/Assets/Models/stylized_crystal_gems_asset_pack/textures/material_normal.png" id="2_2meep"]
@@ -46,11 +46,40 @@ shadow_mesh = SubResource("ArrayMesh_a3ewx")
 [sub_resource type="SphereShape3D" id="SphereShape3D_omtr3"]
 radius = 0.343384
 
+[sub_resource type="Animation" id="Animation_arpq3"]
+resource_name = "Collected"
+length = 0.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.5, 1, 0, 0.151432, 0)
+
+[sub_resource type="Animation" id="Animation_r3v0k"]
+resource_name = "Float"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 0, 0.25, 0, 2, 1, 0, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7qe1m"]
+_data = {
+"Collected": SubResource("Animation_arpq3"),
+"Float": SubResource("Animation_r3v0k")
+}
+
 [node name="gem_shard" type="Node3D"]
 script = ExtResource("1_0j0dg")
 
 [node name="Shard" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.0124942, 0)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.151432, 0)
 mesh = SubResource("ArrayMesh_e3m57")
 skeleton = NodePath("")
 
@@ -59,6 +88,12 @@ transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shard/Area3D"]
 shape = SubResource("SphereShape3D_omtr3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Shard")
+libraries = {
+"": SubResource("AnimationLibrary_7qe1m")
+}
 
 [node name="PickupSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_viati")
