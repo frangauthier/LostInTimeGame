@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var audio_streams = []
-
+var animation = true
 
 
 @export var SPEED = 500.0
@@ -13,6 +13,7 @@ func _on_SlidingSound_finished():
 	$"Sounds/sliding sound".play()
 
 func _ready():
+	$RootNode.rotate_x(1.4)
 	$"Sounds/laughing sound3".play()
 	$"Sounds/sliding sound".play()
 	$"Sounds/sliding sound".volume_db = -80 
@@ -55,7 +56,11 @@ func _physics_process(delta):
 #	if direction:
 #		velocity.x = direction.x * SPEED
 #		velocity.z = direction.z * SPEED
+	
 	if is_on_floor():
+		if(animation):
+			$RootNode.rotate_x(-1.4)
+			animation = false
 		var slope_normal = get_floor_normal() + Vector3.UP *0.01
 		var right_dir = transform.basis.x
 		var forward_dir = right_dir.cross(slope_normal).normalized()
