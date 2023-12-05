@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="8_wmeik"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wxvvx"]
-size = Vector3(1, 3, 3)
+size = Vector3(1000, 1000, 5)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nxt5b"]
 points = PackedVector3Array(-0.5, -1.45426, -1.45426, 0.5, 1.45426, 1.45426, 0.5, 1.45426, -1.45426, -0.5, 1.45426, 1.45426, 0.5, -1.45426, 1.45426, -0.5, 1.45426, -1.45426, 0.5, -1.45426, -1.45426, -0.5, -1.45426, 1.45426)
@@ -36,7 +36,7 @@ volume_db = -10.0
 autoplay = true
 
 [node name="PortalBackLobby" parent="." instance=ExtResource("2_2wu0v")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.8313, 7.85661, -3.21156)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.8313, 5.3478, -3.21156)
 
 [node name="PortalBackLobby2" parent="." instance=ExtResource("2_2wu0v")]
 transform = Transform3D(0.121194, 0, 0.992629, 0, 1, 0, -0.992629, 0, 0.121194, -93.7778, -130.289, 87.2617)
@@ -47,7 +47,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0865316, 0.598623, 1.9899)
 [node name="GreenLevel" parent="." instance=ExtResource("7_vwh2d")]
 
 [node name="Venom 2018" parent="." instance=ExtResource("8_wmeik")]
-transform = Transform3D(0.5, 0, 0, 0, 0.0487914, 0.497614, 0, -0.497614, 0.0487914, 2.82694, 6.47743, -0.701547)
+transform = Transform3D(0.5, 0, 0, 0, 0.0487914, 0.497614, 0, -0.497614, 0.0487914, 2.82694, 3.93213, -0.701547)
+
+[node name="Camera3D" type="Camera3D" parent="Venom 2018"]
+transform = Transform3D(-2, 1.74846e-07, 0, -5.43204e-08, -0.621353, 1.90103, 1.66193e-07, 1.90103, 0.621353, -0.72368, 10.0369, 1.88635)
 
 [node name="FinishArea" type="Area3D" parent="."]
 transform = Transform3D(0.996998, 0, -0.0774325, 0, 1, 0, 0.0774325, 0, 0.996998, -65.6976, -118.756, 90.9285)
@@ -60,7 +63,20 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FinishArea"]
 shape = SubResource("ConvexPolygonShape3D_nxt5b")
 
-[node name="RewardSpawnPoint" type="Node" parent="."]
+[node name="DeathZone" type="Area3D" parent="."]
+transform = Transform3D(0.996998, 0, -0.0774325, 0, 1, 0, 0.0774325, 0, 0.996998, -65.6976, -140.192, 90.9285)
+
+[node name="deathMesh" type="MeshInstance3D" parent="DeathZone"]
+transform = Transform3D(1, 0, 4.44089e-16, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("BoxMesh_wxvvx")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZone"]
+shape = SubResource("ConvexPolygonShape3D_nxt5b")
 
 [connection signal="collected" from="gem_shard" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="gem_shard" to="Green_UI" method="_on_gem_shard_collected"]
+[connection signal="death_barrier_hit" from="Venom 2018" to="." method="_on_venom_2018_death_barrier_hit"]
+[connection signal="finish_line_reached" from="Venom 2018" to="." method="_on_venom_2018_finish_line_reached"]
+[connection signal="body_entered" from="FinishArea" to="Venom 2018" method="_on_finish_area_body_entered"]
+[connection signal="body_entered" from="DeathZone" to="Venom 2018" method="_on_death_zone_body_entered"]

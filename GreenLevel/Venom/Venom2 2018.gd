@@ -2,7 +2,8 @@ extends CharacterBody3D
 
 var audio_streams = []
 
-
+signal death_barrier_hit
+signal finish_line_reached
 
 @export var SPEED = 500.0
 @export var JUMP_VELOCITY = 500
@@ -72,3 +73,12 @@ func _on_gem_shard_collected():
 	audio_player.stream = audio_stream  # Set the audio stream to play.
 	add_child(audio_player)  # Add the AudioStreamPlayer to the scene.
 	audio_player.play()  #  Replace with function body.
+
+
+func _on_death_zone_body_entered(body):
+	print("hit")
+	death_barrier_hit.emit()
+
+
+func _on_finish_area_body_entered(body):
+	finish_line_reached.emit()
