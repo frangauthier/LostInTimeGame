@@ -72,7 +72,6 @@ func _physics_process(delta):
 
 func _on_gem_shard_collected():
 	var audio_stream = audio_streams[randi() % audio_streams.size()]
-	print(audio_stream)
 	# Play the audio stream.
 	var audio_player = AudioStreamPlayer.new()  # Create a new AudioStreamPlayer.
 	audio_player.stream = audio_stream  # Set the audio stream to play.

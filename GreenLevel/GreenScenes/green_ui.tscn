@@ -102,7 +102,7 @@ stretch_mode = 5
 [node name="Label" type="Label" parent="RewardContainer/TiersVBox/GemHBox"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "50"
+text = "45"
 horizontal_alignment = 1
 vertical_alignment = 1
 
