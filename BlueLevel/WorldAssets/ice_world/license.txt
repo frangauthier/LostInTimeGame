@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ice World
+* source:	https://sketchfab.com/3d-models/ice-world-15fe110a62624e718e1e9685ac2d21c7
+* author:	C.anton (https://sketchfab.com/C.anton)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ice World" (https://sketchfab.com/3d-models/ice-world-15fe110a62624e718e1e9685ac2d21c7) by C.anton (https://sketchfab.com/C.anton) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

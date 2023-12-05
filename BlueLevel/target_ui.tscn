@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmjtqyr3ghwgb"]
+[gd_scene load_steps=6 format=3 uid="uid://b3vccllqncm3p"]
 
 [ext_resource type="Script" path="res://BlueLevel/target_ui.gd" id="1_ugy7h"]
 [ext_resource type="Texture2D" uid="uid://di3s4kdtkdtdw" path="res://BlueLevel/progress_bar/bg.png" id="2_d1w1y"]
