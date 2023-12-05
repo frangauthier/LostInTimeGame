@@ -46,141 +46,141 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.3229, -128.073, 87.6907)
 [node name="Gems" type="Node3D" parent="."]
 
 [node name="gem_shard" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89415, -1.22439, 8.56248)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89415, -1.41959, 8.56248)
 
 [node name="gem_shard2" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18542, -2.97006, 17.6045)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18542, -3.073, 17.6045)
 
 [node name="gem_shard3" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1389, -7.97723, 23.705)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1389, -8.18635, 23.705)
 
 [node name="gem_shard4" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.328, -10.8532, 19.9022)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7895, -10.4604, 19.9022)
 
 [node name="gem_shard5" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.7789, -13.1739, 16.1094)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.7789, -13.3866, 16.1094)
 
 [node name="gem_shard6" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.905, -17.887, 6.569)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.905, -18.3324, 6.569)
 
 [node name="gem_shard7" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.844, -23.3293, -2.046)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.844, -23.6221, -2.046)
 
 [node name="gem_shard8" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3871, -26.4597, -8.55247)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.2417, -25.2511, -6.73058)
 
 [node name="gem_shard9" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2029, -29.4016, -13.9851)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2029, -29.6775, -13.9851)
 
 [node name="gem_shard10" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4877, -32.482, -15.1462)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4877, -33.192, -15.1462)
 
 [node name="gem_shard11" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.938, -36.3367, -10.091)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.938, -36.5304, -10.091)
 
 [node name="gem_shard12" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.876, -38.2893, -4.039)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.876, -38.5673, -4.039)
 
 [node name="gem_shard13" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.666, -38.569, 1.656)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.666, -38.7517, 1.656)
 
 [node name="gem_shard14" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829144, -38.569, 9.27412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829144, -38.908, 9.27412)
 
 [node name="gem_shard15" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30678, -39.8638, 19.3129)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30678, -40.3768, 19.3129)
 
 [node name="gem_shard16" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5624, -43.2368, 24.9375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5624, -43.706, 24.9375)
 
 [node name="gem_shard17" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.694, -47.0954, 26.2092)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.694, -47.4112, 26.2092)
 
 [node name="gem_shard18" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.4944, -48.5322, 29.9925)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.4944, -48.7152, 29.9925)
 
 [node name="gem_shard19" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.5527, -50.279, 36.4715)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.5527, -50.5767, 36.4715)
 
 [node name="gem_shard20" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.0913, -52.0303, 42.2029)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.0913, -52.1996, 42.2029)
 
 [node name="gem_shard21" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.6683, -53.2851, 47.0496)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.6683, -53.5722, 47.0496)
 
 [node name="gem_shard22" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.8606, -54.6463, 53.5118)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.8606, -53.9112, 53.5118)
 
 [node name="gem_shard23" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.8606, -56.9424, 63.1235)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.8606, -57.0026, 63.1235)
 
 [node name="gem_shard24" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.8606, -58.8199, 69.5713)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.8606, -58.0798, 69.5713)
 
 [node name="gem_shard25" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.8606, -61.5301, 78.225)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.8606, -61.7067, 78.225)
 
 [node name="gem_shard26" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.5394, -64.8631, 90.7813)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.5394, -65.2855, 90.7813)
 
 [node name="gem_shard27" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.4116, -68.0833, 95.8959)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.4116, -68.5, 95.8959)
 
 [node name="gem_shard28" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.3865, -71.63, 96.9867)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.3865, -71.9988, 96.9867)
 
 [node name="gem_shard29" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.0821, -74.453, 95.7995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.0821, -74.6507, 95.7995)
 
 [node name="gem_shard30" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.9281, -77.1167, 99.8041)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.9281, -77.3148, 99.8041)
 
 [node name="gem_shard31" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.6361, -79.4501, 106.32)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.6361, -79.7556, 106.32)
 
 [node name="gem_shard32" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.4829, -81.9008, 114.465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.4829, -82.2521, 114.465)
 
 [node name="gem_shard33" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.4829, -83.8269, 122.875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.4829, -84.544, 122.875)
 
 [node name="gem_shard34" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.4639, -86.1189, 130.008)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.4639, -86.5862, 130.008)
 
 [node name="gem_shard35" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.5864, -88.2542, 134.226)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.5864, -88.5575, 134.226)
 
 [node name="gem_shard36" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.9401, -91.1246, 137.68)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.9401, -90.35, 137.482)
 
 [node name="gem_shard37" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.9988, -93.2835, 137.995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.9988, -93.9043, 137.995)
 
 [node name="gem_shard38" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.827, -96.4463, 136.379)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.827, -96.9032, 136.379)
 
 [node name="gem_shard39" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.8727, -99.1442, 128.259)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.8727, -100.059, 128.259)
 
 [node name="gem_shard40" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5845, -102.177, 119.465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5845, -102.804, 119.465)
 
 [node name="gem_shard41" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6872, -104.52, 111.523)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6872, -104.863, 111.523)
 
 [node name="gem_shard42" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.3024, -107.033, 102.371)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.3024, -107.443, 102.371)
 
 [node name="gem_shard43" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.4681, -110.239, 95.6406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.4681, -110.519, 95.6406)
 
 [node name="gem_shard44" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.6786, -112.667, 93.0833)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.6786, -113.055, 93.0833)
 
 [node name="gem_shard45" parent="Gems" instance=ExtResource("6_7xxkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.6071, -115.705, 91.6924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.6071, -116.118, 91.6924)
 
-[node name="Venom 2018" parent="." instance=ExtResource("8_wmeik")]
+[node name="Venom" parent="." instance=ExtResource("8_wmeik")]
 transform = Transform3D(0.399678, 0.0160527, -5.23017e-08, 0.0139008, -0.3461, 0.200054, 0.0080285, -0.199893, -0.346379, 3.3357, 6.46952, -1.35549)
 SPEED = 500.0
 
@@ -192,139 +192,139 @@ transform = Transform3D(0.990211, -0.477282, -0.0410294, 0.475448, 0.990689, -0.
 
 [connection signal="collected" from="Gems/gem_shard" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard2" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard2" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard2" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard2" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard3" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard3" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard3" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard3" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard4" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard4" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard4" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard4" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard5" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard5" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard5" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard5" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard6" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard6" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard6" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard6" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard7" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard7" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard7" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard7" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard8" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard8" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard8" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard8" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard9" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard9" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard9" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard9" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard10" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard10" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard10" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard10" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard11" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard11" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard11" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard11" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard12" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard12" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard12" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard12" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard13" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard13" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard13" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard13" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard14" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard14" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard14" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard14" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard15" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard15" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard15" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard15" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard16" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard16" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard16" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard16" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard17" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard17" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard17" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard17" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard18" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard18" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard18" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard18" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard19" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard19" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard19" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard19" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard20" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard20" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard20" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard20" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard21" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard21" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard21" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard21" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard22" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard22" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard22" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard22" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard23" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard23" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard23" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard23" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard24" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard24" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard24" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard24" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard25" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard25" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard25" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard25" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard26" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard26" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard26" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard26" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard27" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard27" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard27" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard27" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard28" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard28" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard28" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard28" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard29" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard29" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard29" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard29" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard30" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard30" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard30" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard30" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard31" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard31" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard31" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard31" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard32" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard32" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard32" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard32" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard33" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard33" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard33" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard33" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard34" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard34" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard34" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard34" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard35" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard35" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard35" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard35" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard36" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard36" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard36" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard36" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard37" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard37" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard37" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard37" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard38" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard38" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard38" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard38" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard39" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard39" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard39" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard39" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard40" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard40" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard40" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard40" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard41" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard41" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard41" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard41" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard42" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard42" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard42" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard42" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard43" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard43" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard43" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard43" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard44" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard44" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard44" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard44" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard45" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gems/gem_shard45" to="Green_UI" method="_on_gem_shard_collected"]
-[connection signal="collected" from="Gems/gem_shard45" to="Venom 2018" method="_on_gem_shard_collected"]
+[connection signal="collected" from="Gems/gem_shard45" to="Venom" method="_on_gem_shard_collected"]
 [connection signal="finished" from="FinishArea" to="." method="_on_finish_area_finished"]
 
 [editable path="Gems/gem_shard"]

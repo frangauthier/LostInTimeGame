@@ -8,10 +8,10 @@ const SILVER_COIN_SCENE = preload("res://GreenLevel/GreenScenes/simple_gem_coin_
 const BRONZE_COIN_SCENE = preload("res://GreenLevel/GreenScenes/simple_gem_coin_bronze.tscn")
 
 var REWARD_TIERS = {
-	GEM = 45,
-	GOLD = 30,
-	SILVER = 20,
-	BRONZE = 10
+	GEM = 40,
+	GOLD = 25,
+	SILVER = 15,
+	BRONZE = 5
 }
 
 var gem_counter: int = 0

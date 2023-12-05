@@ -15,7 +15,8 @@ func _process(delta):
 	self.rotate_y(delta * ROTATION_SPEED)
 
 func _on_area_3d_body_entered(body):
-	if !is_collected:
+	
+	if !is_collected and body.name == "Venom":
 		$Shard.visible = false
 		is_collected = true
 		$PickupSound.play()
