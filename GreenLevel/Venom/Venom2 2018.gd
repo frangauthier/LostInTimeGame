@@ -3,8 +3,8 @@ extends CharacterBody3D
 var audio_streams = []
 var animation = true
 
-@export var SPEED = 500.0
-@export var JUMP_VELOCITY = 500
+@export var SPEED = 350.0
+@export var JUMP_VELOCITY = 5 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -34,11 +34,11 @@ func _physics_process(delta):
 			$"Sounds/sliding sound".volume_db = 0
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y += JUMP_VELOCITY
-		$"Sounds/sliding sound".volume_db = -80
-		$"Sounds/jumping sound2".play()
-	self.velocity = velocity
+#	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+#		velocity.y += JUMP_VELOCITY
+#		$"Sounds/sliding sound".volume_db = -80
+#		$"Sounds/jumping sound2".play()
+#	self.velocity = velocity
 
 # Handle rotation.
 	var rotation_speed = 150.0  # Adjust this value to your liking.
@@ -62,7 +62,12 @@ func _physics_process(delta):
 		var slope_normal = get_floor_normal() + Vector3.UP *0.01
 		var right_dir = transform.basis.x
 		var forward_dir = right_dir.cross(slope_normal).normalized()
-		velocity = forward_dir * SPEED * delta 
+		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+			velocity.y += JUMP_VELOCITY
+			$"Sounds/sliding sound".volume_db = -80
+			$"Sounds/jumping sound2".play()
+		else:
+			velocity = forward_dir * SPEED * delta 
 	move_and_slide()
 
 func _on_gem_shard_collected():
