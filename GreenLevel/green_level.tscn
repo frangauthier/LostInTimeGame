@@ -8,15 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://c7i1s2j7kcomy" path="res://GreenLevel/GreenScenes/green_gem_shard.tscn" id="6_7xxkl"]
 [ext_resource type="PackedScene" uid="uid://ciyrf8dluo1te" path="res://GreenLevel/green_level_TEMPLATE_MAP.tscn" id="7_vwh2d"]
 [ext_resource type="PackedScene" uid="uid://btkaplwamuj6s" path="res://GreenLevel/Venom/Venom2 2018.tscn" id="8_wmeik"]
+[ext_resource type="PackedScene" uid="uid://dd750mge8ldtv" path="res://GreenLevel/GreenScenes/death_area.tscn" id="9_78y3o"]
+[ext_resource type="PackedScene" uid="uid://dt1meug6sepao" path="res://GreenLevel/GreenScenes/finish_area.tscn" id="10_brm8m"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_wxvvx"]
-size = Vector3(1000, 1000, 5)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nxt5b"]
-points = PackedVector3Array(-0.5, -1.45426, -1.45426, 0.5, 1.45426, 1.45426, 0.5, 1.45426, -1.45426, -0.5, 1.45426, 1.45426, 0.5, -1.45426, 1.45426, -0.5, 1.45426, -1.45426, 0.5, -1.45426, -1.45426, -0.5, -1.45426, 1.45426)
-
-[node name="GreenLevel" type="Node3D"]
+[node name="GreenLevel" type="Node3D" node_paths=PackedStringArray("reward_spawn")]
 script = ExtResource("1_eepxb")
+reward_spawn = NodePath("RewardSpawnPoint")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
@@ -46,18 +43,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0865316, 0.598623, 1.9899)
 
 [node name="GreenLevel" parent="." instance=ExtResource("7_vwh2d")]
 
-[node name="FinishArea" type="Area3D" parent="."]
-transform = Transform3D(0.996998, 0, -0.0774325, 0, 1, 0, 0.0774325, 0, 0.996998, -65.6976, -118.756, 90.9285)
-
-[node name="Finish" type="MeshInstance3D" parent="FinishArea"]
-visible = false
-mesh = SubResource("BoxMesh_wxvvx")
-skeleton = NodePath("../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FinishArea"]
-shape = SubResource("ConvexPolygonShape3D_nxt5b")
-
-[node name="RewardSpawnPoint" type="Node" parent="."]
+[node name="RewardSpawnPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.3229, -128.901, 87.6907)
 
 [node name="Gem" type="Node3D" parent="."]
 
@@ -116,7 +103,13 @@ transform = Transform3D(0.99821, -0.0062546, 0.0594806, 0.00626569, 0.99998, 0, 
 transform = Transform3D(0.99821, -0.0062546, 0.0594806, 0.00626569, 0.99998, 0, -0.0594794, 0.000372687, 0.998229, -6.98298, -35.4283, -12.1797)
 
 [node name="Venom 2018" parent="." instance=ExtResource("8_wmeik")]
-transform = Transform3D(0.5, 0, 0, 0, -0.426552, 0.26087, 0, -0.26087, -0.426552, 3.30854, 6.10256, -1.29907)
+transform = Transform3D(0.499597, 0.020066, -4.44206e-08, 0.0173761, -0.432625, 0.250068, 0.0100357, -0.249867, -0.432973, 3.3357, 6.75462, -1.35549)
+
+[node name="DeathArea" parent="." instance=ExtResource("9_78y3o")]
+transform = Transform3D(0.996998, 0, -0.0774325, 0, 1, 0, 0.0774325, 0, 0.996998, -65.6976, -134.102, 90.9285)
+
+[node name="FinishArea" parent="." instance=ExtResource("10_brm8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3249, -118.631, 90.6967)
 
 [connection signal="collected" from="Gem/gem_shard" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gem/gem_shard" to="Green_UI" method="_on_gem_shard_collected"]
@@ -154,3 +147,4 @@ transform = Transform3D(0.5, 0, 0, 0, -0.426552, 0.26087, 0, -0.26087, -0.426552
 [connection signal="collected" from="Gem/gem_shard17" to="Green_UI" method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gem/gem_shard18" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gem/gem_shard18" to="Green_UI" method="_on_gem_shard_collected"]
+[connection signal="finished" from="FinishArea" to="." method="_on_finish_area_finished"]

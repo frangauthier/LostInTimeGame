@@ -2,8 +2,6 @@ extends Node3D
 
 @export var reward_spawn: Node3D
 
-@onready var player: CharacterBody3D = $Player
-
 const TIME_STONE_SCENE = preload("res://GreenLevel/GreenScenes/time_stone.tscn")
 const GOLD_COIN_SCENE = preload("res://GreenLevel/GreenScenes/simple_gem_coin_gold.tscn")
 const SILVER_COIN_SCENE = preload("res://GreenLevel/GreenScenes/simple_gem_coin_silver.tscn")
@@ -51,15 +49,5 @@ func giveReward():
 func _on_gem_shard_collected():
 	gem_counter += 1
 
-func _on_venom_2018_death_barrier_hit():
-	print("death barrier hit")
-	var current_scene = get_tree().get_current_scene()
-	var new_scene_instance = current_scene.instance()
-
-	get_tree().reload_current_scene()
-	get_tree().set_current_scene(new_scene_instance)
-
-
-func _on_venom_2018_finish_line_reached():
+func _on_finish_area_finished():
 	giveReward()
-	
