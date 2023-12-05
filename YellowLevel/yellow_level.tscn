@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjykeqsxjykxu"]
+[gd_scene load_steps=9 format=3 uid="uid://cjykeqsxjykxu"]
 
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_omg1k"]
+[ext_resource type="PackedScene" uid="uid://d3vm0l44npgdj" path="res://YellowLevel/Scenes/old_tyre.tscn" id="2_1l6ol"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xsofc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -20,6 +21,7 @@ albedo_color = Color(0.6, 0.517647, 0.254902, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_q15gj"]
 material = SubResource("StandardMaterial3D_x65hj")
+size = Vector2(25, 25)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ff5sy"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
@@ -42,3 +44,12 @@ mesh = SubResource("PlaneMesh_q15gj")
 shape = SubResource("ConcavePolygonShape3D_ff5sy")
 
 [node name="Player" parent="." instance=ExtResource("1_omg1k")]
+
+[node name="Old_tyre" parent="." instance=ExtResource("2_1l6ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20103, 1.52057, 3.86976)
+
+[node name="Old_tyre2" parent="." instance=ExtResource("2_1l6ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21613, 1.52057, 3.86976)
+
+[node name="Old_tyre3" parent="." instance=ExtResource("2_1l6ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.570651, 4.04606, 5.11431)
