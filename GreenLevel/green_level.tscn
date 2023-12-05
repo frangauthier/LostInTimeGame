@@ -36,7 +36,7 @@ volume_db = -10.0
 autoplay = true
 
 [node name="PortalBackLobby" parent="." instance=ExtResource("2_2wu0v")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.8313, 7.85661, -3.21156)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.32002, 6.53484, -3.21156)
 
 [node name="PortalBackLobby2" parent="." instance=ExtResource("2_2wu0v")]
 transform = Transform3D(0.121194, 0, 0.992629, 0, 1, 0, -0.992629, 0, 0.121194, -93.7778, -130.289, 87.2617)
@@ -45,9 +45,6 @@ transform = Transform3D(0.121194, 0, 0.992629, 0, 1, 0, -0.992629, 0, 0.121194, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0865316, 0.598623, 1.9899)
 
 [node name="GreenLevel" parent="." instance=ExtResource("7_vwh2d")]
-
-[node name="Venom 2018" parent="." instance=ExtResource("8_wmeik")]
-transform = Transform3D(0.5, 0, 0, 0, 0.0487914, 0.497614, 0, -0.497614, 0.0487914, 2.82694, 6.47743, -0.701547)
 
 [node name="FinishArea" type="Area3D" parent="."]
 transform = Transform3D(0.996998, 0, -0.0774325, 0, 1, 0, 0.0774325, 0, 0.996998, -65.6976, -118.756, 90.9285)
@@ -117,6 +114,9 @@ transform = Transform3D(0.99821, -0.0062546, 0.0594806, 0.00626569, 0.99998, 0, 
 
 [node name="gem_shard18" parent="Gem" instance=ExtResource("6_7xxkl")]
 transform = Transform3D(0.99821, -0.0062546, 0.0594806, 0.00626569, 0.99998, 0, -0.0594794, 0.000372687, 0.998229, -6.98298, -35.4283, -12.1797)
+
+[node name="Venom 2018" parent="." instance=ExtResource("8_wmeik")]
+transform = Transform3D(0.5, 0, 0, 0, -0.426552, 0.26087, 0, -0.26087, -0.426552, 3.30854, 6.10256, -1.29907)
 
 [connection signal="collected" from="Gem/gem_shard" to="." method="_on_gem_shard_collected"]
 [connection signal="collected" from="Gem/gem_shard" to="Green_UI" method="_on_gem_shard_collected"]
