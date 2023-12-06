@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://csuhfivvslxs"]
+[gd_scene load_steps=12 format=3 uid="uid://csuhfivvslxs"]
 
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_o0oxf"]
 [ext_resource type="PackedScene" uid="uid://btkavalrqerr8" path="res://BlueLevel/WorldAssets/Objects/iceFloor.tscn" id="2_lw0qx"]
 [ext_resource type="PackedScene" uid="uid://bprken47yeprx" path="res://BlueLevel/WorldAssets/Objects/iceBridge.tscn" id="3_muque"]
 [ext_resource type="PackedScene" uid="uid://bfwwdn0i4sxyg" path="res://BlueLevel/WorldAssets/Objects/Rock1.tscn" id="4_42wrh"]
+[ext_resource type="PackedScene" uid="uid://3qpakq0doubi" path="res://garden_gnome.tscn" id="5_5cwdg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ly6jl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -45,6 +46,9 @@ mesh = SubResource("PlaneMesh_y8f68")
 shape = SubResource("ConcavePolygonShape3D_1s6gl")
 
 [node name="Player" parent="." instance=ExtResource("1_o0oxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09315, 0)
+collision_layer = 2
+collision_mask = 7
 
 [node name="iceFloor" parent="." instance=ExtResource("2_lw0qx")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13, -1.42093, -14)
@@ -62,3 +66,6 @@ transform = Transform3D(-0.02, 0, 1.74846e-09, 0, 0.02, 0, -1.74846e-09, 0, -0.0
 
 [node name="Rock1" parent="." instance=ExtResource("4_42wrh")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11.6324, 2.11391, -10.4507)
+
+[node name="Garden_Gnome" parent="." instance=ExtResource("5_5cwdg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -1, 2, 0)
