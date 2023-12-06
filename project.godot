@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Lost In Time"
-run/main_scene="res://GreenLevel/green_level.tscn"
+run/main_scene="res://Common/Scenes/Levels/lost_in_time_world.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Globals="*res://Common/Scripts/globals.gd"
+MusicManager="*res://GreenLevel/GreenScripts/MusicManager.gd"
 
 [display]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://iok7mad6ntj0"]
 
 [ext_resource type="Script" path="res://GreenLevel/GreenScripts/green_level_manager.gd" id="1_eepxb"]
-[ext_resource type="PackedScene" uid="uid://cftr6ie1o3auk" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="2_2wu0v"]
+[ext_resource type="PackedScene" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="2_2wu0v"]
 [ext_resource type="PackedScene" uid="uid://du80smrse61sd" path="res://GreenLevel/GreenScenes/green_ui.tscn" id="2_kjlh8"]
 [ext_resource type="AudioStream" uid="uid://b5o8ebu06qfd4" path="res://GreenLevel/GreenAssests/Sounds/John_Bartmann_-_01_-_Mad_Hatter_Tea_Party(chosic.com).mp3" id="3_10xsl"]
 [ext_resource type="AudioStream" uid="uid://bd7mcvk2qaio8" path="res://GreenLevel/GreenAssests/Sounds/zapsplat_nature_rainforest_evening_cicada_insects_birds_distant_echos_28312.mp3" id="4_c4xmg"]
@@ -25,7 +25,6 @@ shadow_enabled = true
 
 [node name="BGM-Player" type="AudioStreamPlayer2D" parent="SoundPlayers"]
 stream = ExtResource("3_10xsl")
-autoplay = true
 
 [node name="Ambience-Player" type="AudioStreamPlayer2D" parent="SoundPlayers"]
 stream = ExtResource("4_c4xmg")

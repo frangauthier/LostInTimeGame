@@ -3,8 +3,8 @@ extends CharacterBody3D
 var audio_streams = []
 var animation = true
 
-@export var SPEED = 350.0
-@export var JUMP_VELOCITY = 5 
+@export var SPEED = 250.0
+@export var JUMP_VELOCITY = 2.5 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
