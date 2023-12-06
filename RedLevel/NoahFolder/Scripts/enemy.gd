@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const LERP_VALUE : float = 0.15
 
-const SPEED = 3.0
+const SPEED = 4.0
 const JUMP_VELOCITY = 4.5
 const ACCEL = 10
 
