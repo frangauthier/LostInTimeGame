@@ -18,6 +18,7 @@ func _on_body_entered(_body):
 		$"1".visible = false
 		is_collected = true
 		$PickupSound.play()
+		MusicManager.who_laugh_the_last()
 		collected.emit()
 		$Timer.start()
 

@@ -13,6 +13,7 @@ func _process(delta):
 func _on_body_entered(_body):
 	$PickupSound.play()
 	$"1_1_0".visible = false
+	MusicManager.who_laugh_the_last()
 	$Hum.stop()
 	$Timer.start()
 	Globals.complete_level("green")

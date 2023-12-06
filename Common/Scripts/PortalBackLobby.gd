@@ -14,4 +14,8 @@ func _process(delta):
 
 
 func _on_enter_portal_area_body_entered(body):
+	print(body.name)
+	if(body.name == "Venom"):
+		MusicManager.stop_music()
+		
 	Globals.load_level("lobby")

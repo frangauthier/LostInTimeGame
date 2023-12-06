@@ -11,7 +11,7 @@ var REWARD_TIERS = {
 	GEM = 40,
 	GOLD = 25,
 	SILVER = 15,
-	BRONZE = 5
+	BRONZE = 1
 }
 
 var gem_counter: int = 0
