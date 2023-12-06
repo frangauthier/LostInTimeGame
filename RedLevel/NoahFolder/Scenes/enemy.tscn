@@ -9,8 +9,8 @@ radius = 0.622481
 height = 1.71536
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vupgv"]
-radius = 0.274007
-height = 1.62678
+radius = 0.340293
+height = 1.4282
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5pyjf"]
 animation = &"idle"
@@ -70,6 +70,7 @@ visible = false
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Worker" index="3"]
 
 [node name="HitBox" type="Area3D" parent="Worker" index="4"]
+visible = false
 collision_layer = 128
 collision_mask = 4
 
@@ -78,7 +79,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.551484)
 shape = SubResource("CapsuleShape3D_redmd")
 
 [node name="DangerZone" type="Area3D" parent="Worker" index="5"]
-visible = false
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Worker/DangerZone" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -96,3 +97,4 @@ parameters/conditions/is_running = false
 stream = ExtResource("3_p2skv")
 
 [connection signal="body_entered" from="Worker/HitBox" to="Worker" method="_on_hit_box_body_entered"]
+[connection signal="body_entered" from="Worker/DangerZone" to="Worker" method="_on_danger_zone_body_entered"]

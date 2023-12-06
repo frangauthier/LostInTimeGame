@@ -73,3 +73,8 @@ func hit():
 	$"../Hit Sound".play()
 	if hit_points <= 0:
 		die()
+
+
+func _on_danger_zone_body_entered(body):
+	if (body.name == 'Player'):
+		print('PLAYER_ELIMINATED')
