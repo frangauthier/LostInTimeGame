@@ -58,6 +58,7 @@ func update_animation():
 func _on_hit_box_body_entered(body):
 	
 	if (body.name == "bullet"):
+		$"../AnimationPlayer".free()
 		GlobalRedVariable.killAmount += 1
 		print("KILLED")
 		queue_free()
