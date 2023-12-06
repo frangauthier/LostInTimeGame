@@ -1,0 +1,135 @@
+[gd_scene load_steps=13 format=3 uid="uid://bdupkh0grwy27"]
+
+[ext_resource type="PackedScene" uid="uid://lqyku5wn2wo0" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/MovementController.tscn" id="1_t1jcr"]
+[ext_resource type="Script" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/Head.gd" id="2_yi3p2"]
+[ext_resource type="Script" path="res://RedLevel/MattMikeFolder/Matt_Player/Player_Extras/scripts/Weapon_State_Machine/Weapon_State_Machine.gd" id="3_bu7if"]
+[ext_resource type="PackedScene" uid="uid://drns2kevx2ak2" path="res://RedLevel/MattMikeFolder/Matt_Player/Player_Extras/Weapon_Models/blasterA.glb" id="3_i1pqv"]
+[ext_resource type="PackedScene" uid="uid://bvlnghquw6pe2" path="res://RedLevel/MattMikeFolder/Matt_Player/Player_Extras/Weapon_Models/blasterN.glb" id="4_q0351"]
+[ext_resource type="Resource" uid="uid://bwrs8ensewkgc" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/blasterL (2).tres" id="4_t1aay"]
+[ext_resource type="AnimationLibrary" uid="uid://uybino34n0sj" path="res://RedLevel/MattMikeFolder/Matt_Player/Player_Extras/weapon_animation.res" id="4_w6ldk"]
+[ext_resource type="PackedScene" uid="uid://c7sp7l3lsswwa" path="res://RedLevel/MattMikeFolder/Matt_Player/Player_Extras/Weapon_Models/blasterD.glb" id="5_4evdq"]
+[ext_resource type="AudioStream" uid="uid://b63bjb8bcdoqi" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/LaserShoot.mp3.mp3" id="9_snm7q"]
+[ext_resource type="AudioStream" uid="uid://bkgpgcsxilvko" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/Jump.mp3" id="10_6nwem"]
+
+[sub_resource type="Animation" id="Animation_tvd50"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blasterI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.148, 1.379, -0.398)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blasterL:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.117, 1.16, -0.512)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("blasterL:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("blasterN:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.193, 1.255, -0.643)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("blasterN:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ys4uk"]
+_data = {
+"RESET": SubResource("Animation_tvd50")
+}
+
+[node name="Player" instance=ExtResource("1_t1jcr")]
+speed = 11
+
+[node name="Head" type="Node3D" parent="." index="1"]
+script = ExtResource("2_yi3p2")
+
+[node name="Camera" type="Camera3D" parent="Head" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.637844, 0)
+current = true
+
+[node name="Weapons_Manager" type="Node3D" parent="Head/Camera" index="0" node_paths=PackedStringArray("Animation_Player")]
+script = ExtResource("3_bu7if")
+Animation_Player = NodePath("Weapons_Models/AnimationPlayer")
+_weapon_resources = Array[Resource("res://RedLevel/MattMikeFolder/Matt_Player/Player_Extras/scripts/Weapon_State_Machine/weapon_resource.gd")]([ExtResource("4_t1aay")])
+Start_Weapons = Array[String](["blasterL"])
+
+[node name="Weapons_Models" type="Node3D" parent="Head/Camera/Weapons_Manager" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.54919, 0)
+
+[node name="blasterN" type="Node3D" parent="Head/Camera/Weapons_Manager/Weapons_Models" index="0"]
+transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, 0.193, 1.255, -0.643)
+visible = false
+
+[node name="blasterN" parent="Head/Camera/Weapons_Manager/Weapons_Models/blasterN" index="0" instance=ExtResource("4_q0351")]
+
+[node name="blasterI" type="Node3D" parent="Head/Camera/Weapons_Manager/Weapons_Models" index="1"]
+transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, -0.148, 1.379, -0.398)
+visible = false
+
+[node name="blasterD" parent="Head/Camera/Weapons_Manager/Weapons_Models/blasterI" index="0" instance=ExtResource("5_4evdq")]
+
+[node name="blasterL" type="Node3D" parent="Head/Camera/Weapons_Manager/Weapons_Models" index="2"]
+transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, 0.117, 1.16, -0.512)
+visible = false
+
+[node name="blasterA" parent="Head/Camera/Weapons_Manager/Weapons_Models/blasterL" index="0" instance=ExtResource("3_i1pqv")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera/Weapons_Manager/Weapons_Models" index="3"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_ys4uk"),
+"Global": ExtResource("4_w6ldk")
+}
+
+[node name="BulletPoint" type="Marker3D" parent="Head/Camera/Weapons_Manager" index="1"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.313352, -0.240567, -0.907474)
+gizmo_extents = 0.21
+
+[node name="Shoot" type="AudioStreamPlayer3D" parent="." index="2"]
+stream = ExtResource("9_snm7q")
+
+[node name="Jump" type="AudioStreamPlayer3D" parent="." index="3"]
+stream = ExtResource("10_6nwem")
