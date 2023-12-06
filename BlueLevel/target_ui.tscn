@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3vccllqncm3p"]
+[gd_scene load_steps=6 format=3 uid="uid://bmjtqyr3ghwgb"]
 
 [ext_resource type="Script" path="res://BlueLevel/target_ui.gd" id="1_ugy7h"]
 [ext_resource type="Texture2D" uid="uid://di3s4kdtkdtdw" path="res://BlueLevel/progress_bar/bg.png" id="2_d1w1y"]
@@ -28,7 +28,7 @@ text = "0"
 layout_mode = 2
 text = "/10"
 
-[node name="MarginContainer2" type="MarginContainer" parent="."]
+[node name="SliderContainer" type="MarginContainer" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -39,10 +39,10 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer2"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="SliderContainer"]
 layout_mode = 2
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer2/HBoxContainer2"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="SliderContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

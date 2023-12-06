@@ -1,27 +1,25 @@
 extends CanvasLayer
 
-
 var progress_bar : TextureProgressBar
 var time_left : float = 30.0
+var max_time : float = 30.0  # Set the maximum time
 
 func _ready():
 	progress_bar = $MarginContainer2/HBoxContainer2/TextureProgressBar
+	progress_bar.value = max_time  # Set the progress bar to start at 30
+	$Timer.wait_time = max_time
+	$Timer.start()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-#	$TargetContainer/HBoxContainer/TargetVar.text = str(Globals.targetDestroyed)
+	time_left = max(0, time_left - delta)  # Ensure time_left doesn't go below 0
 	update_progress_bar()
-	pass
 
 func update_progress_bar():
-	# Calculate the progress based on the remaining time
-	var progress = time_left / 30.0
-	# Update the progress bar value
+	var progress = time_left  # Use time_left directly for progress
 	progress_bar.value = progress
 
 func _on_timer_timeout():
-	# Display a message when the timer runs out
 	print("Timer ran out!")
-	# Reload the scene (replace 'blue_level' with your actual scene name)
-	get_tree().change_scene("res://blue_level.tscn")
+	get_tree().change_scene_to_file("res://BlueLevel/TimerRanOutScene.tscn")
+
+
