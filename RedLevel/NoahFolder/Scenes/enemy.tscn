@@ -1,7 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://brunr2p1xxuji"]
+[gd_scene load_steps=11 format=3 uid="uid://brunr2p1xxuji"]
 
 [ext_resource type="Script" path="res://RedLevel/NoahFolder/Scripts/enemy.gd" id="1_groen"]
 [ext_resource type="PackedScene" uid="uid://b8jqhu4iqvkdn" path="res://RedLevel/NoahFolder/Worker/worker.gltf" id="1_hxm03"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_redmd"]
+radius = 0.151196
+height = 1.61718
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vupgv"]
+radius = 0.274007
+height = 1.62678
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5pyjf"]
 animation = &"idle"
@@ -32,7 +40,22 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 [node name="Worker" parent="." index="0"]
 script = ExtResource("1_groen")
 
+[node name="CollisionShape3D" parent="Worker" index="0"]
+visible = false
+
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Worker" index="3"]
+
+[node name="HitBox" type="Area3D" parent="Worker" index="4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Worker/HitBox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_redmd")
+
+[node name="DangerZone" type="Area3D" parent="Worker" index="5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Worker/DangerZone" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_vupgv")
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
 tree_root = SubResource("AnimationNodeStateMachine_ccoaw")
@@ -40,3 +63,5 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/conditions/is_idling = false
 parameters/conditions/is_running = false
+
+[connection signal="body_entered" from="Worker/HitBox" to="Worker" method="_on_hit_box_body_entered"]

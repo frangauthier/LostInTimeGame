@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const LERP_VALUE : float = 0.15
 
-const SPEED = 2.0
+const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 const ACCEL = 10
 
@@ -53,3 +53,11 @@ func auto_movement(delta):
 func update_animation():
 	$"../AnimationTree"["parameters/conditions/is_idling"] = velocity.length() < 0.05
 	$"../AnimationTree"["parameters/conditions/is_running"] = velocity.length() > 0.05
+
+# On getting hit logic
+func _on_hit_box_body_entered(body):
+	
+	if (body.name == "Player"):
+		GlobalRedVariable.killAmount += 1
+		print("KILLED")
+		queue_free()
