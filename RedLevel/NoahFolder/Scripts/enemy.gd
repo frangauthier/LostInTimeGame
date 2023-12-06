@@ -70,5 +70,6 @@ func die():
 
 func hit():
 	hit_points -= 1
+	$"../Hit Sound".play()
 	if hit_points <= 0:
 		die()
