@@ -15,6 +15,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
 @onready var player = $'../../../Player' # Worker -> Enemy -> Enemies -> RedLevel -> Player
 
+var hit_points: float = 3;
+
 var target_set = false
 
 func _process(delta):
@@ -58,7 +60,15 @@ func update_animation():
 func _on_hit_box_body_entered(body):
 	
 	if (body.name == "bullet"):
-		$"../AnimationPlayer".free()
-		GlobalRedVariable.killAmount += 1
-		print("KILLED")
-		queue_free()
+		hit()
+
+func die():
+	$"../AnimationPlayer".free()
+	GlobalRedVariable.killAmount += 1
+	print("KILLED")
+	queue_free()
+
+func hit():
+	hit_points -= 1
+	if hit_points <= 0:
+		die()
