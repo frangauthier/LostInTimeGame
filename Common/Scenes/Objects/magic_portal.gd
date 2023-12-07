@@ -11,6 +11,10 @@ extends Node3D
 func _ready():
 	var material = portal_center_mesh.get_active_material(0)
 	material.albedo_color = portal_color_override
+	if(Globals.is_level_completed(gem_color)):
+		var gem = gem_scene.instantiate() as Node3D
+		gem.scale = Vector3.ONE*0.003;
+		$GemLocation.add_child(gem)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -46,3 +46,5 @@ func load_level(gem_color: String):
 		get_tree().change_scene_to_packed(next_scene)
 	
 
+func is_level_completed(gem_color: String):
+	return gem_collected[gem_color]

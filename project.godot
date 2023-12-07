@@ -64,3 +64,7 @@ jump={
 
 3d_render/layer_1="Player"
 3d_render/layer_2="Ground"
+3d_physics/layer_1="Player"
+3d_physics/layer_2="Ground"
+3d_physics/layer_12="Tires"
+3d_physics/layer_13="Footballs"
