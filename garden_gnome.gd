@@ -23,6 +23,8 @@ func _on_body_entered(body):
 	
 
 func _disable_collision_shape():
+
+
 	$CollisionShape3D.set_disabled(true)
 	deleteObject()
 	emit_Particule()
@@ -32,7 +34,7 @@ func _disable_collision_shape():
 		
 	if node3DPlatform != null:
 		node3DPlatform.visible = true
-	
+	BlueGlobals.score += 1
 
 func deleteObject():
 	$IceCube.queue_free() 

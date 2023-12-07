@@ -1,13 +1,14 @@
 extends CanvasLayer
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	pass
 
 func _process(_delta):
 	pass
 
 func _on_restart_pressed():
-	get_tree().change_scene_to_file("res://BlueLevel/blue_level.tscn")
+	get_tree().change_scene_to_file("res://BlueLevel/world.tscn")
 	print("Clicked")
 	get_tree().set_pause(false)
 

@@ -17,8 +17,9 @@ offset_bottom = 50.0
 [node name="HBoxContainer" type="HBoxContainer" parent="TargetContainer"]
 layout_mode = 2
 
-[node name="PLACETARGETIMGHERE" type="TextureRect" parent="TargetContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="TargetContainer/HBoxContainer"]
 layout_mode = 2
+text = "Targets:"
 
 [node name="TargetVar" type="Label" parent="TargetContainer/HBoxContainer"]
 layout_mode = 2
