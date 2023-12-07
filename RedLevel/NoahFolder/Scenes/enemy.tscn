@@ -93,9 +93,13 @@ parameters/conditions/is_running = false
 
 [node name="Hit Sound" type="AudioStreamPlayer3D" parent="." index="3"]
 stream = ExtResource("3_p2skv")
+unit_size = 100.0
+max_distance = 2000.0
 
 [node name="Dead" type="AudioStreamPlayer3D" parent="." index="4"]
 stream = ExtResource("4_qxwcj")
+unit_size = 100.0
+max_distance = 2000.0
 
 [connection signal="body_entered" from="Worker/HitBox" to="Worker" method="_on_hit_box_body_entered"]
 [connection signal="body_entered" from="Worker/DangerZone" to="Worker" method="_on_danger_zone_body_entered"]

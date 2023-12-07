@@ -145,6 +145,8 @@ stream = ExtResource("10_6nwem")
 
 [node name="Hitsound" type="AudioStreamPlayer3D" parent="." index="5"]
 stream = ExtResource("11_q24ge")
+unit_size = 100.0
+max_distance = 400.0
 
 [node name="Dead" type="AudioStreamPlayer3D" parent="." index="6"]
 stream = ExtResource("11_jdeag")
