@@ -1,4 +1,4 @@
 extends CanvasLayer
 
 func _process(delta):
-	$MarginContainer/VBoxContainer/Label.text = "Killed: " + str(GlobalRedVariable.killAmount)
+	$MarginContainer2/VBoxContainer/Label2.text = "Dummies Smashed: " + str(GlobalRedVariable.killAmount)

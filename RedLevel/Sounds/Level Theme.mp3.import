@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3yod8jgutym1"
+path="res://.godot/imported/Level Theme.mp3-683ff97cc0399f9b3230a05e4277a579.mp3str"
+
+[deps]
+
+source_file="res://RedLevel/Sounds/Level Theme.mp3"
+dest_files=["res://.godot/imported/Level Theme.mp3-683ff97cc0399f9b3230a05e4277a579.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
