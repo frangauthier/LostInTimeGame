@@ -2,7 +2,7 @@ extends CanvasLayer
 
 var progress_bar : TextureProgressBar
 @export var time_left : float = 30.0
-@export var max_time : float = 60.0  # Set the maximum time
+@export var max_time : float = 30.0  # Set the maximum time
 var targetCount : int
 
 func _ready():
@@ -22,7 +22,7 @@ func update_progress_bar():
 
 func _on_timer_timeout():
 	print("Timer ran out!")
-	get_tree().change_scene_to_file("res://BlueLevel/world.tscn")
+	get_tree().change_scene_to_file("res://BlueLevel/TimerRanOutScene.tscn")
 
 func update_target():
 		targetCount = BlueGlobals.score

@@ -1,17 +1,20 @@
-[gd_scene load_steps=22 format=3 uid="uid://csuhfivvslxs"]
+[gd_scene load_steps=25 format=3 uid="uid://dahmsxe7x74ae"]
 
 [ext_resource type="Script" path="res://BlueLevel/worldScript.gd" id="1_hh52x"]
 [ext_resource type="PackedScene" uid="uid://btkavalrqerr8" path="res://BlueLevel/Assets/WorldAssets/Objects/iceFloor.tscn" id="2_lw0qx"]
 [ext_resource type="Texture2D" uid="uid://doyodkg1ds7td" path="res://Common/Assets/Textures/Sky.png" id="2_mixya"]
 [ext_resource type="PackedScene" uid="uid://bprken47yeprx" path="res://BlueLevel/Assets/WorldAssets/Objects/iceBridge.tscn" id="3_muque"]
-[ext_resource type="PackedScene" uid="uid://chqd8noxhjino" path="res://garden_gnome.tscn" id="5_5cwdg"]
+[ext_resource type="PackedScene" uid="uid://bpvev8mdd35u6" path="res://garden_gnome.tscn" id="5_5cwdg"]
 [ext_resource type="PackedScene" uid="uid://bua3tb48rql7t" path="res://BlueLevel/Assets/Rock/rock_moss_set_02_1k/IceRocks/Rock1.tscn" id="5_61fhv"]
 [ext_resource type="Texture2D" uid="uid://bt05pdn1vy6nn" path="res://BlueLevel/snow18/textures/Material_baseColor.png" id="6_rro31"]
 [ext_resource type="Texture2D" uid="uid://ctfexng7l623d" path="res://BlueLevel/snow18/textures/Material_metallicRoughness.png" id="7_cliwn"]
 [ext_resource type="PackedScene" uid="uid://c854k4sxlj54p" path="res://BlueLevel/PlayerWorkingfolder/spiderman_playerBlue.tscn" id="8_84hs5"]
 [ext_resource type="Texture2D" uid="uid://rdx0y53cldul" path="res://BlueLevel/snow18/textures/Material_normal.png" id="8_ro4q2"]
-[ext_resource type="PackedScene" uid="uid://jtud4rxblqdt" path="res://BlueLevel/magicPortalBlue.tscn" id="11_vvm0x"]
+[ext_resource type="PackedScene" path="res://BlueLevel/magicPortalBlue.tscn" id="11_vvm0x"]
 [ext_resource type="Script" path="res://BlueLevel/finalPortal.gd" id="12_urmxp"]
+[ext_resource type="PackedScene" path="res://BlueLevel/UI/EndGameMenu_BlueLevel.tscn" id="13_4lm8d"]
+[ext_resource type="PackedScene" uid="uid://bpargcfd5qjoy" path="res://BlueLevel/UI/target_ui.tscn" id="14_oxlsj"]
+[ext_resource type="PackedScene" path="res://BlueLevel/UI/TimerRanOutScene.tscn" id="15_jbrvd"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0twx2"]
 panorama = ExtResource("2_mixya")
@@ -104,7 +107,6 @@ staticBody3Dplatform = NodePath("../../Rocks/Rock2")
 
 [node name="Garden_Gnome5" parent="Gnomes" node_paths=PackedStringArray("node3DPlatform") instance=ExtResource("5_5cwdg")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -9.17813, 2.2327, 5.89803)
-staticBody3Dplatform = NodePath("")
 node3DPlatform = NodePath("../../IceBridges/iceBridge2")
 
 [node name="Garden_Gnome2" parent="Gnomes" node_paths=PackedStringArray("staticBody3Dplatform") instance=ExtResource("5_5cwdg")]
@@ -122,12 +124,10 @@ node3DPlatform = NodePath("../../Walls/wall1")
 [node name="Garden_Gnome6" parent="Gnomes" node_paths=PackedStringArray("staticBody3Dplatform") instance=ExtResource("5_5cwdg")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -12.0165, 12.0206, 23.2018)
 staticBody3Dplatform = NodePath("../../Walls/wall2")
-node3DPlatform = NodePath("")
 
 [node name="Garden_Gnome7" parent="Gnomes" node_paths=PackedStringArray("staticBody3Dplatform") instance=ExtResource("5_5cwdg")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 1.0115, 13.3132, 20.869)
 staticBody3Dplatform = NodePath("../../Rocks/Rock4")
-node3DPlatform = NodePath("")
 
 [node name="Walls" type="Node3D" parent="."]
 
@@ -171,6 +171,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.390309, 2.56825, -0.928842
 [node name="magic_portal" parent="." instance=ExtResource("11_vvm0x")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 18.941, 12.3447, 22.1361)
 script = ExtResource("12_urmxp")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("13_4lm8d")]
+visible = false
+
+[node name="TargetUI" parent="." instance=ExtResource("14_oxlsj")]
+
+[node name="Menu" parent="." instance=ExtResource("15_jbrvd")]
+visible = false
 
 [connection signal="throw" from="Player" to="." method="_on_player_throw"]
 [connection signal="body_entered" from="RespawnBorders" to="." method="_on_area_3d_body_entered"]
