@@ -43,17 +43,17 @@ Bronze Material:
 
 
 Wood sound:
-	Link: https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=39921
+	Link: https://pixabay.com/sound-effects/056492-fingernail-scratching-along-a-flat-wood-surface-39921/
 	Author: pixabay	
 	Name: wood scratching
 
 Jumping sound:
-	Link: https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=65494
+	Link: https://pixabay.com/sound-effects/funny-sound-effect-for-quotjack-in-the-boxquot-sound-ver2-110924/
 	Author: pixabay
 	Name: Jump
 
 Laughing sounds:
-	Link: https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=22868
+	Link: https://pixabay.com/sound-effects/male-exclamations-22868/
 	Author: Pixabay
 	Name: Exclamations Male
 
