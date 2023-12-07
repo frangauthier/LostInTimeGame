@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://csuhfivvslxs"]
 
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_o0oxf"]
-[ext_resource type="PackedScene" uid="uid://btkavalrqerr8" path="res://BlueLevel/WorldAssets/Objects/iceFloor.tscn" id="2_lw0qx"]
-[ext_resource type="PackedScene" uid="uid://bprken47yeprx" path="res://BlueLevel/WorldAssets/Objects/iceBridge.tscn" id="3_muque"]
-[ext_resource type="PackedScene" uid="uid://bfwwdn0i4sxyg" path="res://BlueLevel/WorldAssets/Objects/Rock1.tscn" id="4_42wrh"]
-[ext_resource type="PackedScene" uid="uid://3qpakq0doubi" path="res://garden_gnome.tscn" id="5_5cwdg"]
+[ext_resource type="PackedScene" uid="uid://btkavalrqerr8" path="res://BlueLevel/Assets/WorldAssets/Objects/iceFloor.tscn" id="2_lw0qx"]
+[ext_resource type="PackedScene" uid="uid://bprken47yeprx" path="res://BlueLevel/Assets/WorldAssets/Objects/iceBridge.tscn" id="3_muque"]
+[ext_resource type="PackedScene" uid="uid://chqd8noxhjino" path="res://garden_gnome.tscn" id="5_5cwdg"]
+[ext_resource type="PackedScene" uid="uid://bua3tb48rql7t" path="res://BlueLevel/Assets/Rock/rock_moss_set_02_1k/IceRocks/Rock1.tscn" id="5_61fhv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ly6jl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -58,14 +58,34 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13, -1.42093, -14)
 [node name="iceBridge" parent="IceBridges" instance=ExtResource("3_muque")]
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -3.32705, -0.266405, -4.15595)
 
+[node name="iceBridge4" parent="IceBridges" instance=ExtResource("3_muque")]
+transform = Transform3D(0.0141421, 0, -0.0141421, 0, 0.02, 0, 0.0141421, 0, 0.0141421, -10.2837, 4.07687, -12.874)
+
 [node name="iceBridge2" parent="IceBridges" instance=ExtResource("3_muque")]
 transform = Transform3D(-8.74228e-10, 0, -0.02, 0, 0.02, 0, 0.02, 0, -8.74228e-10, 18.673, -0.266405, 7.84405)
 
 [node name="iceBridge3" parent="IceBridges" instance=ExtResource("3_muque")]
 transform = Transform3D(-0.02, 0, 1.74846e-09, 0, 0.02, 0, -1.74846e-09, 0, -0.02, 19.673, -0.266405, -2.15595)
 
-[node name="Rock1" parent="." instance=ExtResource("4_42wrh")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11.6324, 2.11391, -10.4507)
+[node name="Rocks" type="Node3D" parent="."]
 
-[node name="Garden_Gnome" parent="." instance=ExtResource("5_5cwdg")]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -1, 2, 0)
+[node name="Rock2" parent="Rocks" instance=ExtResource("5_61fhv")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.91812, 1.85748, -14.4681)
+
+[node name="Rock3" parent="Rocks" instance=ExtResource("5_61fhv")]
+transform = Transform3D(-3.49848, 0, -1.93924, 0, 4, 0, 1.93924, 0, -3.49848, 0.918118, 2.85748, -14.4681)
+
+[node name="Gnomes" type="Node3D" parent="."]
+
+[node name="Garden_Gnome" parent="Gnomes" node_paths=PackedStringArray("staticBody3Dplatform") instance=ExtResource("5_5cwdg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -0.604219, 2.2327, 7.26374)
+staticBody3Dplatform = NodePath("../../Rocks/Rock2")
+
+[node name="Garden_Gnome2" parent="Gnomes" node_paths=PackedStringArray("staticBody3Dplatform") instance=ExtResource("5_5cwdg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 20.3958, 2.37326, 10.2637)
+staticBody3Dplatform = NodePath("../../Rocks/Rock3")
+
+[node name="Garden_Gnome3" parent="Gnomes" node_paths=PackedStringArray("node3DPlatform") instance=ExtResource("5_5cwdg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 17.6141, 2.37326, -13.6927)
+staticBody3Dplatform = NodePath("")
+node3DPlatform = NodePath("../../IceBridges/iceBridge4")

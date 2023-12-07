@@ -1,18 +1,18 @@
 [gd_scene load_steps=14 format=3 uid="uid://btkavalrqerr8"]
 
-[ext_resource type="Texture2D" uid="uid://esrvxehcnteu" path="res://BlueLevel/WorldAssets/Textures/snow18/textures/Material_baseColor.png" id="1_ahc6h"]
-[ext_resource type="Texture2D" uid="uid://bifjfrc5m1ubr" path="res://BlueLevel/WorldAssets/Textures/snow18/textures/Material_metallicRoughness.png" id="2_ooss0"]
-[ext_resource type="Texture2D" uid="uid://ca0sqeql0352q" path="res://BlueLevel/WorldAssets/Textures/snow18/textures/Material_normal.png" id="3_3uaoi"]
+[ext_resource type="Texture2D" uid="uid://esrvxehcnteu" path="res://BlueLevel/Assets/WorldAssets/Textures/snow18/textures/Material_baseColor.png" id="1_m04vn"]
+[ext_resource type="Texture2D" uid="uid://bifjfrc5m1ubr" path="res://BlueLevel/Assets/WorldAssets/Textures/snow18/textures/Material_metallicRoughness.png" id="2_bj2vk"]
+[ext_resource type="Texture2D" uid="uid://ca0sqeql0352q" path="res://BlueLevel/Assets/WorldAssets/Textures/snow18/textures/Material_normal.png" id="3_fjpw1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5aohd"]
 resource_name = "M_Agua"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.183199, 0.392407, 0.431789, 1)
-albedo_texture = ExtResource("1_ahc6h")
+albedo_texture = ExtResource("1_m04vn")
 metallic = 1.0
-metallic_texture = ExtResource("2_ooss0")
-roughness_texture = ExtResource("3_3uaoi")
+metallic_texture = ExtResource("2_bj2vk")
+roughness_texture = ExtResource("3_fjpw1")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dv2qh"]
 _surfaces = [{

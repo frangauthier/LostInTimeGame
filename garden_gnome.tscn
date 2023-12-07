@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://3qpakq0doubi"]
+[gd_scene load_steps=17 format=3 uid="uid://chqd8noxhjino"]
 
 [ext_resource type="Script" path="res://garden_gnome.gd" id="1_wrbkv"]
 [ext_resource type="AudioStream" uid="uid://dwrlcowye113x" path="res://BlueLevel/ice-hit-ground-01.mp3" id="2_un0b4"]

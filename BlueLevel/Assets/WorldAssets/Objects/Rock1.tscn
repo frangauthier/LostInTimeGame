@@ -1,16 +1,16 @@
 [gd_scene load_steps=7 format=3 uid="uid://bfwwdn0i4sxyg"]
 
-[ext_resource type="Texture2D" uid="uid://esrvxehcnteu" path="res://BlueLevel/WorldAssets/Textures/snow18/textures/Material_baseColor.png" id="1_p2tge"]
-[ext_resource type="Texture2D" uid="uid://bifjfrc5m1ubr" path="res://BlueLevel/WorldAssets/Textures/snow18/textures/Material_metallicRoughness.png" id="2_4eura"]
-[ext_resource type="Texture2D" uid="uid://ca0sqeql0352q" path="res://BlueLevel/WorldAssets/Textures/snow18/textures/Material_normal.png" id="3_andv2"]
+[ext_resource type="Texture2D" uid="uid://esrvxehcnteu" path="res://BlueLevel/Assets/WorldAssets/Textures/snow18/textures/Material_baseColor.png" id="1_1fvna"]
+[ext_resource type="Texture2D" uid="uid://bifjfrc5m1ubr" path="res://BlueLevel/Assets/WorldAssets/Textures/snow18/textures/Material_metallicRoughness.png" id="2_v0gdo"]
+[ext_resource type="Texture2D" uid="uid://ca0sqeql0352q" path="res://BlueLevel/Assets/WorldAssets/Textures/snow18/textures/Material_normal.png" id="3_ghs72"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wa2oq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ew7b0"]
-albedo_texture = ExtResource("1_p2tge")
+albedo_texture = ExtResource("1_1fvna")
 metallic = 1.0
-metallic_texture = ExtResource("2_4eura")
-roughness_texture = ExtResource("3_andv2")
+metallic_texture = ExtResource("2_v0gdo")
+roughness_texture = ExtResource("3_ghs72")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jqa1a"]
 radius = 8.0

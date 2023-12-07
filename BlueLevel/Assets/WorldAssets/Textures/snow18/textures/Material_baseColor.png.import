@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://esrvxehcnteu"
-path.s3tc="res://.godot/imported/Material_baseColor.png-1ec3d7cde9dd1ff480f57af10d180546.s3tc.ctex"
+path.s3tc="res://.godot/imported/Material_baseColor.png-2f3856eb2d311329b1fa6e4d63211fc7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://BlueLevel/WorldAssets/Textures/snow18/textures/Material_baseColor.png"
-dest_files=["res://.godot/imported/Material_baseColor.png-1ec3d7cde9dd1ff480f57af10d180546.s3tc.ctex"]
+source_file="res://BlueLevel/Assets/WorldAssets/Textures/snow18/textures/Material_baseColor.png"
+dest_files=["res://.godot/imported/Material_baseColor.png-2f3856eb2d311329b1fa6e4d63211fc7.s3tc.ctex"]
 
 [params]
 

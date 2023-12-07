@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://rx58ltr1fr6r"
-path="res://.godot/imported/scene.gltf-ad4162d4887ba883aa06d16bc0a2db0d.scn"
+path="res://.godot/imported/scene.gltf-21f27535fd95cdcf278b451972e2947a.scn"
 
 [deps]
 
-source_file="res://BlueLevel/WorldAssets/Textures/snow18/scene.gltf"
-dest_files=["res://.godot/imported/scene.gltf-ad4162d4887ba883aa06d16bc0a2db0d.scn"]
+source_file="res://BlueLevel/Assets/WorldAssets/Textures/snow18/scene.gltf"
+dest_files=["res://.godot/imported/scene.gltf-21f27535fd95cdcf278b451972e2947a.scn"]
 
 [params]
 
