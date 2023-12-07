@@ -47,6 +47,7 @@ func _physics_process(delta):
 		var just_landed := is_on_floor() and snap_vector == Vector3.ZERO
 		var is_jumping := is_on_floor() and Input.is_action_just_pressed("jump")
 		if is_jumping:
+			$AudioStreamPlayer3D.play()
 			velocity.y = jump_strength
 			snap_vector = Vector3.ZERO
 		elif just_landed:
