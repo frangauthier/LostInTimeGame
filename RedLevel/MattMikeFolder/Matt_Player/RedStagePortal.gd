@@ -9,14 +9,20 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	GlobalRedVariable.killAmount = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	Check_if_complete()
 	pass
 
 
+func Check_if_complete():
+	if GlobalRedVariable.killAmount >= 10 and not $Sketchfab_model2/Portal_on.playing:
+		$Sketchfab_model2/Portal_on.play()
+		
+		
 func _on_enter_portal_area_body_entered(body):
 	if GlobalRedVariable.killAmount >= 10:
 		#var gem = gem_scene.instantiate() as Node3D
@@ -24,5 +30,6 @@ func _on_enter_portal_area_body_entered(body):
 		#$GemLocation.add_child(gem)
 		Globals.complete_level(gem_color);
 		get_tree().change_scene_to_file("res://Common/Scenes/Levels/lost_in_time_world.tscn")
+		
 
 

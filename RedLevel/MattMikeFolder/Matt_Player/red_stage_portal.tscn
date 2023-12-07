@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dpy8qbcf6inqw"]
+[gd_scene load_steps=21 format=3 uid="uid://dpy8qbcf6inqw"]
 
 [ext_resource type="Script" path="res://RedLevel/MattMikeFolder/Matt_Player/RedStagePortal.gd" id="1_t7tqy"]
 [ext_resource type="Texture2D" uid="uid://b67bsrncksdyw" path="res://Common/Assets/Models/magic_portal/textures/MagicStoneMoss_baseColor.png" id="2_hrsps"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b7t75wijgwqgu" path="res://Common/Assets/Models/magic_portal/textures/PortalSurface_baseColor.png" id="7_ix0xd"]
 [ext_resource type="Texture2D" uid="uid://bhdtqbhihm300" path="res://Common/Assets/Models/magic_portal/textures/PortalSurface_emissive.png" id="8_wxscp"]
 [ext_resource type="Texture2D" uid="uid://dyhmpg47maobi" path="res://Common/Assets/Models/magic_portal/textures/PortalSurface_normal.png" id="9_ljagk"]
+[ext_resource type="AudioStream" uid="uid://cwjessdlxqakp" path="res://RedLevel/Sounds/Portal_On.wav" id="10_xdw6c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iytb1"]
 resource_name = "MagicStoneMoss"
@@ -185,5 +186,10 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model2/EnterPortalArea"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0432391, -0.196827)
 shape = SubResource("CylinderShape3D_c3864")
+
+[node name="Portal_on" type="AudioStreamPlayer3D" parent="Sketchfab_model2"]
+stream = ExtResource("10_xdw6c")
+unit_size = 100.0
+max_distance = 2000.0
 
 [connection signal="body_entered" from="Sketchfab_model2/EnterPortalArea" to="." method="_on_enter_portal_area_body_entered"]
