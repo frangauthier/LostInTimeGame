@@ -70,5 +70,14 @@ wait_time = 10.0
 one_shot = true
 autostart = true
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+light_color = Color(0.0195313, 0.996094, 0.996094, 1)
+light_energy = 2.5
+light_indirect_energy = 3.732
+light_size = 0.4
+omni_range = 0.939
+omni_attenuation = 1.31951
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

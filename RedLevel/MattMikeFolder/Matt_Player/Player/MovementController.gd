@@ -62,3 +62,11 @@ func accelerate(delta: float) -> void:
 	
 	velocity.x = temp_vel.x
 	velocity.z = temp_vel.z
+
+func _on_area_3d_body_entered(body):
+	if (body.name == 'enemy'):
+		$Dead.play()
+		print('PLAYER_ELIMINATED')
+		await get_tree().create_timer(0.5).timeout
+		get_tree().reload_current_scene()
+		GlobalRedVariable.killAmount = 0
