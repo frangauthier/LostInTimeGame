@@ -177,7 +177,6 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.84671, 1.04313, -5.56309)
 
 [node name="WallMesh" type="MeshInstance3D" parent="FootballEnclosure/Wall1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_pgp1p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FootballEnclosure/Wall1"]
