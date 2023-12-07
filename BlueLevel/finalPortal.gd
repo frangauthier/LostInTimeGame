@@ -12,4 +12,4 @@ func _process(delta):
 	pass
 	
 func _on_enter_portal_area_body_entered(body):
-	Globals.load_level()
+	get_tree().change_scene_to_file("res://Common/Scenes/Levels/lost_in_time_world.tscn")

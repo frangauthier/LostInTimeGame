@@ -25,4 +25,4 @@ func _on_complete_button_body_entered(body):
 
 
 func _on_enter_portal_area_body_entered(body):
-	Globals.load_level(gem_color)
+	get_tree().change_scene_to_file("res://BlueLevel/world.tscn")

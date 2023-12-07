@@ -1,12 +1,11 @@
 [gd_scene load_steps=22 format=3 uid="uid://csuhfivvslxs"]
 
+[ext_resource type="Script" path="res://BlueLevel/worldScript.gd" id="1_hh52x"]
 [ext_resource type="PackedScene" uid="uid://btkavalrqerr8" path="res://BlueLevel/Assets/WorldAssets/Objects/iceFloor.tscn" id="2_lw0qx"]
 [ext_resource type="Texture2D" uid="uid://doyodkg1ds7td" path="res://Common/Assets/Textures/Sky.png" id="2_mixya"]
 [ext_resource type="PackedScene" uid="uid://bprken47yeprx" path="res://BlueLevel/Assets/WorldAssets/Objects/iceBridge.tscn" id="3_muque"]
 [ext_resource type="PackedScene" uid="uid://chqd8noxhjino" path="res://garden_gnome.tscn" id="5_5cwdg"]
 [ext_resource type="PackedScene" uid="uid://bua3tb48rql7t" path="res://BlueLevel/Assets/Rock/rock_moss_set_02_1k/IceRocks/Rock1.tscn" id="5_61fhv"]
-[ext_resource type="PackedScene" uid="uid://bmjtqyr3ghwgb" path="res://BlueLevel/target_ui.tscn" id="6_crn8f"]
-[ext_resource type="PackedScene" uid="uid://bvu5mbywcgkoc" path="res://BlueLevel/objective_container.tscn" id="6_pkpye"]
 [ext_resource type="Texture2D" uid="uid://bt05pdn1vy6nn" path="res://BlueLevel/snow18/textures/Material_baseColor.png" id="6_rro31"]
 [ext_resource type="Texture2D" uid="uid://ctfexng7l623d" path="res://BlueLevel/snow18/textures/Material_metallicRoughness.png" id="7_cliwn"]
 [ext_resource type="PackedScene" uid="uid://c854k4sxlj54p" path="res://BlueLevel/PlayerWorkingfolder/spiderman_playerBlue.tscn" id="8_84hs5"]
@@ -157,7 +156,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0765, 8.89485, 3.69994)
 shape = SubResource("BoxShape3D_wb3t8")
 
 [node name="Player" parent="." instance=ExtResource("8_84hs5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19268, 1.12404, -1.33934)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19268, 2.04169, -4.33934)
 
 [node name="RespawnBorders" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.73162, 0)
