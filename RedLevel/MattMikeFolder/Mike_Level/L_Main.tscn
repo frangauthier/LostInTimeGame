@@ -1,8 +1,9 @@
-[gd_scene load_steps=36 format=3 uid="uid://d2vgv6ie0v40s"]
+[gd_scene load_steps=38 format=3 uid="uid://d2vgv6ie0v40s"]
 
 [ext_resource type="Script" path="res://RedLevel/MattMikeFolder/Mike_Level/L_Main.gd" id="1_km1jj"]
 [ext_resource type="PackedScene" uid="uid://ctkc7yqdqdtao" path="res://RedLevel/MattMikeFolder/Mike_Level/Geometry/Floor.tscn" id="1_yb0tt"]
 [ext_resource type="PackedScene" uid="uid://cdn7d5mxwdyks" path="res://RedLevel/MattMikeFolder/Mike_Level/Geometry/Wall.tscn" id="3_jw8hm"]
+[ext_resource type="Material" uid="uid://crax0shsngy2d" path="res://RedLevel/MattMikeFolder/Mike_Level/Materials/Stone.tres" id="4_tqlbi"]
 [ext_resource type="PackedScene" uid="uid://besfpqmr1e0bs" path="res://Common/Scenes/Objects/magic_portal.tscn" id="6_7540m"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/Player.tscn" id="6_jxer1"]
 [ext_resource type="PackedScene" uid="uid://ksxkc4kfuve7" path="res://RedLevel/NoahFolder/Scenes/spawner.tscn" id="6_r13ss"]
@@ -10,6 +11,7 @@
 [ext_resource type="Material" uid="uid://douffunt8ply1" path="res://RedLevel/MattMikeFolder/Mike_Level/Materials/WoodPlanks.tres" id="7_ngwho"]
 [ext_resource type="Material" uid="uid://dudcyf3ww2ohg" path="res://RedLevel/MattMikeFolder/Mike_Level/Materials/Steel.tres" id="8_81ia8"]
 [ext_resource type="Script" path="res://RedLevel/Scripts/UI.gd" id="8_h7xgo"]
+[ext_resource type="Texture2D" uid="uid://dvov4lj57mk02" path="res://RedLevel/MattMikeFolder/Mike_Level/AllSkyFree_Sky_MoonBurst_Equirect.png" id="8_xu4g7"]
 [ext_resource type="AudioStream" uid="uid://d3yod8jgutym1" path="res://RedLevel/Sounds/Level Theme.mp3" id="9_irnux"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_cso3q"]
@@ -72,16 +74,16 @@ size = Vector3(14, 0.5, 4)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_do582"]
 data = PackedVector3Array(-7, 0.25, 2, 7, 0.25, 2, -7, -0.25, 2, 7, 0.25, 2, 7, -0.25, 2, -7, -0.25, 2, 7, 0.25, -2, -7, 0.25, -2, 7, -0.25, -2, -7, 0.25, -2, -7, -0.25, -2, 7, -0.25, -2, 7, 0.25, 2, 7, 0.25, -2, 7, -0.25, 2, 7, 0.25, -2, 7, -0.25, -2, 7, -0.25, 2, -7, 0.25, -2, -7, 0.25, 2, -7, -0.25, -2, -7, 0.25, 2, -7, -0.25, 2, -7, -0.25, -2, 7, 0.25, 2, -7, 0.25, 2, 7, 0.25, -2, -7, 0.25, 2, -7, 0.25, -2, 7, 0.25, -2, -7, -0.25, 2, 7, -0.25, 2, -7, -0.25, -2, 7, -0.25, 2, 7, -0.25, -2, -7, -0.25, -2)
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggqlx"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_oqrc8"]
+panorama = ExtResource("8_xu4g7")
 
 [sub_resource type="Sky" id="Sky_t5ash"]
-sky_material = SubResource("ProceduralSkyMaterial_ggqlx")
+sky_material = SubResource("PanoramaSkyMaterial_oqrc8")
 
 [sub_resource type="Environment" id="Environment_7ofk6"]
 background_mode = 2
 sky = SubResource("Sky_t5ash")
+sky_custom_fov = 90.0
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_sky_contribution = 0.9
 tonemap_mode = 2
@@ -104,16 +106,36 @@ navigation_mesh = SubResource("NavigationMesh_cso3q")
 [node name="Floor" parent="NavigationRegion3D/ArenaGeometry" instance=ExtResource("1_yb0tt")]
 
 [node name="Wall" parent="NavigationRegion3D/ArenaGeometry" instance=ExtResource("3_jw8hm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.75, -20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.97887, -20)
+surface_material_override/0 = ExtResource("4_tqlbi")
+
+[node name="Wall9" parent="NavigationRegion3D/ArenaGeometry" instance=ExtResource("3_jw8hm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.22, -19.869)
 
 [node name="Wall2" parent="NavigationRegion3D/ArenaGeometry" instance=ExtResource("3_jw8hm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.75, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.694564, 20)
+
+[node name="Wall7" parent="NavigationRegion3D/ArenaGeometry" instance=ExtResource("3_jw8hm")]
+transform = Transform3D(0.844496, 0.535562, 0, -0.535562, 0.844496, 0, 0, 0, 1, -6.01713, -6.68633, 20.0284)
+surface_material_override/0 = ExtResource("4_tqlbi")
+
+[node name="Wall8" parent="NavigationRegion3D/ArenaGeometry" instance=ExtResource("3_jw8hm")]
+transform = Transform3D(-0.844328, -0.535827, 8.74228e-08, -0.535827, 0.844328, 0, -7.38135e-08, -4.68435e-08, -1, 6.017, -6.686, 20.028)
+surface_material_override/0 = ExtResource("4_tqlbi")
 
 [node name="Wall3" parent="NavigationRegion3D/ArenaGeometry" instance=ExtResource("3_jw8hm")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 20, 5.75, 0)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 20, 2.979, 0)
+surface_material_override/0 = ExtResource("4_tqlbi")
+
+[node name="Wall6" parent="NavigationRegion3D/ArenaGeometry" instance=ExtResource("3_jw8hm")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 19.869, -2.22, 0)
 
 [node name="Wall4" parent="NavigationRegion3D/ArenaGeometry" instance=ExtResource("3_jw8hm")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -20, 5.75, 0)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -20, 2.979, 0)
+surface_material_override/0 = ExtResource("4_tqlbi")
+
+[node name="Wall5" parent="NavigationRegion3D/ArenaGeometry" instance=ExtResource("3_jw8hm")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -19.8692, -2.22012, 0)
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/ArenaGeometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, -17.5)
@@ -129,6 +151,7 @@ shape = SubResource("ConcavePolygonShape3D_4rksp")
 transform = Transform3D(1.12, 0, 0, 0, 1.12, 0, 0, 0, 1.12, 0, 4.28622, 0)
 mesh = SubResource("CylinderMesh_67dj0")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("4_tqlbi")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/ArenaGeometry/Tower"]
 
@@ -278,7 +301,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.023735)
 shape = SubResource("ConcavePolygonShape3D_mr3ar")
 
 [node name="TooSteep1" type="MeshInstance3D" parent="NavigationRegion3D/ArenaGeometry"]
-transform = Transform3D(-0.5, -0.866025, 8.74228e-08, -0.866025, 0.5, 0, -4.37114e-08, -7.57103e-08, -1, 16.5, 5.5, 8)
+transform = Transform3D(-0.5, -0.866025, 8.74228e-08, -0.866025, 0.5, 0, -4.37114e-08, -7.57103e-08, -1, 16.5, 2.649, 8)
 mesh = SubResource("BoxMesh_006tu")
 surface_material_override/0 = ExtResource("8_81ia8")
 
@@ -288,13 +311,14 @@ surface_material_override/0 = ExtResource("8_81ia8")
 shape = SubResource("ConcavePolygonShape3D_do582")
 
 [node name="TooSteep2" type="MeshInstance3D" parent="NavigationRegion3D/ArenaGeometry"]
-transform = Transform3D(0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0, 1, -16.5, 5.5, 8)
+transform = Transform3D(0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0, 1, -16.5, 2.64857, 8)
 mesh = SubResource("BoxMesh_006tu")
 surface_material_override/0 = ExtResource("8_81ia8")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/ArenaGeometry/TooSteep2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/ArenaGeometry/TooSteep2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_do582")
 
 [node name="red_portal" parent="NavigationRegion3D" instance=ExtResource("6_7540m")]
@@ -366,3 +390,6 @@ text = "Dummies SMASHED: 0
 "
 label_settings = SubResource("LabelSettings_ut3dd")
 horizontal_alignment = 1
+
+[node name="BlueGem" parent="." instance=ExtResource("7_8rcb2")]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 0, 11.0551, 0)
