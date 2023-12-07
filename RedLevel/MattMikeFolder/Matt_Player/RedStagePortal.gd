@@ -19,12 +19,12 @@ func _process(delta):
 
 
 func Check_if_complete():
-	if GlobalRedVariable.killAmount >= 10 and not $Sketchfab_model2/Portal_on.playing:
+	if GlobalRedVariable.killAmount >= GlobalRedVariable.killGoal and not $Sketchfab_model2/Portal_on.playing:
 		$Sketchfab_model2/Portal_on.play()
 		
 		
 func _on_enter_portal_area_body_entered(body):
-	if GlobalRedVariable.killAmount >= 10:
+	if GlobalRedVariable.killAmount >= GlobalRedVariable.killGoal:
 		#var gem = gem_scene.instantiate() as Node3D
 		#gem.scale = Vector3.ONE*0.003;
 		#$GemLocation.add_child(gem)

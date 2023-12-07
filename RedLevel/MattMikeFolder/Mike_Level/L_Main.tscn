@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://RedLevel/MattMikeFolder/Mike_Level/L_Main.gd" id="1_km1jj"]
 [ext_resource type="PackedScene" uid="uid://ctkc7yqdqdtao" path="res://RedLevel/MattMikeFolder/Mike_Level/Geometry/Floor.tscn" id="1_yb0tt"]
 [ext_resource type="PackedScene" uid="uid://cdn7d5mxwdyks" path="res://RedLevel/MattMikeFolder/Mike_Level/Geometry/Wall.tscn" id="3_jw8hm"]
-[ext_resource type="Material" uid="uid://crax0shsngy2d" path="res://RedLevel/MattMikeFolder/Mike_Level/Materials/Stone.tres" id="4_tqlbi"]
+[ext_resource type="Material" path="res://RedLevel/MattMikeFolder/Mike_Level/Materials/Stone.tres" id="4_tqlbi"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/Player.tscn" id="6_jxer1"]
 [ext_resource type="PackedScene" uid="uid://ksxkc4kfuve7" path="res://RedLevel/NoahFolder/Scenes/spawner.tscn" id="6_r13ss"]
 [ext_resource type="PackedScene" uid="uid://bxje7wxl4i0vq" path="res://Common/Scenes/Objects/Red_gem.tscn" id="7_8rcb2"]
