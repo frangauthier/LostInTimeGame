@@ -1,12 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://brunr2p1xxuji"]
+[gd_scene load_steps=18 format=3 uid="uid://brunr2p1xxuji"]
 
 [ext_resource type="Script" path="res://RedLevel/NoahFolder/Scripts/enemy.gd" id="1_groen"]
 [ext_resource type="PackedScene" uid="uid://b8jqhu4iqvkdn" path="res://RedLevel/NoahFolder/Worker/worker.gltf" id="1_hxm03"]
 [ext_resource type="AudioStream" uid="uid://dvlshgfxnkqom" path="res://RedLevel/Sounds/Hitsound.mp3" id="3_p2skv"]
+[ext_resource type="AudioStream" uid="uid://ckvl7ahcjtfgl" path="res://RedLevel/Sounds/Player_Death.wav" id="4_qxwcj"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_redmd"]
-radius = 0.622481
-height = 1.71536
+[sub_resource type="BoxShape3D" id="BoxShape3D_vwa8k"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vupgv"]
 radius = 0.340293
@@ -58,7 +57,7 @@ states/run/position = Vector2(461, 59)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_07cug"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_turvq"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_w0a47"), "run", "idle_with_ball", SubResource("AnimationNodeStateMachineTransition_rwevb"), "idle", "idle_with_ball", SubResource("AnimationNodeStateMachineTransition_cj44b"), "idle_with_ball", "End", SubResource("AnimationNodeStateMachineTransition_nqlbc")]
 graph_offset = Vector2(-269.26, -15.6523)
 
-[node name="Enemy" instance=ExtResource("1_hxm03")]
+[node name="Enemy" groups=["Target"] instance=ExtResource("1_hxm03")]
 
 [node name="Worker" parent="." index="0"]
 collision_mask = 5
@@ -70,13 +69,12 @@ visible = false
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Worker" index="3"]
 
 [node name="HitBox" type="Area3D" parent="Worker" index="4"]
-visible = false
 collision_layer = 128
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Worker/HitBox" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.551484)
-shape = SubResource("CapsuleShape3D_redmd")
+transform = Transform3D(0.86, 0, 0, 0, 1.95, 0, 0, 0, 0.725, 0, 1, -0.0661633)
+shape = SubResource("BoxShape3D_vwa8k")
 
 [node name="DangerZone" type="Area3D" parent="Worker" index="5"]
 collision_mask = 3
@@ -95,6 +93,9 @@ parameters/conditions/is_running = false
 
 [node name="Hit Sound" type="AudioStreamPlayer3D" parent="." index="3"]
 stream = ExtResource("3_p2skv")
+
+[node name="Dead" type="AudioStreamPlayer3D" parent="." index="4"]
+stream = ExtResource("4_qxwcj")
 
 [connection signal="body_entered" from="Worker/HitBox" to="Worker" method="_on_hit_box_body_entered"]
 [connection signal="body_entered" from="Worker/DangerZone" to="Worker" method="_on_danger_zone_body_entered"]

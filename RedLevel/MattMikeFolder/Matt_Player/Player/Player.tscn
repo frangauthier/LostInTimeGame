@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bdupkh0grwy27"]
+[gd_scene load_steps=16 format=3 uid="uid://bdupkh0grwy27"]
 
 [ext_resource type="PackedScene" uid="uid://lqyku5wn2wo0" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/MovementController.tscn" id="1_t1jcr"]
 [ext_resource type="Script" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/Head.gd" id="2_yi3p2"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://c7sp7l3lsswwa" path="res://RedLevel/MattMikeFolder/Matt_Player/Player_Extras/Weapon_Models/blasterD.glb" id="5_4evdq"]
 [ext_resource type="AudioStream" uid="uid://b63bjb8bcdoqi" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/LaserShoot.mp3.mp3" id="9_snm7q"]
 [ext_resource type="AudioStream" uid="uid://bkgpgcsxilvko" path="res://RedLevel/MattMikeFolder/Matt_Player/Player/Jump.mp3" id="10_6nwem"]
+[ext_resource type="AudioStream" uid="uid://ckvl7ahcjtfgl" path="res://RedLevel/Sounds/Player_Death.wav" id="11_jdeag"]
+[ext_resource type="AudioStream" uid="uid://dvlshgfxnkqom" path="res://RedLevel/Sounds/Hitsound.mp3" id="11_q24ge"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yqk3n"]
 
 [sub_resource type="Animation" id="Animation_tvd50"]
 length = 0.001
@@ -82,7 +86,13 @@ _data = {
 [node name="Player" instance=ExtResource("1_t1jcr")]
 speed = 11
 
-[node name="Head" type="Node3D" parent="." index="1"]
+[node name="Area3D" type="Area3D" parent="." index="0"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+shape = SubResource("CapsuleShape3D_yqk3n")
+
+[node name="Head" type="Node3D" parent="." index="2"]
 script = ExtResource("2_yi3p2")
 
 [node name="Camera" type="Camera3D" parent="Head" index="0"]
@@ -127,8 +137,16 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.313352, -0.240567, -0.907474)
 gizmo_extents = 0.21
 
-[node name="Shoot" type="AudioStreamPlayer3D" parent="." index="2"]
+[node name="Shoot" type="AudioStreamPlayer3D" parent="." index="3"]
 stream = ExtResource("9_snm7q")
 
-[node name="Jump" type="AudioStreamPlayer3D" parent="." index="3"]
+[node name="Jump" type="AudioStreamPlayer3D" parent="." index="4"]
 stream = ExtResource("10_6nwem")
+
+[node name="Hitsound" type="AudioStreamPlayer3D" parent="." index="5"]
+stream = ExtResource("11_q24ge")
+
+[node name="Dead" type="AudioStreamPlayer3D" parent="." index="6"]
+stream = ExtResource("11_jdeag")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

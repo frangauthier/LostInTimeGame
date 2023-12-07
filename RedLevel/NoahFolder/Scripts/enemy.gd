@@ -15,7 +15,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var nav: NavigationAgent3D = $NavigationAgent3D
 @onready var player = $'../../../Player' # Worker -> Enemy -> Enemies -> RedLevel -> Player
 
-var hit_points: float = 3;
+var hit_points: float = 2;
 
 var target_set = false
 
@@ -77,4 +77,8 @@ func hit():
 
 func _on_danger_zone_body_entered(body):
 	if (body.name == 'Player'):
+		$"../Dead".play()
 		print('PLAYER_ELIMINATED')
+		await get_tree().create_timer(0.5).timeout
+		get_tree().reload_current_scene()
+		GlobalRedVariable.killAmount = 0
