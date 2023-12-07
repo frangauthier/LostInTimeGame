@@ -1,0 +1,14 @@
+https://www.sounds-resource.com/pc_computer/quakeexpansions/ (Used for sounds and music.)
+
+https://chafmere.itch.io/godot-4-fps-controller (Used for Laser Gun.)
+
+https://polyhaven.com/ (Where Textuures were sourced.)
+
+https://github.com/Whimfoome/godot-FirstPersonStarter (Used for Movement.)
+
+http://abfonts.freehostia.com/opti/ (Font Used.)
+
+https://www.youtube.com/shorts/FsLkXXOyeRI (Laser Gun Sound.)
+
+
+
