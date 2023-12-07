@@ -53,3 +53,7 @@ func _on_timer_timeout():
 
 
 
+
+
+func _on_player_throw():
+	pass # Replace with function body.

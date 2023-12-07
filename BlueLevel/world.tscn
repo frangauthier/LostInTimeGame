@@ -1,10 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://csuhfivvslxs"]
+[gd_scene load_steps=18 format=3 uid="uid://csuhfivvslxs"]
 
-[ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_o0oxf"]
+[ext_resource type="Script" path="res://BlueLevel/worldScript.gd" id="1_hh52x"]
 [ext_resource type="PackedScene" uid="uid://btkavalrqerr8" path="res://BlueLevel/Assets/WorldAssets/Objects/iceFloor.tscn" id="2_lw0qx"]
 [ext_resource type="PackedScene" uid="uid://bprken47yeprx" path="res://BlueLevel/Assets/WorldAssets/Objects/iceBridge.tscn" id="3_muque"]
 [ext_resource type="PackedScene" uid="uid://chqd8noxhjino" path="res://garden_gnome.tscn" id="5_5cwdg"]
 [ext_resource type="PackedScene" uid="uid://bua3tb48rql7t" path="res://BlueLevel/Assets/Rock/rock_moss_set_02_1k/IceRocks/Rock1.tscn" id="5_61fhv"]
+[ext_resource type="Texture2D" uid="uid://bt05pdn1vy6nn" path="res://BlueLevel/snow18/textures/Material_baseColor.png" id="6_rro31"]
+[ext_resource type="Texture2D" uid="uid://ctfexng7l623d" path="res://BlueLevel/snow18/textures/Material_metallicRoughness.png" id="7_cliwn"]
+[ext_resource type="PackedScene" uid="uid://c854k4sxlj54p" path="res://BlueLevel/PlayerWorkingfolder/spiderman_playerBlue.tscn" id="8_84hs5"]
+[ext_resource type="Texture2D" uid="uid://rdx0y53cldul" path="res://BlueLevel/snow18/textures/Material_normal.png" id="8_ro4q2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ly6jl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -28,7 +32,17 @@ material = SubResource("StandardMaterial3D_d6l1b")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1s6gl"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gf5we"]
+albedo_texture = ExtResource("6_rro31")
+metallic = 1.0
+metallic_texture = ExtResource("7_cliwn")
+roughness_texture = ExtResource("8_ro4q2")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wb3t8"]
+size = Vector3(1, 9.19905, 6.42783)
+
 [node name="BlueLevel" type="Node3D"]
+script = ExtResource("1_hh52x")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nokqg")
@@ -45,11 +59,6 @@ mesh = SubResource("PlaneMesh_y8f68")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_1s6gl")
 
-[node name="Player" parent="." instance=ExtResource("1_o0oxf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09315, 0)
-collision_layer = 2
-collision_mask = 7
-
 [node name="iceFloor" parent="." instance=ExtResource("2_lw0qx")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13, -1.42093, -14)
 
@@ -60,6 +69,9 @@ transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -3.32705, -0.266405,
 
 [node name="iceBridge4" parent="IceBridges" instance=ExtResource("3_muque")]
 transform = Transform3D(0.0141421, 0, -0.0141421, 0, 0.02, 0, 0.0141421, 0, 0.0141421, -10.2837, 4.07687, -12.874)
+
+[node name="iceBridge5" parent="IceBridges" instance=ExtResource("3_muque")]
+transform = Transform3D(0.0119295, 0, 0.0160526, 0, 0.02, 0, -0.0160526, 0, 0.0119295, -13.2837, 5.77796, 14.5147)
 
 [node name="iceBridge2" parent="IceBridges" instance=ExtResource("3_muque")]
 transform = Transform3D(-8.74228e-10, 0, -0.02, 0, 0.02, 0, 0.02, 0, -8.74228e-10, 18.673, -0.266405, 7.84405)
@@ -87,5 +99,22 @@ staticBody3Dplatform = NodePath("../../Rocks/Rock3")
 
 [node name="Garden_Gnome3" parent="Gnomes" node_paths=PackedStringArray("node3DPlatform") instance=ExtResource("5_5cwdg")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 17.6141, 2.37326, -13.6927)
-staticBody3Dplatform = NodePath("")
 node3DPlatform = NodePath("../../IceBridges/iceBridge4")
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Walls"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Walls/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0937, 8.93601, 3.67573)
+size = Vector3(1, 8.96983, 6.63917)
+material = SubResource("StandardMaterial3D_gf5we")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0765, 8.89485, 3.69994)
+shape = SubResource("BoxShape3D_wb3t8")
+
+[node name="Player" parent="." instance=ExtResource("8_84hs5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19268, 1.12404, -1.33934)
+
+[connection signal="throw" from="Player" to="." method="_on_player_throw"]
