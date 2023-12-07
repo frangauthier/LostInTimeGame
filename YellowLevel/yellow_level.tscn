@@ -1,14 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjykeqsxjykxu"]
+[gd_scene load_steps=29 format=3 uid="uid://cjykeqsxjykxu"]
 
+[ext_resource type="Script" path="res://YellowLevel/yellow_level.gd" id="1_glxjp"]
+[ext_resource type="Texture2D" uid="uid://c3qvjq47ucbfk" path="res://Common/Assets/Textures/mpumalanga_veld_puresky_2k.hdr" id="1_o5vpr"]
 [ext_resource type="PackedScene" uid="uid://sat46a0fj1y2" path="res://Common/Scenes/Characters/spiderman_player.tscn" id="1_omg1k"]
 [ext_resource type="PackedScene" uid="uid://d3vm0l44npgdj" path="res://YellowLevel/Scenes/old_tyre.tscn" id="2_1l6ol"]
+[ext_resource type="Texture2D" uid="uid://x5bq8262ba4" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_diff_1k.png" id="3_0gq7a"]
+[ext_resource type="Texture2D" uid="uid://chl6tgct4wlof" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_nor_gl_1k.png" id="4_xaqbk"]
+[ext_resource type="Texture2D" uid="uid://dg0g22clwmej5" path="res://Common/Assets/Textures/mossy_rock_1k/textures/mossy_rock_rough_1k.png" id="5_ay4ab"]
+[ext_resource type="PackedScene" path="res://Common/Scenes/Objects/portal_back_lobby.tscn" id="5_bn78t"]
+[ext_resource type="Texture2D" uid="uid://slxdjv5d0254" path="res://YellowLevel/Sprites/GoalTire.png" id="5_qrbkb"]
+[ext_resource type="Texture2D" uid="uid://o7xtw6sjmlgw" path="res://YellowLevel/Sprites/tire.png" id="6_njrf3"]
+[ext_resource type="Texture2D" uid="uid://ybwrtbp0ar78" path="res://YellowLevel/Sprites/American_football.png" id="7_p61tk"]
+[ext_resource type="PackedScene" path="res://Common/Scenes/Objects/Yellow_gem.tscn" id="9_iqiue"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xsofc"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ix8xu"]
+panorama = ExtResource("1_o5vpr")
 
 [sub_resource type="Sky" id="Sky_fy3xa"]
-sky_material = SubResource("ProceduralSkyMaterial_xsofc")
+sky_material = SubResource("PanoramaSkyMaterial_ix8xu")
 
 [sub_resource type="Environment" id="Environment_nk6jm"]
 background_mode = 2
@@ -17,16 +26,55 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x65hj"]
-albedo_color = Color(0.6, 0.517647, 0.254902, 1)
+albedo_color = Color(0.498039, 0.556863, 0.282353, 1)
+albedo_texture = ExtResource("3_0gq7a")
+roughness_texture = ExtResource("5_ay4ab")
+normal_enabled = true
+normal_texture = ExtResource("4_xaqbk")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_q15gj"]
 material = SubResource("StandardMaterial3D_x65hj")
 size = Vector2(25, 25)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ugcr8"]
-data = PackedVector3Array(2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kihk2"]
+data = PackedVector3Array(12.5, 0, 12.5, -12.5, 0, 12.5, 12.5, 0, -12.5, -12.5, 0, 12.5, -12.5, 0, -12.5, 12.5, 0, -12.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfc77"]
+albedo_texture = ExtResource("3_0gq7a")
+uv1_scale = Vector3(7, 1, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pgp1p"]
+material = SubResource("StandardMaterial3D_dfc77")
+size = Vector3(7, 2, 0.4)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c171w"]
+points = PackedVector3Array(-3.55486, -1.05556, -0.255556, 3.55486, 1.05556, 0.3, 3.55486, 1.05556, -0.255556, -3.55486, 1.05556, 0.3, 3.55486, -1.05556, 0.3, 3.55486, -1.05556, -0.255556, -3.55486, 1.05556, -0.255556, -3.55486, -1.05556, 0.3)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4yar8"]
+load_path = "res://.godot/imported/mossy_rock_diff_1k.png-2d174aaf02b34fb5721d1f71a261bf6e.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wr4ve"]
+albedo_texture = SubResource("CompressedTexture2D_4yar8")
+uv1_scale = Vector3(7, 1, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h4r7r"]
+material = SubResource("StandardMaterial3D_wr4ve")
+size = Vector3(2.5, 2, 0.4)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kfvo1"]
+points = PackedVector3Array(-1.15416, -0.92785, -0.2, 1.17288, 0.926695, 0.2, 1.17288, -0.319358, 0.2, -1.17263, 0.926695, 0.2, 1.15441, 0.911977, -0.2, -1.17263, -0.942568, 0.2, 1.15419, -0.92785, -0.2, -1.15416, 0.911977, -0.2, 1.17265, -0.942568, 0.2, 1.25, -0.339837, -0.0601771)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8kne7"]
+points = PackedVector3Array(-1.15416, -0.92785, -0.2, 1.17288, 0.926695, 0.2, 1.17288, -0.319358, 0.2, -1.17263, 0.926695, 0.2, 1.15441, 0.911977, -0.2, -1.17263, -0.942568, 0.2, 1.15419, -0.92785, -0.2, -1.15416, 0.911977, -0.2, 1.17265, -0.942568, 0.2, 1.25, -0.339837, -0.0601771)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tet2o"]
+size = Vector3(7, 7, 7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ey5i"]
+size = Vector3(25, 30, 1)
 
 [node name="YellowLevel" type="Node3D"]
+script = ExtResource("1_glxjp")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nk6jm")
@@ -35,22 +83,216 @@ environment = SubResource("Environment_nk6jm")
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Floor" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_q15gj")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+[node name="StaticBody3D2" type="StaticBody3D" parent="Floor"]
 collision_layer = 2
+collision_mask = 6145
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_ugcr8")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D2"]
+shape = SubResource("ConcavePolygonShape3D_kihk2")
 
 [node name="Player" parent="." instance=ExtResource("1_omg1k")]
 
-[node name="Old_tyre" parent="." instance=ExtResource("2_1l6ol")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20103, 1.52057, 3.86976)
+[node name="TireEnclosure" type="Node3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.60856, 0, 2.84307)
 
-[node name="Old_tyre2" parent="." instance=ExtResource("2_1l6ol")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21613, 1.52057, 3.86976)
+[node name="Wall1" type="StaticBody3D" parent="TireEnclosure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.84671, 1.04313, -5.56309)
 
-[node name="Old_tyre3" parent="." instance=ExtResource("2_1l6ol")]
+[node name="WallMesh" type="MeshInstance3D" parent="TireEnclosure/Wall1"]
+mesh = SubResource("BoxMesh_pgp1p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TireEnclosure/Wall1"]
+shape = SubResource("ConvexPolygonShape3D_c171w")
+
+[node name="Wall2" type="StaticBody3D" parent="TireEnclosure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.84671, 1.04313, -12.5846)
+
+[node name="WallMesh" type="MeshInstance3D" parent="TireEnclosure/Wall2"]
+mesh = SubResource("BoxMesh_pgp1p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TireEnclosure/Wall2"]
+shape = SubResource("ConvexPolygonShape3D_c171w")
+
+[node name="Wall3" type="StaticBody3D" parent="TireEnclosure"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.2561, 1.04313, -8.84216)
+
+[node name="WallMesh" type="MeshInstance3D" parent="TireEnclosure/Wall3"]
+mesh = SubResource("BoxMesh_pgp1p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TireEnclosure/Wall3"]
+shape = SubResource("ConvexPolygonShape3D_c171w")
+
+[node name="Wall4" type="StaticBody3D" parent="TireEnclosure"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.3176, 1.04313, -11.4922)
+
+[node name="WallMesh" type="MeshInstance3D" parent="TireEnclosure/Wall4"]
+mesh = SubResource("BoxMesh_h4r7r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TireEnclosure/Wall4"]
+shape = SubResource("ConvexPolygonShape3D_kfvo1")
+
+[node name="Wall5" type="StaticBody3D" parent="TireEnclosure"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.3176, 1.04313, -6.74709)
+
+[node name="WallMesh" type="MeshInstance3D" parent="TireEnclosure/Wall5"]
+mesh = SubResource("BoxMesh_h4r7r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TireEnclosure/Wall5"]
+shape = SubResource("ConvexPolygonShape3D_8kne7")
+
+[node name="Sprite3D" type="Sprite3D" parent="TireEnclosure/Wall5"]
+transform = Transform3D(-0.25, 0, -3.77489e-08, 0, 0.25, 0, 3.77489e-08, 0, -0.25, 0.0136232, 0, -0.251626)
+texture = ExtResource("5_qrbkb")
+
+[node name="LowWall" type="StaticBody3D" parent="TireEnclosure"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.3176, -0.922075, -9.15129)
+
+[node name="WallMesh" type="MeshInstance3D" parent="TireEnclosure/LowWall"]
+mesh = SubResource("BoxMesh_h4r7r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TireEnclosure/LowWall"]
+shape = SubResource("ConvexPolygonShape3D_8kne7")
+
+[node name="AreaForObjects" type="Area3D" parent="TireEnclosure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.59479, 0, -8.58751)
+collision_layer = 2
+collision_mask = 2048
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TireEnclosure/AreaForObjects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.87363, 2.7062, -0.465228)
+shape = SubResource("BoxShape3D_tet2o")
+
+[node name="Sprite3D" type="Sprite3D" parent="TireEnclosure"]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, -8.04621, 0.01, -8.9258)
+texture = ExtResource("6_njrf3")
+
+[node name="FootballEnclosure" type="Node3D" parent="."]
+transform = Transform3D(-1.2, 0, 1.81195e-07, 0, 1.2, 0, -1.81195e-07, 0, -1.2, -2.47282, -11.5628, -2.79086)
+visible = false
+
+[node name="Wall1" type="StaticBody3D" parent="FootballEnclosure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.84671, 1.04313, -5.56309)
+
+[node name="WallMesh" type="MeshInstance3D" parent="FootballEnclosure/Wall1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_pgp1p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FootballEnclosure/Wall1"]
+shape = SubResource("ConvexPolygonShape3D_c171w")
+
+[node name="Wall2" type="StaticBody3D" parent="FootballEnclosure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.84671, 1.04313, -12.5846)
+
+[node name="WallMesh" type="MeshInstance3D" parent="FootballEnclosure/Wall2"]
+mesh = SubResource("BoxMesh_pgp1p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FootballEnclosure/Wall2"]
+shape = SubResource("ConvexPolygonShape3D_c171w")
+
+[node name="Wall3" type="StaticBody3D" parent="FootballEnclosure"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.2561, 1.04313, -8.84216)
+
+[node name="WallMesh" type="MeshInstance3D" parent="FootballEnclosure/Wall3"]
+mesh = SubResource("BoxMesh_pgp1p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FootballEnclosure/Wall3"]
+shape = SubResource("ConvexPolygonShape3D_c171w")
+
+[node name="Wall4" type="StaticBody3D" parent="FootballEnclosure"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.3176, 1.04313, -11.4922)
+
+[node name="WallMesh" type="MeshInstance3D" parent="FootballEnclosure/Wall4"]
+mesh = SubResource("BoxMesh_h4r7r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FootballEnclosure/Wall4"]
+shape = SubResource("ConvexPolygonShape3D_kfvo1")
+
+[node name="Wall5" type="StaticBody3D" parent="FootballEnclosure"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.3176, 1.04313, -6.74709)
+
+[node name="WallMesh" type="MeshInstance3D" parent="FootballEnclosure/Wall5"]
+mesh = SubResource("BoxMesh_h4r7r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FootballEnclosure/Wall5"]
+shape = SubResource("ConvexPolygonShape3D_8kne7")
+
+[node name="AreaForObjects" type="Area3D" parent="FootballEnclosure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.59479, 0, -8.58751)
+collision_layer = 2
+collision_mask = 4097
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FootballEnclosure/AreaForObjects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.87363, 2.7062, -0.465228)
+shape = SubResource("BoxShape3D_tet2o")
+
+[node name="FootballSprite3D" type="Sprite3D" parent="FootballEnclosure"]
+transform = Transform3D(-0.2, -1.74845e-08, 7.64273e-16, 0, -8.74228e-09, -0.2, 1.74845e-08, -0.2, 8.74228e-09, -4.93959, 0.0474947, -9.46145)
+texture = ExtResource("7_p61tk")
+
+[node name="Boundaries" type="Node3D" parent="."]
+
+[node name="Node3D" type="StaticBody3D" parent="Boundaries"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.5, 0, 0)
+collision_mask = 2049
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundaries/Node3D"]
+shape = SubResource("BoxShape3D_4ey5i")
+
+[node name="Node3D4" type="StaticBody3D" parent="Boundaries"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.5, 0, 0)
+collision_mask = 2049
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundaries/Node3D4"]
+shape = SubResource("BoxShape3D_4ey5i")
+
+[node name="Node3D2" type="StaticBody3D" parent="Boundaries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.5)
+collision_mask = 2049
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundaries/Node3D2"]
+shape = SubResource("BoxShape3D_4ey5i")
+
+[node name="Node3D3" type="StaticBody3D" parent="Boundaries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.5)
+collision_mask = 2049
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundaries/Node3D3"]
+shape = SubResource("BoxShape3D_4ey5i")
+
+[node name="Spawned" type="Node3D" parent="."]
+
+[node name="Old_tyre" parent="Spawned" instance=ExtResource("2_1l6ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37824, 2.11776, 3.86976)
+
+[node name="Old_tyre4" parent="Spawned" instance=ExtResource("2_1l6ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37824, 1.77861, -0.774909)
+
+[node name="Old_tyre2" parent="Spawned" instance=ExtResource("2_1l6ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3427, 2.96828, -9.72565)
+
+[node name="Old_tyre3" parent="Spawned" instance=ExtResource("2_1l6ol")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.570651, 4.04606, 5.11431)
+
+[node name="Old_tyre5" parent="Spawned" instance=ExtResource("2_1l6ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.20354, 4.04606, 5.11431)
+
+[node name="Old_tyre6" parent="Spawned" instance=ExtResource("2_1l6ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9004, 6.04761, -5.31681)
+
+[node name="Old_tyre7" parent="Spawned" instance=ExtResource("2_1l6ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6511, 6.04761, -0.614463)
+
+[node name="Yellow_gem" parent="Spawned" instance=ExtResource("9_iqiue")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, -1.62921e-09, 0, 1.62921e-09, 0.01, -12.4247, 8.73541, 11.293)
+visible = false
+
+[node name="PortalBackLobby" parent="." instance=ExtResource("5_bn78t")]
+transform = Transform3D(0.672031, 0, -0.740523, 0, 1, 0, 0.740523, 0, 0.672031, -10.9614, 0, 9.58357)
+
+[connection signal="body_entered" from="TireEnclosure/AreaForObjects" to="." method="_on_tire_entered"]
+[connection signal="body_exited" from="TireEnclosure/AreaForObjects" to="." method="_on_tire_exited"]
+[connection signal="body_entered" from="FootballEnclosure/AreaForObjects" to="." method="_on_football_entered"]
+[connection signal="body_exited" from="FootballEnclosure/AreaForObjects" to="." method="_on_football_exited"]

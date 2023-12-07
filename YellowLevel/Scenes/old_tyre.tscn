@@ -55,6 +55,9 @@ height = 0.148319
 radius = 0.287983
 
 [node name="Old_tyre" type="RigidBody3D"]
+collision_layer = 2048
+collision_mask = 3
+mass = 5.0
 physics_material_override = SubResource("PhysicsMaterial_ri2r5")
 
 [node name="old_tyre" type="MeshInstance3D" parent="."]
