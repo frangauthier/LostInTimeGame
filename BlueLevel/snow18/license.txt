@@ -1,0 +1,11 @@
+Model Information:
+* title:	Snow18
+* source:	https://sketchfab.com/3d-models/snow18-dd493efebc6840a4acfeb2656d4f4778
+* author:	Publicdomaintextures (https://sketchfab.com/Publicdomaintextures)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Snow18" (https://sketchfab.com/3d-models/snow18-dd493efebc6840a4acfeb2656d4f4778) by Publicdomaintextures (https://sketchfab.com/Publicdomaintextures) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
