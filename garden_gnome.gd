@@ -47,7 +47,7 @@ func emit_Particule():
 func _on_timer_timeout():
 	$garden_gnome_1k2.visible=false
 	$CPUParticles3D2.emitting=true
-	$CollectingAudio.play()
+	$CollectingAudio.stop()
 	$CPUParticles3D2.emitting=false
 	
 
